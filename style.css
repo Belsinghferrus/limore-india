@@ -199,3 +199,28 @@ body {
 .animate-scroll:hover {
     animation-play-state: paused;
 }
+
+
+
+/* --- MAP ANIMATIONS --- */
+@keyframes flyRoute {
+    0% {
+        offset-distance: 0%;
+    }
+    100% {
+        offset-distance: 100%;
+    }
+}
+.animate-fly-route {
+    animation: flyRoute 8s linear infinite;
+}
+
+@keyframes ping-slow {
+    75%, 100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+.animate-ping-slow {
+    animation: ping-slow 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
