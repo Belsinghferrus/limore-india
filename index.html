@@ -1112,166 +1112,180 @@
 
 
     <!-- ========================================== -->
-    <!-- SECTION 7: SOCIAL PROOF (TESTIMONIALS)      -->
+    <!-- SECTION 7: THE TRUST DASHBOARD (100vh)      -->
     <!-- ========================================== -->
-    <section class="py-16 lg:py-24 bg-brand-white relative overflow-hidden">
-
-        <!-- Subtle Background Accent -->
-        <div
-            class="absolute top-0 right-0 w-[300px] h-[300px] bg-brand-red/5 rounded-full blur-[80px] pointer-events-none">
-        </div>
-
-        <div class="max-w-[90rem] mx-auto px-6 lg:px-12 relative z-10">
-
-            <!-- Section Header -->
-            <div class="max-w-xl mb-12 lg:mb-16">
-                <div class="flex items-center gap-3 mb-2">
-                    <span class="w-2 h-2 bg-brand-red rounded-full"></span>
-                    <p class="font-sans text-[0.65rem] uppercase tracking-[0.2em] font-bold text-brand-red">Social Proof
-                    </p>
+    <section class="min-h-screen lg:h-screen flex flex-col justify-center bg-brand-white relative overflow-hidden border-y border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto w-full px-6 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-0 py-12 lg:py-0">
+            
+            <!-- ====================================== -->
+            <!-- LEFT COLUMN: THE HUMAN TESTIMONIAL     -->
+            <!-- ====================================== -->
+            <div class="lg:col-span-5 flex flex-col justify-center pr-0 lg:pr-12 space-y-8">
+                
+                <!-- Huge Editorial Quote -->
+                <div class="relative space-y-6">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="w-4 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.55rem] uppercase tracking-[0.2em] font-bold text-brand-red">Real Experiences</p>
+                    </div>
+                    
+                    <h2 class="font-serif text-3xl lg:text-[2.8rem] font-semibold text-brand-black leading-[1.15] tracking-tight">
+                        Trusted by travelers<br>
+                        <span class="italic font-normal text-brand-red">across borders.</span>
+                    </h2>
+                    
+                    <blockquote class="relative">
+                        <p class="text-brand-black/70 text-sm lg:text-base leading-relaxed font-light italic max-w-sm">
+                            "From our corporate charter to the smooth family trip to Kerala, Limored handled everything flawlessly. The service in Dubai and India was world-class."
+                        </p>
+                        <footer class="mt-6 pt-6 border-t border-black/5 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-red/10 flex items-center justify-center text-brand-red font-bold text-sm border border-brand-red/20">
+                                AM
+                            </div>
+                            <div>
+                                <p class="text-[0.65rem] font-bold uppercase tracking-wider text-brand-black">Arjun Mehta</p>
+                                <p class="text-[0.55rem] uppercase tracking-widest text-black/40">Frequent Flyer, Mumbai – Dubai</p>
+                            </div>
+                        </footer>
+                    </blockquote>
                 </div>
-                <h2 class="font-display text-3xl lg:text-4xl font-bold text-brand-black leading-[1.1]">
-                    Trusted by <span class="text-brand-red italic font-normal">Leaders</span>
-                </h2>
+
+                <!-- The Universal Trust Text -->
+                <div class="bg-brand-black/5 rounded-xl px-6 py-4 border border-black/5 flex flex-wrap items-center justify-between gap-4">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 bg-brand-red rounded-full animate-pulse"></span>
+                        <span class="text-[0.55rem] font-bold uppercase tracking-widest text-brand-black/70">24/7 Support Active</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-[0.5rem] font-mono text-brand-black/40">
+                        <i class="fa-solid fa-route text-brand-red"></i> DXB ↔ BOM
+                    </div>
+                </div>
             </div>
 
-            <!-- Testimonial Grid (3 Corporate Quotes) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <!-- ====================================== -->
+            <!-- RIGHT COLUMN: THE DATA DASHBOARD       -->
+            <!-- ====================================== -->
+            <div class="lg:col-span-7 bg-[#0A0A0A] rounded-3xl p-6 lg:p-10 shadow-2xl shadow-black/20 border border-white/10 relative flex flex-col justify-center">
+                
+                <!-- Background Tech Grid -->
+                <div class="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none rounded-3xl"></div>
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-brand-red/5 rounded-full blur-[80px] pointer-events-none"></div>
 
-                <!-- Card 1 -->
-                <div
-                    class="group relative bg-white border border-black/5 p-8 lg:p-10 rounded-2xl transition-all duration-300 hover:border-brand-red/30 hover:shadow-[0_15px_40px_-10px_rgba(0,0,0,0.05)]">
-                    <div class="absolute top-6 right-6 text-brand-red/10 font-display text-6xl italic select-none">"
-                    </div>
-                    <div class="relative z-10">
-                        <p class="text-brand-black/70 text-sm leading-relaxed font-light italic">
-                            "Their corporate travel management is seamless. Our executives no longer worry about
-                            logistics or delays—it just works."
-                        </p>
-                        <div class="mt-6 pt-6 border-t border-black/5 flex items-center gap-4">
-                            <div
-                                class="w-10 h-10 rounded-full bg-brand-black/5 flex items-center justify-center text-brand-black font-bold text-xs">
-                                SJ</div>
-                            <div>
-                                <p class="text-[0.7rem] font-bold uppercase tracking-wider text-brand-black">Sarah
-                                    Jenkins</p>
-                                <p class="text-[0.6rem] uppercase tracking-widest text-black/40">VP Operations,
-                                    GlobalTech</p>
+                <div class="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-6 h-full">
+                    
+                    <!-- 1. Satisfaction Rings (SVG) -->
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col items-center justify-center hover:border-brand-red/50 transition-colors duration-300">
+                        <div class="flex gap-6 lg:gap-8 w-full justify-center">
+                            <!-- Ring 1 -->
+                            <div class="flex flex-col items-center">
+                                <div class="relative w-20 h-20 lg:w-24 lg:h-24 flex items-center justify-center">
+                                    <svg class="w-full h-full progress-ring__circle" viewBox="0 0 36 36">
+                                        <path class="text-white/10" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3" />
+                                        <path class="text-brand-red" stroke-dasharray="100, 100" stroke-dashoffset="2" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                                    </svg>
+                                    <span class="absolute text-white font-display text-lg font-bold">98%</span>
+                                </div>
+                                <p class="text-[0.5rem] uppercase tracking-widest text-gray-400 mt-3 text-center">Client Satisfaction</p>
+                            </div>
+                            <!-- Ring 2 -->
+                            <div class="flex flex-col items-center">
+                                <div class="relative w-20 h-20 lg:w-24 lg:h-24 flex items-center justify-center">
+                                    <svg class="w-full h-full progress-ring__circle" viewBox="0 0 36 36">
+                                        <path class="text-white/10" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3" />
+                                        <path class="text-brand-red" stroke-dasharray="100, 100" stroke-dashoffset="0.2" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                                    </svg>
+                                    <span class="absolute text-white font-display text-lg font-bold">99.8%</span>
+                                </div>
+                                <p class="text-[0.5rem] uppercase tracking-widest text-gray-400 mt-3 text-center">On-Time Arrival</p>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Card 2 (Center feature) -->
-                <div
-                    class="group relative bg-white border border-black/5 p-8 lg:p-10 rounded-2xl transition-all duration-300 hover:border-brand-red/30 hover:shadow-[0_15px_40px_-10px_rgba(0,0,0,0.05)] md:translate-y-4">
-                    <div class="absolute top-6 right-6 text-brand-red/10 font-display text-6xl italic select-none">"
+                    <!-- 2. Bar Graph (Route Volume) -->
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col justify-between hover:border-brand-red/50 transition-colors duration-300">
+                        <p class="text-[0.55rem] uppercase tracking-widest text-brand-red font-bold">Active Route Volume</p>
+                        <div class="flex justify-between items-end h-24 gap-2 pt-4">
+                            
+                            <!-- CHANGED: added justify-end -->
+                            <div class="flex flex-col justify-end items-center gap-2 w-full h-full">
+                                <div class="w-full bg-white/10 rounded-t-sm bar-animate bar-1 relative overflow-hidden">
+                                    <div class="absolute inset-0 bg-brand-red/80"></div>
+                                </div>
+                                <span class="text-[0.45rem] font-mono text-gray-400">DXB</span>
+                            </div>
+                    
+                            <!-- CHANGED: added justify-end -->
+                            <div class="flex flex-col justify-end items-center gap-2 w-full h-full">
+                                <div class="w-full bg-white/10 rounded-t-sm bar-animate bar-2 relative overflow-hidden" style="animation-delay: 0.2s;">
+                                    <div class="absolute inset-0 bg-brand-red/60"></div>
+                                </div>
+                                <span class="text-[0.45rem] font-mono text-gray-400">TRV</span>
+                            </div>
+                    
+                            <!-- CHANGED: added justify-end -->
+                            <div class="flex flex-col justify-end items-center gap-2 w-full h-full">
+                                <div class="w-full bg-white/10 rounded-t-sm bar-animate bar-3 relative overflow-hidden" style="animation-delay: 0.4s;">
+                                    <div class="absolute inset-0 bg-brand-red/40"></div>
+                                </div>
+                                <span class="text-[0.45rem] font-mono text-gray-400">COK</span>
+                            </div>
+                    
+                            <!-- CHANGED: added justify-end -->
+                            <div class="flex flex-col justify-end items-center gap-2 w-full h-full">
+                                <div class="w-full bg-white/10 rounded-t-sm bar-animate bar-4 relative overflow-hidden" style="animation-delay: 0.6s;">
+                                    <div class="absolute inset-0 bg-brand-red/60"></div>
+                                </div>
+                                <span class="text-[0.45rem] font-mono text-gray-400">DEL</span>
+                            </div>
+                    
+                        </div>
                     </div>
-                    <div class="relative z-10">
-                        <p class="text-brand-black/70 text-sm leading-relaxed font-light italic">
-                            "The private aviation and ground coordination for our Dubai corporate event was absolute
-                            perfection. Limored handled it flawlessly."
-                        </p>
-                        <div class="mt-6 pt-6 border-t border-black/5 flex items-center gap-4">
-                            <div
-                                class="w-10 h-10 rounded-full bg-brand-black/5 flex items-center justify-center text-brand-black font-bold text-xs">
-                                AM</div>
-                            <div>
-                                <p class="text-[0.7rem] font-bold uppercase tracking-wider text-brand-black">Arjun Mehta
-                                </p>
-                                <p class="text-[0.6rem] uppercase tracking-widest text-black/40">Founder, LuxeEvents</p>
+
+                    <!-- 3. Client Count Status -->
+                    <div class="col-span-1 sm:col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 hover:border-brand-red/50 transition-colors duration-300 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-red/10 rounded-full blur-[40px] pointer-events-none"></div>
+                        <div class="flex items-center gap-6 z-10">
+                            <div class="text-center">
+                                <p class="font-display text-2xl lg:text-3xl font-bold text-white tracking-tight">500+</p>
+                                <p class="text-[0.5rem] uppercase tracking-widest text-gray-400">Corporate Clients</p>
+                            </div>
+                            <div class="w-px h-10 bg-white/10"></div>
+                            <div class="text-center">
+                                <p class="font-display text-2xl lg:text-3xl font-bold text-white tracking-tight">15K+</p>
+                                <p class="text-[0.5rem] uppercase tracking-widest text-gray-400">Happy Travelers</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div
-                    class="group relative bg-white border border-black/5 p-8 lg:p-10 rounded-2xl transition-all duration-300 hover:border-brand-red/30 hover:shadow-[0_15px_40px_-10px_rgba(0,0,0,0.05)]">
-                    <div class="absolute top-6 right-6 text-brand-red/10 font-display text-6xl italic select-none">"
-                    </div>
-                    <div class="relative z-10">
-                        <p class="text-brand-black/70 text-sm leading-relaxed font-light italic">
-                            "Reliable, punctual, and remarkably well-maintained. We rely on their fleet weekly for our
-                            VIP guest transfers."
-                        </p>
-                        <div class="mt-6 pt-6 border-t border-black/5 flex items-center gap-4">
-                            <div
-                                class="w-10 h-10 rounded-full bg-brand-black/5 flex items-center justify-center text-brand-black font-bold text-xs">
-                                EL</div>
-                            <div>
-                                <p class="text-[0.7rem] font-bold uppercase tracking-wider text-brand-black">Emirates
-                                    Logistics</p>
-                                <p class="text-[0.6rem] uppercase tracking-widest text-black/40">Corporate Accounts, UAE
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- ========================================== -->
-            <!-- PARTNER LOGOS (The Grayscale Wall)          -->
-            <!-- ========================================== -->
-            <div class="mt-16 lg:mt-20 pt-12 border-t border-black/5">
-                <p class="text-center font-sans text-[0.6rem] uppercase tracking-[0.2em] font-bold text-black/40 mb-8">
-                    Our Valued Partners</p>
-
-                <!-- Logo Container (Grayscale to Color Hover) -->
-                <div
-                    class="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16 opacity-50 transition-all duration-500 hover:opacity-100">
-
-                    <!-- Partner 1 (IATA) -->
-                    <div class="grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer group">
-                        <div
-                            class="w-20 h-12 rounded border border-black/10 flex items-center justify-center bg-black/5 text-[0.6rem] font-bold uppercase tracking-widest text-black/50 group-hover:text-brand-red transition-colors">
-                            IATA
-                        </div>
-                        <!-- NOTE: Replace the above div with your actual <img src="iata-logo.svg"> tag -->
-                    </div>
-
-                    <!-- Partner 2 (TAFI) -->
-                    <div class="grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer group">
-                        <div
-                            class="w-20 h-12 rounded border border-black/10 flex items-center justify-center bg-black/5 text-[0.6rem] font-bold uppercase tracking-widest text-black/50 group-hover:text-brand-red transition-colors">
-                            TAFI
+                        <div class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-red/20 border border-brand-red/30 z-10">
+                            <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
+                            <span class="text-[0.45rem] uppercase tracking-widest text-brand-red font-bold">Verified Stats</span>
                         </div>
                     </div>
 
-                    <!-- Partner 3 (PATA) -->
-                    <div class="grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer group">
-                        <div
-                            class="w-20 h-12 rounded border border-black/10 flex items-center justify-center bg-black/5 text-[0.6rem] font-bold uppercase tracking-widest text-black/50 group-hover:text-brand-red transition-colors">
-                            PATA
-                        </div>
+                    <!-- 4. The Flying Route (SVG) -->
+                    <div class="col-span-1 sm:col-span-2 bg-transparent relative h-16 lg:h-20 flex items-center justify-center">
+                        <!-- The path line -->
+                        <svg class="absolute w-full h-full" viewBox="0 0 400 40">
+                            <path d="M 20 20 Q 200 0 380 20" stroke="#ffffff20" stroke-width="2" stroke-dasharray="4 4" fill="none" />
+                            <path d="M 20 20 Q 200 0 380 20" stroke="#D9181E" stroke-width="1.5" stroke-dasharray="4 4" fill="none" opacity="0.6" />
+                            
+                            <!-- The Plane on the path -->
+                            <g class="animate-fly-plane" style="offset-path: path('M 20 20 Q 200 0 380 20');">
+                                <svg x="-8" y="-8" width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M21 16V14L13 9V3.5C13 2.67 12.33 2 11.5 2C10.67 2 10 2.67 10 3.5V9L2 14V16L10 13.5V19L8 20.5V22L11.5 21L15 22V20.5L13 19V13.5L21 16Z" fill="#D9181E"/>
+                                </svg>
+                            </g>
+                            
+                            <!-- Start Node -->
+                            <circle cx="20" cy="20" r="4" fill="#D9181E" class="animate-pulse" />
+                            <circle cx="380" cy="20" r="4" fill="#ffffff" />
+                        </svg>
                     </div>
-
-                    <!-- Partner 4 (ASTA) -->
-                    <div class="grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer group">
-                        <div
-                            class="w-20 h-12 rounded border border-black/10 flex items-center justify-center bg-black/5 text-[0.6rem] font-bold uppercase tracking-widest text-black/50 group-hover:text-brand-red transition-colors">
-                            ASTA
-                        </div>
-                    </div>
-
-                    <!-- Partner 5 (Generic) -->
-                    <div class="grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer group">
-                        <div
-                            class="w-20 h-12 rounded border border-black/10 flex items-center justify-center bg-black/5 text-[0.6rem] font-bold uppercase tracking-widest text-black/50 group-hover:text-brand-red transition-colors">
-                            TRAV
-                        </div>
-                    </div>
-
                 </div>
             </div>
 
         </div>
     </section>
-
-
-
-
 
 
 

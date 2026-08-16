@@ -224,3 +224,35 @@ body {
 .animate-ping-slow {
     animation: ping-slow 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
+
+
+
+
+
+/* --- DASHBOARD ANIMATIONS --- */
+@keyframes growBar {
+    0% { height: 0%; }
+    100% { height: var(--bar-height); }
+}
+.bar-animate {
+    animation: growBar 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.bar-1 { --bar-height: 80%; }
+.bar-2 { --bar-height: 65%; }
+.bar-3 { --bar-height: 45%; }
+.bar-4 { --bar-height: 55%; }
+
+@keyframes flyPlane {
+    0% { offset-distance: 0%; }
+    100% { offset-distance: 100%; }
+}
+.animate-fly-plane {
+    animation: flyPlane 6s linear infinite;
+}
+
+/* Progress Ring SVG stroke offset calculation */
+.progress-ring__circle {
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
