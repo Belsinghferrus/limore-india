@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Limored | Premium Corporate Travel</title>
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- PREMIUM TYPOGRAPHY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Syne', 'sans-serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#0A0A0A',
+                            white: '#FCFCFC',
+                            red: '#D9181E',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .logo-e {
+            display: inline-block;
+            width: 1.1em;
+            height: 1.1em;
+            border: 3px solid #D9181E;
+            border-radius: 50%;
+            position: relative;
+            margin-left: -2px; 
+            vertical-align: middle;
+            transform: translateY(-10%);
+        }
+        .logo-e::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0.5em;
+            height: 1px;
+            background-color: #FCFCFC;
+        }
+    </style>
+</head>
+<body class="bg-brand-white text-brand-black antialiased overflow-x-hidden">
+
+    <!-- (Your Navbar goes here) -->
+
+    <!-- ========================================== -->
+    <!-- ABOUT HERO: THE ORIGIN STORY (EDITORIAL)    -->
+    <!-- ========================================== -->
+    <main class="pt-20 min-h-screen flex items-center relative bg-brand-white overflow-hidden">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center py-12 lg:py-20">
+            
+            <!-- LEFT COLUMN: The Origin Story Typography -->
+            <div class="flex flex-col justify-center space-y-8 relative z-10">
+                
+                <div class="flex items-center gap-3">
+                    <span class="w-6 h-px bg-brand-red"></span>
+                    <p class="font-sans text-[0.65rem] uppercase tracking-[0.2em] font-bold text-brand-red">Since 2014</p>
+                </div>
+
+                <h1 class="font-display text-5xl lg:text-[4.5rem] xl:text-[5.5rem] font-bold text-brand-black leading-[0.9] tracking-tight">
+                    Architects of<br>
+                    <span class="font-serif italic font-normal text-brand-red">Global Transit.</span>
+                </h1>
+
+                <div class="space-y-5 text-black/60 text-sm lg:text-base leading-relaxed max-w-md font-light">
+                    <p>
+                        Founded in 2014, Limored was built on a singular principle: the modern corporation doesn't just need transport—it needs an invisible, precision-engineered logistical spine.
+                    </p>
+                    <p>
+                        Today, from the bustling terminals of Dubai to the backwaters of Kerala, we orchestrate executive mobility with absolute zero compromise.
+                    </p>
+                </div>
+
+                <!-- The Call to Action Button -->
+                <div class="pt-4">
+                    <a href="#team" class="inline-flex items-center gap-3 bg-brand-black text-white px-8 py-3.5 text-[0.65rem] font-bold uppercase tracking-widest transition-all duration-300 hover:bg-brand-red group">
+                        <span>Meet Our Team</span>
+                        <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- A subtle Founder's Note (Editorial touch) -->
+                <div class="pt-6 border-t border-black/5 mt-4 max-w-xs">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-black/5 flex items-center justify-center text-brand-black font-bold text-xs">L</div>
+                        <div>
+                            <p class="text-[0.6rem] font-bold uppercase tracking-wider text-brand-black">Founded in Dubai</p>
+                            <p class="text-[0.5rem] uppercase tracking-widest text-black/40">Global Operations India & UAE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Cinematic Visual -->
+            <div class="relative h-[400px] lg:h-[600px] w-full rounded-2xl overflow-hidden border border-black/5 shadow-2xl shadow-black/10 bg-brand-black/5">
+                
+                <!-- The Mood Image (Cinematic Private Jet) -->
+                <img src="./assets/images/about/jet.jpg" 
+                     alt="Limored Executive Private Jet" 
+                     class="w-full h-full object-cover saturate-[0.8] contrast-110">
+                
+                <!-- Cinematic Red Light Leak (Oval glow on the right side) -->
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-brand-red/30 mix-blend-overlay pointer-events-none"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-black/40 via-transparent to-transparent pointer-events-none"></div>
+
+                <!-- Floating Location Data "HUD" (Minimal) -->
+                <div class="absolute bottom-6 left-6 bg-black/60 backdrop-blur-md border border-white/10 px-4 py-3 rounded-lg shadow-xl">
+                    <div class="flex items-center gap-3">
+                        <div class="w-2 h-2 bg-brand-red rounded-full animate-pulse"></div>
+                        <div>
+                            <p class="text-[0.5rem] uppercase tracking-widest text-gray-400 font-mono">Current Operational Hub</p>
+                            <p class="text-xs font-bold text-white">Dubai International (DXB)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Scale Badge -->
+                <div class="absolute top-6 right-6 bg-white/90 backdrop-blur-sm border border-black/5 px-4 py-2.5 rounded-lg shadow-xl hidden lg:block">
+                    <p class="text-[0.45rem] uppercase tracking-widest text-black/50 font-bold">Fleet Strength</p>
+                    <p class="font-display text-xl font-bold text-brand-black text-right">2500+</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
