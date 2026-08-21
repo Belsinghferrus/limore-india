@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubai Service | Limore</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- PREMIUM TYPOGRAPHY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Syne:wght@400;600;700;800&family=Playfair+serif:ital,wght@0,400;0,600;1,400&serif=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Syne', 'sans-serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Playfair serif', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#0A0A0A',
+                            white: '#FCFCFC',
+                            red: '#D9181E',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .logo-e {
+            serif: inline-block;
+            width: 1.1em;
+            height: 1.1em;
+            border: 3px solid #D9181E;
+            border-radius: 50%;
+            position: relative;
+            margin-left: -2px;
+            vertical-align: middle;
+            transform: translateY(-10%);
+        }
+
+        .logo-e::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0.5em;
+            height: 1px;
+            background-color: #FCFCFC;
+        }
+    </style>
+</head>
+
+<body class="bg-brand-white text-brand-black antialiased overflow-x-hidden">
+    <section class="pt-20 min-h-screen lg:h-screen relative bg-brand-white overflow-hidden">
+    
+        <!-- Full-Bleed Image Column (Right Side) -->
+        <div class="absolute inset-y-0 right-0 w-full lg:w-[55%] h-full overflow-hidden">
+            <img src="./assets/images/home/dubai-service.jpg" 
+                 alt="Dubai Skyline" 
+                 class="w-full h-full object-cover saturate-[0.9] contrast-110 transition-transform duration-[8s] hover:scale-105">
+            
+            <!-- The "Dissolve" Gradient: Blends the right image into the pure white left side -->
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/80 to-transparent lg:from-brand-white lg:via-brand-white/40 lg:to-transparent"></div>
+            
+            <!-- Subtle Red cinematic light leak on the image -->
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-red/10 via-transparent to-transparent mix-blend-multiply"></div>
+        </div>
+    
+        <!-- The Text & CTA (Left Side) - No Boxes. Pure Typography. -->
+        <div class="relative z-10 max-w-[90rem] mx-auto px-6 lg:px-12 h-full flex items-center">
+            
+            <div class="lg:w-[65%] flex flex-col justify-center py-12 lg:py-0">
+                
+                <!-- Editorial Eyebrow (Minimalist) -->
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="w-10 h-px bg-brand-red"></span>
+                    <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">The Gateway to the Gulf</p>
+                </div>
+    
+                <!-- Massive Experimental Serif Typography (Breaking the Layout) -->
+                <h1 class="font-serif text-6xl lg:text-8xl xl:text-9xl font-bold text-brand-black leading-[0.85] tracking-tight">
+                    A<br>
+                    <span class="text-brand-red italic">Gateway</span><br>
+                    to the Gulf.
+                </h1>
+    
+                <!-- The Subtext (Clean, no box) -->
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md mt-8 font-light">
+                    From the bustling corridors of the Dubai Mall to the high-stakes conference halls of the World Trade Centre, Limore connects the pulse of India to the heart of the UAE with absolute precision and luxury.
+                </p>
+    
+                <!-- The Sharp, Flat, Solid Red CTA -->
+                <div class="mt-10 flex flex-col items-start gap-4">
+                    <a href="#" class="inline-flex items-center gap-3 bg-brand-red text-white px-10 py-4 text-[0.7rem] font-bold uppercase tracking-widest transition-all duration-300 hover:bg-brand-black group">
+                        Plan Your Dubai Journey
+                        <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+    
+                    <!-- The "Badge" reimagined as an editorial footline -->
+                    <div class="flex items-center gap-3 border-l-2 border-brand-red pl-3 py-1">
+                        <i class="fa-regular fa-circle-check text-brand-red text-[10px]"></i>
+                        <span class="font-sans text-[0.6rem] uppercase tracking-[0.2em] font-bold text-brand-black/50">UAE Visa & Flight Assistance Available</span>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-16 lg:py-24 bg-brand-white relative overflow-hidden">
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <!-- Section Header -->
+            <div class="flex items-center gap-4 mb-12">
+                <span class="w-10 h-px bg-brand-red"></span>
+                <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">Our Capabilities</p>
+            </div>
+    
+            <!-- The 3-Column Grid (1, 2, 3 on top; 4 spans full width below) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 border-y border-black/10 divide-y md:divide-y-0 md:divide-x divide-black/10">
+                
+                <!-- Item 1 -->
+                <div class="group p-8 lg:p-12 flex flex-col justify-between hover:bg-brand-black/5 transition-colors duration-300">
+                    <div class="flex items-start justify-between mb-8">
+                        <div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors duration-300 rounded-none">
+                            <i class="fa-solid fa-car-side text-lg"></i>
+                        </div>
+                        <span class="font-serif text-5xl font-bold text-black/10 group-hover:text-brand-red/20 transition-colors duration-300">01</span>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Air & Ground Mobility</h3>
+                        <p class="text-brand-black/60 text-sm leading-relaxed font-light">Executive Dubai airport transfers, professional chauffeur services, and private car hire with a driver for the duration of your stay.</p>
+                    </div>
+                </div>
+    
+                <!-- Item 2 -->
+                <div class="group p-8 lg:p-12 flex flex-col justify-between hover:bg-brand-black/5 transition-colors duration-300">
+                    <div class="flex items-start justify-between mb-8">
+                        <div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors duration-300 rounded-none">
+                            <i class="fa-solid fa-bell-concierge text-lg"></i>
+                        </div>
+                        <span class="font-serif text-5xl font-bold text-black/10 group-hover:text-brand-red/20 transition-colors duration-300">02</span>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Concierge & Travel Planning</h3>
+                        <p class="text-brand-black/60 text-sm leading-relaxed font-light">Dedicated UAE visa assistance, strategic flight bookings, and curated hotel reservations across Dubai and the UAE.</p>
+                    </div>
+                </div>
+    
+                <!-- Item 3 -->
+                <div class="group p-8 lg:p-12 flex flex-col justify-between hover:bg-brand-black/5 transition-colors duration-300">
+                    <div class="flex items-start justify-between mb-8">
+                        <div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors duration-300 rounded-none">
+                            <i class="fa-solid fa-compass text-lg"></i>
+                        </div>
+                        <span class="font-serif text-5xl font-bold text-black/10 group-hover:text-brand-red/20 transition-colors duration-300">03</span>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Tours & Adventures</h3>
+                        <p class="text-brand-black/60 text-sm leading-relaxed font-light">Private Dubai city tours, thrilling desert safari arrangements, and complete UAE tour packages.</p>
+                    </div>
+                </div>
+    
+                <!-- Item 4 (Full Width Span) -->
+                <div class="md:col-span-3 group p-8 lg:p-12 border-t md:border-t-0 md:border-t border-black/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 bg-brand-black/5 hover:bg-brand-red/5 transition-colors duration-300">
+                    <div class="flex items-start gap-6 flex-1">
+                        <div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors duration-300 rounded-none shrink-0">
+                            <i class="fa-solid fa-briefcase text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Corporate & Event Logistics</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light max-w-2xl">Seamless conference transportation, exhibition logistics, wedding transport, and group travel solutions for large delegations.</p>
+                        </div>
+                    </div>
+                    <div class="text-right shrink-0">
+                        <span class="font-serif text-5xl font-bold text-black/10 group-hover:text-brand-red/20 transition-colors duration-300 block">04</span>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 3: ICONIC DUBAI (THE BENTO GRID)    -->
+    <!-- ========================================== -->
+    <section class="py-16 lg:py-24 bg-brand-white relative overflow-hidden">
+        <div class="max-w-[100rem] mx-auto px-6 lg:px-12">
+            
+            <!-- Section Header (Anti-Template Editorial) -->
+            <div class="flex items-center gap-4 mb-12">
+                <span class="w-10 h-px bg-brand-red"></span>
+                <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">Iconic Experiences</p>
+            </div>
+
+            <!-- The Asymmetrical Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-y-4">
+                
+                <!-- CARD 1: Burj Khalifa & Dubai Mall (The Heavyweight - 2x2) -->
+                <div class="group relative lg:col-span-2 lg:row-span-2 h-[400px] lg:h-[600px] overflow-hidden bg-brand-black cursor-pointer rounded-none">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea904ac677e?q=80&w=2070&auto=format&fit=crop" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Burj Khalifa">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
+                    
+                    <!-- Architectural Number -->
+                    <span class="absolute top-6 right-6 font-serif text-6xl font-bold text-white/10">01</span>
+
+                    <div class="absolute bottom-0 left-0 p-8 lg:p-10 max-w-lg">
+                        <div class="w-10 h-1 bg-brand-red mb-4 group-hover:w-16 transition-all duration-500"></div>
+                        <h3 class="font-serif text-3xl lg:text-5xl font-bold text-white tracking-tight leading-tight">Burj Khalifa & Dubai Mall</h3>
+                        <p class="text-gray-300 text-sm mt-3 font-light max-w-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">Ascend the world's tallest tower and explore the world's largest mall, complete with the Dubai Fountain.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 2: Palm Jumeirah & Dubai Marina (Tall - 1x2) -->
+                <div class="group relative lg:col-span-1 lg:row-span-2 h-[400px] lg:h-[600px] overflow-hidden bg-brand-black cursor-pointer rounded-none">
+                    <img src="https://images.unsplash.com/photo-1546412414-e1885259563a?q=80&w=2070&auto=format&fit=crop" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Palm Jumeirah">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
+                    
+                    <span class="absolute top-6 right-6 font-serif text-5xl font-bold text-white/10">02</span>
+
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <div class="w-10 h-1 bg-brand-red mb-4 group-hover:w-16 transition-all duration-500"></div>
+                        <h3 class="font-serif text-2xl lg:text-3xl font-bold text-white tracking-tight leading-tight">Palm Jumeirah & Marina</h3>
+                        <p class="text-gray-300 text-sm mt-2 font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500">Walk the pristine beaches of the man-made palm and dine along the vibrant marina waterfront.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 3: Museum of the Future (Square - 1x1) -->
+                <div class="group relative lg:col-span-1 lg:row-span-1 h-[200px] lg:h-[300px] overflow-hidden bg-brand-black cursor-pointer rounded-none">
+                    <img src="https://images.unsplash.com/photo-1577720643272-265f09367456?q=80&w=2070&auto=format&fit=crop" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Museum of the Future">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
+                    
+                    <span class="absolute top-4 right-4 font-serif text-4xl font-bold text-white/10">03</span>
+
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="font-serif text-xl font-bold text-white tracking-tight">Museum of the Future</h3>
+                        <p class="text-gray-300 text-xs mt-1 font-light line-clamp-2 group-hover:line-clamp-none">Experience the architectural marvel of the silver torus and glimpse the innovations of tomorrow.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 4: Desert Safari (Square - 1x1) -->
+                <div class="group relative lg:col-span-1 lg:row-span-1 h-[200px] lg:h-[300px] overflow-hidden bg-brand-black cursor-pointer rounded-none">
+                    <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=2070&auto=format&fit=crop" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Desert Safari">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
+                    
+                    <span class="absolute top-4 right-4 font-serif text-4xl font-bold text-white/10">04</span>
+
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="font-serif text-xl font-bold text-white tracking-tight">Desert Safari</h3>
+                        <p class="text-gray-300 text-xs mt-1 font-light line-clamp-2 group-hover:line-clamp-none">Leave the city behind for a thrilling dune bashing adventure and a luxury desert camp dinner under the stars.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 5: Gold & Spice Souks (Wide - 2x1) -->
+                <div class="group relative lg:col-span-2 lg:row-span-1 h-[300px] lg:h-[300px] overflow-hidden bg-brand-black cursor-pointer rounded-none">
+                    <img src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?q=80&w=2070&auto=format&fit=crop" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Gold and Spice Souks">
+                    <div class="absolute inset-0 bg-gradient-to-r from-brand-black/90 via-brand-black/30 to-transparent"></div>
+                    
+                    <span class="absolute top-6 right-6 font-serif text-5xl font-bold text-white/10">05</span>
+
+                    <div class="absolute bottom-0 left-0 p-8 lg:p-10 max-w-lg">
+                        <div class="w-10 h-1 bg-brand-red mb-4 group-hover:w-16 transition-all duration-500"></div>
+                        <h3 class="font-serif text-3xl font-bold text-white tracking-tight">Gold & Spice Souks</h3>
+                        <p class="text-gray-300 text-sm mt-2 font-light max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">Immerse yourself in the fragrant, ancient lanes of Deira's traditional spice and gold markets.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 6: Al Fahidi Historical District (Wide - 2x1) -->
+                <div class="group relative lg:col-span-2 lg:row-span-1 h-[300px] lg:h-[300px] overflow-hidden bg-brand-black cursor-pointer rounded-none">
+                    <img src="https://images.unsplash.com/photo-1590050752117-238cb0f5b70e?q=80&w=2070&auto=format&fit=crop" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Al Fahidi Historical District">
+                    <div class="absolute inset-0 bg-gradient-to-r from-brand-black/90 via-brand-black/30 to-transparent"></div>
+                    
+                    <span class="absolute top-6 right-6 font-serif text-5xl font-bold text-white/10">06</span>
+
+                    <div class="absolute bottom-0 left-0 p-8 lg:p-10 max-w-lg">
+                        <div class="w-10 h-1 bg-brand-red mb-4 group-hover:w-16 transition-all duration-500"></div>
+                        <h3 class="font-serif text-3xl font-bold text-white tracking-tight">Al Fahidi Historical District</h3>
+                        <p class="text-gray-300 text-sm mt-2 font-light max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">Step back in time and wander the winding alleys of Dubai's original heritage village.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 4: THE INDIA–DUBAI CORRIDOR         -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden">
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- LEFT COLUMN: The Editorial Text -->
+                <div class="flex flex-col justify-center">
+                    
+                    <!-- Editorial Eyebrow -->
+                    <div class="flex items-center gap-4 mb-8">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">India ↔ UAE Connectivity</p>
+                    </div>
+
+                    <!-- Massive Serif Headline -->
+                    <h2 class="font-serif text-5xl lg:text-6xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                        From God's Own Country<br>
+                        <span class="italic font-normal text-brand-red">to the City of Gold.</span>
+                    </h2>
+
+                    <!-- Body Paragraph -->
+                    <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-lg mt-8 font-light">
+                        We curate the entire journey from South India to the UAE. We offer comprehensive Dubai tour packages from Kerala, flights from Kochi, Trivandrum, and Kozhikode, and a dedicated Limore chauffeur waiting for you the moment you clear arrivals.
+                        <br><br>
+                        Whether it's a luxury Dubai family tour from Kerala or urgent corporate travel, we handle the transition seamlessly.
+                    </p>
+
+                    <!-- The "Included" List (Architectural Invoice Style) -->
+                    <div class="mt-10 pt-6 border-t border-black/10">
+                        <p class="text-[0.6rem] uppercase tracking-[0.2em] font-bold text-brand-black/40 mb-4">Included In Every Journey</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-red text-xs"></i>
+                                <span class="text-brand-black/70 text-sm font-light">Flight Booking</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-red text-xs"></i>
+                                <span class="text-brand-black/70 text-sm font-light">UAE Visa Assistance</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-red text-xs"></i>
+                                <span class="text-brand-black/70 text-sm font-light">Private Airport Transfers</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-red text-xs"></i>
+                                <span class="text-brand-black/70 text-sm font-light">Optional Chauffeur City Tours</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- The Sharp CTA Button -->
+                    <div class="mt-10">
+                        <a href="#" class="inline-flex items-center gap-3 bg-brand-red text-white px-10 py-4 text-[0.7rem] font-bold uppercase tracking-widest hover:bg-brand-black transition-colors duration-300 group rounded-none">
+                            View India-Dubai Packages
+                            <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: The Minimalist Flight Command Panel -->
+                <div class="relative h-[400px] lg:h-[650px] bg-brand-black overflow-hidden border border-black/5 rounded-none">
+                    
+                    <!-- Background Tech Grid (Subtle) -->
+                    <div class="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] bg-[size:20px_20px] opacity-40"></div>
+                    
+                    <!-- The Stylized Flight Path SVG -->
+                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        
+                        <!-- The Red Glowing Arc (Flight Path) -->
+                        <path d="M 80 500 Q 300 100 520 80" stroke="#D9181E" stroke-width="2" stroke-dasharray="8 8" opacity="0.6" />
+                        <path d="M 80 500 Q 300 100 520 80" stroke="#D9181E" stroke-width="10" opacity="0.2" filter="blur(6px)" />
+
+                        <!-- Origin Node: Kochi (COK) -->
+                        <circle cx="80" cy="500" r="6" fill="#D9181E" class="animate-pulse" />
+                        <text x="40" y="540" fill="#ffffff" font-family="Playfair Display, serif" font-weight="700" font-size="20">COK</text>
+                        <text x="40" y="560" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="10" letter-spacing="2" uppercase>Kochi, Kerala</text>
+
+                        <!-- Destination Node: Dubai (DXB) -->
+                        <circle cx="520" cy="80" r="6" fill="#D9181E" class="animate-pulse" />
+                        <text x="540" y="40" fill="#D9181E" font-family="Playfair Display, serif" font-weight="700" font-size="20">DXB</text>
+                        <text x="540" y="60" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="10" letter-spacing="2" uppercase>Dubai, UAE</text>
+
+                        <!-- The tiny plane icon on the path -->
+                        <g class="animate-pulse">
+                            <path d="M 80 500 Q 300 100 520 80" fill="none" stroke="none" id="flightPath" />
+                            <circle r="3" fill="#D9181E">
+                                <animateMotion dur="6s" repeatCount="indefinite">
+                                    <mpath href="#flightPath" />
+                                </animateMotion>
+                            </circle>
+                        </g>
+                    </svg>
+
+                    <!-- Left Edge Red Spine (Architectural Detail) -->
+                    <div class="absolute top-0 left-0 w-1 h-full bg-brand-red/30"></div>
+
+                    <!-- Top Label (Clean, no box) -->
+                    <div class="absolute top-6 right-6 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                        <span class="text-[0.5rem] uppercase tracking-widest text-gray-400 font-mono">Live Route</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 5: UNRIVALED CORPORATE SUPPORT      -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <!-- Engineering Blueprint Grid Background (Subtle depth) -->
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
+
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12 relative z-10">
+            
+            <!-- Stark Editorial Header -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-12">
+                
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">B2B Capabilities</p>
+                    </div>
+
+                    <h2 class="font-serif text-5xl lg:text-7xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                        Logistical<br>
+                        <span class="italic font-normal text-brand-red">Heavyweights.</span>
+                    </h2>
+                </div>
+
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md font-light lg:text-right">
+                    Dubai is the business capital of the Middle East. We are the silent force behind major exhibitions, international conferences, and exclusive corporate retreats. Our fleet handles the complex arrivals and departures of global delegates, ensuring that your event runs flawlessly from the tarmac to the boardroom.
+                </p>
+
+            </div>
+
+            <!-- The Sharp Horizontal "Command Strip" -->
+            <div class="border-y border-black/10 divide-y lg:divide-y-0 lg:divide-x divide-black/10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
+                
+                <!-- Capability 1 -->
+                <div class="group relative p-6 lg:p-8 flex flex-col items-start justify-between hover:bg-brand-black/5 transition-colors duration-300">
+                    <div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red mb-6 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg>
+                    </div>
+                    <div class="flex flex-col w-full">
+                        <h4 class="font-sans text-[0.65rem] uppercase tracking-widest font-bold text-brand-black">Conference Transport</h4>
+                    </div>
+                    <!-- The Precision Red Hover Line -->
+                    <div class="absolute bottom-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Capability 2 -->
+                <div class="group relative p-6 lg:p-8 flex flex-col items-start justify-between hover:bg-brand-black/5 transition-colors duration-300">
+                    <div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red mb-6 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
+                    </div>
+                    <div class="flex flex-col w-full">
+                        <h4 class="font-sans text-[0.65rem] uppercase tracking-widest font-bold text-brand-black">Exhibition Logistics</h4>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Capability 3 -->
+                <div class="group relative p-6 lg:p-8 flex flex-col items-start justify-between hover:bg-brand-black/5 transition-colors duration-300">
+                    <div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red mb-6 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
+                    </div>
+                    <div class="flex flex-col w-full">
+                        <h4 class="font-sans text-[0.65rem] uppercase tracking-widest font-bold text-brand-black">Corporate Group Transport</h4>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Capability 4 -->
+                <div class="group relative p-6 lg:p-8 flex flex-col items-start justify-between hover:bg-brand-black/5 transition-colors duration-300">
+                    <div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red mb-6 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+                    </div>
+                    <div class="flex flex-col w-full">
+                        <h4 class="font-sans text-[0.65rem] uppercase tracking-widest font-bold text-brand-black">Event & Wedding Transport</h4>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Capability 5 -->
+                <div class="group relative p-6 lg:p-8 flex flex-col items-start justify-between hover:bg-brand-black/5 transition-colors duration-300 sm:col-span-2 lg:col-span-1">
+                    <div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red mb-6 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z"/></svg>
+                    </div>
+                    <div class="flex flex-col w-full">
+                        <h4 class="font-sans text-[0.65rem] uppercase tracking-widest font-bold text-brand-black">Hotel Transfer Coordination</h4>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 6: THE LIMORE PROMISE (WHY US)      -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <!-- Editorial Header -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-12">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">The Limore Promise</p>
+                    </div>
+                    <h2 class="font-serif text-5xl lg:text-6xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                        Unwavering <span class="italic font-normal text-brand-red">Trust.</span>
+                    </h2>
+                </div>
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md font-light lg:text-right">
+                    Traveling to a new country should be effortless. We eliminate every point of friction before you even step onto the tarmac.
+                </p>
+            </div>
+
+            <!-- The Sharp 2x2 Architectural Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 border-t border-l border-black/10">
+                
+                <!-- Promise 1: Local UAE Expertise -->
+                <div class="group relative p-8 lg:p-12 border-b border-r border-black/10 hover:bg-brand-black/5 transition-colors duration-300">
+                    <!-- Watermark Number -->
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">01</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-location-dot text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Local UAE Expertise</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">With a dedicated HQ in Dubai, we have deep, established relationships with local tour operators, hotels, and immigration services.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Precision Top Red Line (Draws on Hover) -->
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Promise 2: Seamless Visa & Flight Assistance -->
+                <div class="group relative p-8 lg:p-12 border-b border-r border-black/10 hover:bg-brand-black/5 transition-colors duration-300">
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">02</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-passport text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Seamless Visa & Flight Assistance</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">We handle the heavy bureaucratic lifting. Your visa, flight booking, and hotel reservations are managed end-to-end by our team.</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Promise 3: Premium Fleet for the UAE -->
+                <div class="group relative p-8 lg:p-12 border-b border-r border-black/10 hover:bg-brand-black/5 transition-colors duration-300 md:border-b-0">
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">03</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-car text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Premium Fleet for the UAE</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">Our cars are immaculate, air-conditioned, and suited perfectly for the desert heat. We also provide luxury vans and buses for group travel.</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Promise 4: 24/7 Concierge in Dubai -->
+                <div class="group relative p-8 lg:p-12 border-r border-black/10 hover:bg-brand-black/5 transition-colors duration-300 md:border-r-0">
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">04</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-headset text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">24/7 Concierge in Dubai</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">A dedicated, multi-lingual support team available round-the-clock to address any on-ground needs or last-minute itinerary changes.</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 7: CROSS-BORDER TESTIMONIAL         -->
+    <!-- ========================================== -->
+    <section class="py-0 bg-brand-white relative overflow-hidden border-b border-black/10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 h-auto lg:h-[600px]">
+            
+            <!-- LEFT: The Burj Al Arab Image (Sharp Diagonal Cut) -->
+            <div class="relative h-[350px] lg:h-auto overflow-hidden bg-brand-black">
+                <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=2070&auto=format&fit=crop" 
+                     alt="Burj Al Arab at Night" 
+                     class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] hover:scale-105">
+                
+                <!-- Dark Cinematic Overlay -->
+                <div class="absolute inset-0 bg-brand-black/30 mix-blend-multiply"></div>
+                <div class="absolute inset-0 bg-gradient-to-tr from-brand-red/20 via-transparent to-transparent"></div>
+
+                <!-- The Red Spine Divider (Sharp cut into the white space) -->
+                <div class="absolute top-0 right-0 w-1 h-full bg-brand-red hidden lg:block z-20"></div>
+                <!-- Mobile horizontal red line -->
+                <div class="lg:hidden absolute bottom-0 left-0 w-full h-1 bg-brand-red z-20"></div>
+            </div>
+
+            <!-- RIGHT: The Crisp White Text Block -->
+            <div class="relative p-10 lg:p-16 flex flex-col justify-center bg-brand-white">
+                
+                <!-- Massive Background Quote Mark (Watermark) -->
+                <span class="absolute top-10 right-10 font-serif text-[15rem] leading-none text-brand-red/5 select-none pointer-events-none">"</span>
+
+                <!-- The Quote -->
+                <div class="relative z-10 space-y-8">
+                    <div class="w-12 h-1 bg-brand-red"></div>
+                    
+                    <blockquote class="font-serif text-2xl lg:text-3xl font-medium text-brand-black leading-[1.4] italic max-w-xl">
+                        "Taking our entire team from Kochi to the Dubai Expo was incredibly stressful to plan, but Limore made it look effortless. They booked the flights, arranged the visas, managed the transfers, and organized a fantastic city tour. Truly a world-class operation."
+                    </blockquote>
+                    
+                    <!-- Author Line -->
+                    <div class="pt-6 border-t border-black/10 flex items-center gap-4">
+                        <div class="w-2 h-2 bg-brand-red rotate-45"></div>
+                        <div>
+                            <p class="font-sans text-[0.65rem] uppercase tracking-[0.15em] font-bold text-brand-black">Senior Director</p>
+                            <p class="font-sans text-[0.6rem] uppercase tracking-widest text-black/40 font-light mt-1">MNC Manufacturing Group, Kerala</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 8: THE FINAL CTA (GATEWAY AWAITS)   -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-black relative overflow-hidden border-b border-white/5">
+        
+        <!-- Background Engineering Grid & Red Glow -->
+        <div class="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-red/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <!-- Top and Bottom Architectural Red Threads -->
+        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-brand-red/50 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-brand-red/50 to-transparent"></div>
+
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12 relative z-10 text-center">
+            
+            <!-- Editorial Eyebrow -->
+            <div class="flex items-center justify-center gap-4 mb-6">
+                <span class="w-10 h-px bg-brand-red"></span>
+                <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-white/40">Your Gateway</p>
+                <span class="w-10 h-px bg-brand-red"></span>
+            </div>
+
+            <!-- Massive Headline -->
+            <h2 class="font-serif text-5xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight">
+                Your Gateway to the<br>
+                <span class="italic font-normal text-brand-red">Gulf Awaits.</span>
+            </h2>
+
+            <!-- Subtext -->
+            <p class="text-gray-400 text-sm lg:text-base leading-relaxed max-w-xl mx-auto mt-6 font-light">
+                Whether it's a family holiday from Kerala or a high-stakes corporate conference, let Limore transform your journey into the UAE.
+            </p>
+
+            <!-- The Massive Sharp CTA Button -->
+            <div class="mt-12 flex justify-center">
+                <a href="#" class="inline-flex items-center gap-3 bg-brand-red text-white px-12 py-5 text-[0.7rem] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-black transition-colors duration-300 group rounded-none shadow-lg shadow-brand-red/20">
+                    Book Your Dubai Experience Now
+                    <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+<footer>
+
+</footer>
+
+</html>
