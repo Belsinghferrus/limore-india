@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Weddings | Limored</title>
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Syne', 'sans-serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#0A0A0A',
+                            white: '#FCFCFC',
+                            red: '#D9181E',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-white text-brand-black antialiased overflow-x-hidden">
+
+    <!-- (Your Navbar goes here) -->
+
+    <!-- ========================================== -->
+    <!-- EVENTS HERO: THE GRAND ENTRANCE             -->
+    <!-- ========================================== -->
+    <section class="pt-20 min-h-screen lg:h-screen relative bg-brand-white overflow-hidden flex items-center">
+        
+        <!-- Full-Bleed Cinematic Image (Luxury Fleet & Glowing Venue) -->
+        <div class="absolute inset-y-0 right-0 w-full lg:w-[65%] h-full overflow-hidden">
+            <!-- Using a high-res luxury car / palace venue image -->
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2070&auto=format&fit=crop" 
+                 alt="Luxury Fleet at Event Venue" 
+                 class="w-full h-full object-cover saturate-[0.95] contrast-110 transition-transform duration-[8s] hover:scale-105">
+            
+            <!-- The "Dissolve" Gradient (Melts the image into pure white on the left) -->
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/70 to-transparent lg:via-brand-white/30"></div>
+            
+            <!-- Cinematic Red Light Leak -->
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-red/10 via-transparent to-transparent mix-blend-multiply"></div>
+        </div>
+
+        <!-- The Text & CTA Column (Pure Typography) -->
+        <div class="relative z-10 max-w-[90rem] mx-auto px-6 lg:px-12 w-full">
+            <div class="lg:w-[65%] flex flex-col justify-center py-12 lg:py-0">
+                
+                <!-- Editorial Eyebrow -->
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="w-10 h-px bg-brand-red"></span>
+                    <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">Corporate Galas & Luxury Weddings</p>
+                </div>
+
+                <!-- Massive Serif Headline -->
+                <h1 class="font-serif text-6xl lg:text-8xl xl:text-9xl font-bold text-brand-black leading-[0.85] tracking-tight">
+                    Orchestrating<br>
+                    <span class="text-brand-red italic">the Unforgettable.</span>
+                </h1>
+
+                <!-- The Subtext -->
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md mt-8 font-light">
+                    From the high-stakes corporate product launch to the dream destination wedding, Limore manages the complex logistics of transportation. We ensure every guest arrives with absolute precision and elegance.
+                </p>
+
+                <!-- The Sharp, Flat, Solid Red CTA -->
+                <div class="mt-10 flex flex-col items-start gap-4">
+                    <a href="#" class="inline-flex items-center gap-3 bg-brand-red text-white px-10 py-4 text-[0.7rem] font-bold uppercase tracking-widest transition-all duration-300 hover:bg-brand-black group rounded-none">
+                        Plan Your Event
+                        <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Sharp "VIP Access" Floating Badge (Bottom Right) -->
+        <div class="absolute bottom-8 right-8 lg:bottom-12 lg:right-12 z-20 bg-brand-black/70 backdrop-blur-md border-l-4 border-brand-red px-6 py-4 shadow-2xl rounded-none">
+            <div class="flex items-center gap-3">
+                <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <div class="flex flex-col">
+                    <span class="text-[0.5rem] uppercase tracking-widest text-gray-300 font-mono">Seamless Logistics</span>
+                    <span class="text-lg font-serif font-bold text-white">500+ Events Delivered</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 2: SPECIALIZED SERVICES (TRIPTYCH)  -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <!-- Editorial Header -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-12">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">Our Expertise</p>
+                    </div>
+                    <h2 class="font-serif text-5xl lg:text-6xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                        Specialized <span class="italic font-normal text-brand-red">Services.</span>
+                    </h2>
+                </div>
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md font-light lg:text-right">
+                    Every event is unique. We architect the transportation around your specific vision, ensuring flawless precision from the first guest to the last.
+                </p>
+            </div>
+
+            <!-- The 3-Column Architectural Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 border-y border-black/10 divide-y md:divide-y-0 md:divide-x divide-black/10">
+                
+                <!-- Service 1: Corporate Galas & Conferences -->
+                <div class="group relative flex flex-col hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <!-- The Top Image (Aspirational Corporate Boardroom) -->
+                    <div class="relative h-48 lg:h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070&auto=format&fit=crop" 
+                             class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Corporate Conference">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/40 to-transparent"></div>
+                        
+                        <!-- Massive Watermark Number -->
+                        <span class="absolute top-4 right-4 font-serif text-6xl font-bold text-white/20 group-hover:text-brand-red/30 transition-colors duration-300">01</span>
+                        
+                        <!-- The Sharp Square Icon Box (Overlays the image) -->
+                        <div class="absolute bottom-4 left-4 w-12 h-12 border border-brand-red/30 bg-brand-black/60 backdrop-blur-sm flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-briefcase text-lg"></i>
+                        </div>
+                    </div>
+
+                    <!-- The Text Content -->
+                    <div class="p-8 lg:p-10 flex flex-col flex-1">
+                        <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Corporate Galas & Conferences</h3>
+                        <p class="text-brand-black/60 text-sm leading-relaxed font-light flex-1">End-to-end transport for delegates, executives, and international speakers. Tarmac-side shuttle services, timed arrivals, and large-capacity VIP buses for seamless conference logistics.</p>
+                    </div>
+                    
+                    <!-- The Precision Red Thread Bottom Line -->
+                    <div class="absolute bottom-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Service 2: Luxury Weddings & Celebrations -->
+                <div class="group relative flex flex-col hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <div class="relative h-48 lg:h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop" 
+                             class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Luxury Wedding Aisle">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/40 to-transparent"></div>
+                        <span class="absolute top-4 right-4 font-serif text-6xl font-bold text-white/20 group-hover:text-brand-red/30 transition-colors duration-300">02</span>
+                        <div class="absolute bottom-4 left-4 w-12 h-12 border border-brand-red/30 bg-brand-black/60 backdrop-blur-sm flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-ring text-lg"></i>
+                        </div>
+                    </div>
+                    <div class="p-8 lg:p-10 flex flex-col flex-1">
+                        <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Luxury Weddings & Celebrations</h3>
+                        <p class="text-brand-black/60 text-sm leading-relaxed font-light flex-1">A curated fleet for the bride, groom, and family. We handle guests arriving from Dubai and across India, ensuring no one is late for the mandap or the reception.</p>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Service 3: Private Milestones & VIP Parties -->
+                <div class="group relative flex flex-col hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <div class="relative h-48 lg:h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=2070&auto=format&fit=crop" 
+                             class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Private Villa Party">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/40 to-transparent"></div>
+                        <span class="absolute top-4 right-4 font-serif text-6xl font-bold text-white/20 group-hover:text-brand-red/30 transition-colors duration-300">03</span>
+                        <div class="absolute bottom-4 left-4 w-12 h-12 border border-brand-red/30 bg-brand-black/60 backdrop-blur-sm flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-champagne-glasses text-lg"></i>
+                        </div>
+                    </div>
+                    <div class="p-8 lg:p-10 flex flex-col flex-1">
+                        <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Private Milestones & VIP Parties</h3>
+                        <p class="text-brand-black/60 text-sm leading-relaxed font-light flex-1">High-end birthday celebrations, anniversaries, and exclusive private events. Discreet, elegant, and entirely bespoke to your guest list.</p>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 3: THE EVENT FLEET (ARCHITECTURE)   -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <!-- Editorial Header -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-12">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">The Fleet</p>
+                    </div>
+                    <h2 class="font-serif text-5xl lg:text-6xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                        Vehicles for <span class="italic font-normal text-brand-red">Every Role.</span>
+                    </h2>
+                </div>
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md font-light lg:text-right">
+                    From the grand entrance to the final send-off, our immaculate fleet is tailored to the specific needs of your event.
+                </p>
+            </div>
+
+            <!-- The 4-Column Sharp Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-y border-black/10 divide-y sm:divide-y-0 sm:divide-x divide-black/10">
+                
+                <!-- Vehicle 1: The Vintage Classic (Bride & Groom) -->
+                <div class="group relative flex flex-col hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <!-- The Top Image -->
+                    <div class="relative h-56 lg:h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?q=80&w=2070&auto=format&fit=crop" 
+                             class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Vintage Classic Car">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/40 to-transparent"></div>
+                        
+                        <!-- Massive Watermark Number -->
+                        <span class="absolute top-4 right-4 font-serif text-7xl font-bold text-white/20 group-hover:text-brand-red/30 transition-colors duration-300">01</span>
+                        
+                        <!-- The Sharp Square Icon Box -->
+                        <div class="absolute bottom-4 left-4 w-12 h-12 border border-brand-red/30 bg-brand-black/60 backdrop-blur-sm flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-heart text-lg"></i>
+                        </div>
+                    </div>
+
+                    <!-- The Text Content -->
+                    <div class="p-6 lg:p-8 flex flex-col flex-1">
+                        <h3 class="font-serif text-xl font-bold text-brand-black mb-2">The Vintage Classic</h3>
+                        <p class="text-brand-black/60 text-sm leading-relaxed font-light flex-1">Restored vintage Mercedes or Rolls Royce sedans. Perfect for the grand entrance, wedding photos, and the getaway.</p>
+                    </div>
+                    
+                    <!-- The Precision Red Thread Top Line -->
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Vehicle 2: The Wedding Guest Shuttle -->
+                <div class="group relative flex flex-col hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <div class="relative h-56 lg:h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop" 
+                             class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Luxury V-Class Shuttle">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/40 to-transparent"></div>
+                        <span class="absolute top-4 right-4 font-serif text-7xl font-bold text-white/20 group-hover:text-brand-red/30 transition-colors duration-300">02</span>
+                        <div class="absolute bottom-4 left-4 w-12 h-12 border border-brand-red/30 bg-brand-black/60 backdrop-blur-sm flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-users text-lg"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 lg:p-8 flex flex-col flex-1">
+                        <h3 class="font-serif text-xl font-bold text-brand-black mb-2">The Wedding Guest Shuttle</h3>
+                        <p class="text-brand-black/60 text-sm leading-relaxed font-light flex-1">Mercedes V-Class or Luxury Minibuses. Spacious, immaculate, and equipped with bottled water and chargers for guests traveling between hotels and venues.</p>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Vehicle 3: The Executive Chauffeur (VIPs) -->
+                <div class="group relative flex flex-col hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <div class="relative h-56 lg:h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=2070&auto=format&fit=crop" 
+                             class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Executive S-Class Sedan">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/40 to-transparent"></div>
+                        <span class="absolute top-4 right-4 font-serif text-7xl font-bold text-white/20 group-hover:text-brand-red/30 transition-colors duration-300">03</span>
+                        <div class="absolute bottom-4 left-4 w-12 h-12 border border-brand-red/30 bg-brand-black/60 backdrop-blur-sm flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-briefcase text-lg"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 lg:p-8 flex flex-col flex-1">
+                        <h3 class="font-serif text-xl font-bold text-brand-black mb-2">The Executive Chauffeur</h3>
+                        <p class="text-brand-black/60 text-sm leading-relaxed font-light flex-1">Mercedes S-Class sedans. Dedicated private cars for the bride's parents, the CEO of the company, or specific VIP speakers.</p>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Vehicle 4: The Large Capacity Shuttle -->
+                <div class="group relative flex flex-col hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <div class="relative h-56 lg:h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2070&auto=format&fit=crop" 
+                             class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Premium Coach Bus">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/40 to-transparent"></div>
+                        <span class="absolute top-4 right-4 font-serif text-7xl font-bold text-white/20 group-hover:text-brand-red/30 transition-colors duration-300">04</span>
+                        <div class="absolute bottom-4 left-4 w-12 h-12 border border-brand-red/30 bg-brand-black/60 backdrop-blur-sm flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-bus text-lg"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 lg:p-8 flex flex-col flex-1">
+                        <h3 class="font-serif text-xl font-bold text-brand-black mb-2">The Large Capacity Shuttle</h3>
+                        <p class="text-brand-black/60 text-sm leading-relaxed font-light flex-1">15-25 passenger premium coaches for bulk guest transfers between airports, hotels, and the event hall.</p>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 4: THE LIMORE LOGISTICS PROMISE      -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <!-- Editorial Header -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-12">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">How We Execute</p>
+                    </div>
+                    <h2 class="font-serif text-5xl lg:text-6xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                        The Logistics <span class="italic font-normal text-brand-red">Promise.</span>
+                    </h2>
+                </div>
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md font-light lg:text-right">
+                    We ensure that transportation is the *least* of your worries. You focus on the event, we handle the seamless arrival and departure of every single guest.
+                </p>
+            </div>
+
+            <!-- The Sharp 2x2 Architectural Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 border-t border-l border-black/10">
+                
+                <!-- Promise 1: Real-Time Event Concierge -->
+                <div class="group relative p-8 lg:p-12 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <!-- Watermark Number -->
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">01</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-user-tie text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Real-Time Event Concierge</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">Dedicated on-site event manager. They coordinate live with your venue team to adjust pickup times instantly if the event runs late.</p>
+                        </div>
+                    </div>
+                    <!-- Precision Top Red Line -->
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Promise 2: Guaranteed Timelines -->
+                <div class="group relative p-8 lg:p-12 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">02</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-clock text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Guaranteed Timelines</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">We map out the event schedule and plan our fleet routes in advance. Every pickup and drop-off is synchronized to the minute.</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Promise 3: VIP Access & Parking -->
+                <div class="group relative p-8 lg:p-12 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">03</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-square-parking text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">VIP Access & Parking</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">We negotiate secure, VIP valet parking and designated loading zones at your venue so your guests never walk far.</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Promise 4: Etiquette & Uniforms -->
+                <div class="group relative p-8 lg:p-12 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">04</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-handshake-simple text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Etiquette & Uniforms</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">Your drivers are not just drivers; they are trained in formal event etiquette—helping guests out of the car with white gloves, handling heavy wedding gift bags, and acting discreetly.</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 6: DESTINATION COVERAGE (TERRITORY) -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+                
+                <!-- LEFT COLUMN: The Editorial Statement -->
+                <div class="lg:col-span-5 flex flex-col space-y-8">
+                    
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">Our Territory</p>
+                    </div>
+
+                    <h2 class="font-serif text-5xl lg:text-6xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                        Where We<br>
+                        <span class="italic font-normal text-brand-red">Operate.</span>
+                    </h2>
+
+                    <p class="text-brand-black/60 text-base lg:text-lg leading-relaxed max-w-md font-light">
+                        From the bustling metropolitan galas of Mumbai and Delhi to the serene palace weddings of Rajasthan, our physical presence ensures absolute coverage for your event.
+                    </p>
+
+                    <!-- Sharp List of Global & Indian Regions -->
+                    <div class="mt-6 pt-8 border-t border-black/10 space-y-4">
+                        
+                        <div class="flex items-center gap-4">
+                            <span class="w-2 h-2 bg-brand-red rotate-45 flex-shrink-0"></span>
+                            <div>
+                                <p class="font-sans text-[0.65rem] uppercase tracking-widest font-bold text-brand-black">Global Hub</p>
+                                <p class="text-sm text-brand-black/60 font-light">Dubai, UAE</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <span class="w-2 h-2 bg-brand-red rotate-45 flex-shrink-0"></span>
+                            <div>
+                                <p class="font-sans text-[0.65rem] uppercase tracking-widest font-bold text-brand-black">Kerala & Southern Coast</p>
+                                <p class="text-sm text-brand-black/60 font-light">Kochi & Thiruvananthapuram (Backwater/Resort Weddings)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <span class="w-2 h-2 bg-brand-red rotate-45 flex-shrink-0"></span>
+                            <div>
+                                <p class="font-sans text-[0.65rem] uppercase tracking-widest font-bold text-brand-black">Rajasthan</p>
+                                <p class="text-sm text-brand-black/60 font-light">Jaipur & Udaipur (Iconic Palace Weddings)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <span class="w-2 h-2 bg-brand-red rotate-45 flex-shrink-0"></span>
+                            <div>
+                                <p class="font-sans text-[0.65rem] uppercase tracking-widest font-bold text-brand-black">Goa & The West</p>
+                                <p class="text-sm text-brand-black/60 font-light">Destination Beach Weddings</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <span class="w-2 h-2 bg-brand-red rotate-45 flex-shrink-0"></span>
+                            <div>
+                                <p class="font-sans text-[0.65rem] uppercase tracking-widest font-bold text-brand-black">Metropolitan Hubs</p>
+                                <p class="text-sm text-brand-black/60 font-light">Mumbai & Delhi (Luxury Galas & Hotel Weddings)</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: The Sharp SVG Territory Map -->
+                <div class="lg:col-span-7 relative h-[400px] lg:h-[550px] w-full overflow-hidden">
+                    
+                    <!-- The Stylized SVG Map Background (Dissolving into white) -->
+                    <svg viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 w-full h-full">
+                        
+                        <!-- The connecting route lines -->
+                        <path d="M 120 100 L 250 150 L 400 250 L 350 400 L 200 350 L 120 100" stroke="#D9181E" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.3" />
+                        <path d="M 250 150 L 500 120" stroke="#D9181E" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.3" />
+                        <path d="M 400 250 L 550 300" stroke="#D9181E" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.3" />
+                        <path d="M 200 350 L 100 450" stroke="#D9181E" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.3" />
+
+                        <!-- Dubai (Global Hub) -->
+                        <circle cx="120" cy="100" r="8" fill="#D9181E" class="animate-pulse" />
+                        <text x="140" y="95" fill="#0A0A0A" font-family="Playfair Display, serif" font-weight="700" font-size="24">Dubai</text>
+                        <text x="140" y="115" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="10" letter-spacing="1" uppercase>UAE</text>
+
+                        <!-- Delhi (Metro) -->
+                        <circle cx="250" cy="150" r="8" fill="#D9181E" class="animate-pulse" />
+                        <text x="270" y="145" fill="#0A0A0A" font-family="Playfair Display, serif" font-weight="700" font-size="24">Delhi</text>
+                        <text x="270" y="165" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="10" letter-spacing="1" uppercase>NCR</text>
+
+                        <!-- Jaipur/Udaipur (Rajasthan) -->
+                        <circle cx="400" cy="250" r="8" fill="#D9181E" class="animate-pulse" />
+                        <text x="420" y="245" fill="#0A0A0A" font-family="Playfair Display, serif" font-weight="700" font-size="24">Rajasthan</text>
+                        <text x="420" y="265" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="10" letter-spacing="1" uppercase>Jaipur & Udaipur</text>
+
+                        <!-- Mumbai (Metro/West) -->
+                        <circle cx="500" cy="120" r="8" fill="#D9181E" class="animate-pulse" />
+                        <text x="500" y="100" fill="#0A0A0A" font-family="Playfair Display, serif" font-weight="700" font-size="24">Mumbai</text>
+                        <text x="500" y="120" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="10" letter-spacing="1" uppercase>West</text>
+
+                        <!-- Goa (Beach) -->
+                        <circle cx="550" cy="300" r="8" fill="#D9181E" class="animate-pulse" />
+                        <text x="530" y="330" fill="#0A0A0A" font-family="Playfair Display, serif" font-weight="700" font-size="24">Goa</text>
+
+                        <!-- Kochi (Kerala) -->
+                        <circle cx="350" cy="400" r="8" fill="#D9181E" class="animate-pulse" />
+                        <text x="370" y="395" fill="#0A0A0A" font-family="Playfair Display, serif" font-weight="700" font-size="24">Kochi</text>
+                        <text x="370" y="415" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="10" letter-spacing="1" uppercase>Kerala</text>
+
+                        <!-- Trivandrum (Kerala) -->
+                        <circle cx="200" cy="350" r="8" fill="#D9181E" class="animate-pulse" />
+                        <text x="220" y="345" fill="#0A0A0A" font-family="Playfair Display, serif" font-weight="700" font-size="24">Trivandrum</text>
+                        <text x="220" y="365" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="10" letter-spacing="1" uppercase>Kerala</text>
+                        
+                        <!-- The Dissolving Gradient (To blend the map into the white background) -->
+                        <defs>
+                            <linearGradient id="fadeLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#FCFCFC" stop-opacity="1" />
+                                <stop offset="20%" stop-color="#FCFCFC" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#fadeLeft)" pointer-events="none" />
+                    </svg>
+
+                    <!-- Editorial Footline at the bottom of the map -->
+                    <div class="absolute bottom-6 left-6 border-l-2 border-brand-red pl-4">
+                        <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-brand-black/50">Global Coverage,</p>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-brand-black/50">Local Ground Command.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 7: TRACK RECORD OF EXCELLENCE       -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 border-y border-black/10 divide-y lg:divide-y-0 lg:divide-x divide-black/10">
+                
+                <!-- LEFT: The Massive Trust Indicators -->
+                <div class="lg:col-span-5 p-10 lg:p-16 flex flex-col justify-center space-y-10">
+                    
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">The Evidence</p>
+                    </div>
+
+                    <div class="space-y-8">
+                        <!-- Stat 1 -->
+                        <div class="group hover:translate-x-2 transition-transform duration-300">
+                            <div class="flex items-baseline gap-4">
+                                <span class="font-serif text-7xl lg:text-8xl font-bold text-brand-red tracking-tight">100+</span>
+                                <span class="w-2 h-2 bg-brand-red rotate-45 mb-4"></span>
+                            </div>
+                            <p class="text-[0.7rem] uppercase tracking-widest font-bold text-brand-black/60 mt-1">Luxury Weddings</p>
+                        </div>
+
+                        <!-- Stat 2 -->
+                        <div class="group hover:translate-x-2 transition-transform duration-300">
+                            <div class="flex items-baseline gap-4">
+                                <span class="font-serif text-7xl lg:text-8xl font-bold text-brand-black tracking-tight">500+</span>
+                                <span class="w-2 h-2 bg-brand-red rotate-45 mb-4"></span>
+                            </div>
+                            <p class="text-[0.7rem] uppercase tracking-widest font-bold text-brand-black/60 mt-1">Corporate Galas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: The High-End Testimonial -->
+                <div class="lg:col-span-7 p-10 lg:p-16 relative flex flex-col justify-center">
+                    
+                    <!-- Massive Watermark Quote -->
+                    <span class="absolute -top-10 right-10 font-serif text-[15rem] leading-none text-brand-red/5 select-none pointer-events-none">"</span>
+                    
+                    <div class="relative z-10 space-y-8">
+                        <div class="w-12 h-1 bg-brand-red"></div>
+                        
+                        <blockquote class="font-serif text-2xl lg:text-3xl font-medium text-brand-black leading-[1.4] italic max-w-2xl">
+                            "Limore was the silent hero of our 300-guest wedding in Jaipur. They moved the entire family and our international guests seamlessly from the airport to the palace. We didn't hear a single complaint, which is the highest praise possible for transport logistics."
+                        </blockquote>
+                        
+                        <div class="pt-6 border-t border-black/10 flex items-center gap-4">
+                            <div class="w-2 h-2 bg-brand-red rotate-45"></div>
+                            <div>
+                                <p class="font-sans text-[0.65rem] uppercase tracking-[0.15em] font-bold text-brand-black">Ananya Singh</p>
+                                <p class="font-sans text-[0.6rem] uppercase tracking-widest text-black/40 font-light mt-1">Head Wedding Planner, Jaipur Luxury Events</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 8: THE FINAL CTA (LET'S BUILD)      -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-black relative overflow-hidden border-b border-white/5">
+        
+        <!-- Background Tactical Grid & Red Glow -->
+        <div class="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-red/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <!-- Top and Bottom Architectural Red Threads -->
+        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-brand-red/50 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-brand-red/50 to-transparent"></div>
+
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12 relative z-10 text-center">
+            
+            <!-- Editorial Eyebrow -->
+            <div class="flex items-center justify-center gap-4 mb-6">
+                <span class="w-10 h-px bg-brand-red"></span>
+                <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-white/40">Let's Collaborate</p>
+                <span class="w-10 h-px bg-brand-red"></span>
+            </div>
+
+            <!-- Massive Headline -->
+            <h2 class="font-serif text-5xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight">
+                Your Vision. <span class="italic font-normal text-brand-red">Our Logistics.</span>
+            </h2>
+
+            <!-- Subtext -->
+            <p class="text-gray-400 text-sm lg:text-base leading-relaxed max-w-xl mx-auto mt-6 font-light">
+                Whether it's an intimate corporate dinner for 20 or a royal wedding for 500, we are ready to curate the transport experience.
+            </p>
+
+            <!-- The Massive Sharp CTA Button -->
+            <div class="mt-12 flex justify-center">
+                <a href="#" class="inline-flex items-center gap-3 bg-brand-red text-white px-12 py-5 text-[0.7rem] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-black transition-colors duration-300 group rounded-none shadow-lg shadow-brand-red/20">
+                    Request a Logistics Consultation
+                    <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>
