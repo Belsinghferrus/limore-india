@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerala Tourism | Limored</title>
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Syne', 'sans-serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'], 
+                    },
+                    colors: {
+                        brand: {
+                            black: '#0A0A0A',
+                            white: '#FCFCFC',
+                            red: '#D9181E',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-white text-brand-black antialiased overflow-x-hidden">
+
+    <!-- (Your Navbar goes here) -->
+
+    <!-- ========================================== -->
+    <!-- KERALA HERO: THE GATEWAY                    -->
+    <!-- ========================================== -->
+    <section class="pt-20 min-h-screen lg:h-screen relative bg-brand-white overflow-hidden flex items-center">
+    
+        <!-- Full-Bleed Cinematic Image Column (Dissolves into white) -->
+        <div class="absolute inset-y-0 right-0 w-full lg:w-[60%] h-full overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=2070&auto=format&fit=crop" 
+                 alt="Kerala Houseboat at Sunset" 
+                 class="w-full h-full object-cover saturate-[0.95] contrast-110 transition-transform duration-[8s] hover:scale-105">
+            
+            <!-- The "Dissolve" Gradient (Melts the image into pure white on the left) -->
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/60 to-transparent lg:via-brand-white/30"></div>
+            
+            <!-- Cinematic Red Light Leak -->
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-red/10 via-transparent to-transparent mix-blend-multiply"></div>
+        </div>
+    
+        <!-- The Text & CTA Column (Pure Typography, No Boxes) -->
+        <div class="relative z-10 max-w-[90rem] mx-auto px-6 lg:px-12 w-full">
+            <div class="lg:w-[60%] flex flex-col justify-center py-12 lg:py-0">
+                
+                <!-- Editorial Eyebrow (Minimalist) -->
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="w-10 h-px bg-brand-red"></span>
+                    <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">The Gateway</p>
+                </div>
+    
+                <!-- Massive Experimental Serif Typography (Breaking the Layout) -->
+                <h1 class="font-serif text-6xl lg:text-8xl xl:text-9xl font-bold text-brand-black leading-[0.85] tracking-tight">
+                    Discover<br>
+                    <span class="text-brand-red italic">God's Own</span><br>
+                    Country.
+                </h1>
+    
+                <!-- The Subtext (Clean, no box) -->
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md mt-8 font-light">
+                    From the misty peaks of Munnar to the serene backwaters of Alleppey, Limore curates bespoke Kerala experiences. Whether it's a private family tour, a spiritual pilgrimage, or a group corporate retreat, we blend premium luxury with the authentic soul of Kerala.
+                </p>
+    
+                <!-- The Sharp, Flat, Solid Red CTA + Editorial Footline -->
+                <div class="mt-10 flex flex-col items-start gap-4">
+                    <a href="#" class="inline-flex items-center gap-3 bg-brand-red text-white px-10 py-4 text-[0.7rem] font-bold uppercase tracking-widest transition-all duration-300 hover:bg-brand-black group rounded-none">
+                        Plan Your Kerala Escape
+                        <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+    
+                    <!-- The "Badge" reimagined as an editorial footline -->
+                    <div class="flex items-center gap-3 border-l-2 border-brand-red pl-3 py-1">
+                        <span class="w-1.5 h-1.5 bg-brand-red rounded-full animate-pulse"></span>
+                        <i class="fa-solid fa-location-dot text-brand-red text-[10px]"></i>
+                        <span class="font-sans text-[0.6rem] uppercase tracking-[0.2em] font-bold text-brand-black/50">Limore Kerala Specialists</span>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 2: THE LIMORE PROMISE (LOCAL EXPERTISE) -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <!-- Editorial Header -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-12">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">Why Choose Limore</p>
+                    </div>
+                    <h2 class="font-serif text-5xl lg:text-6xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                        The Limore <span class="italic font-normal text-brand-red">Promise.</span>
+                    </h2>
+                </div>
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md font-light lg:text-right">
+                    A standard tour operator books your ticket. We curate the memory. Here is how we elevate your Kerala experience.
+                </p>
+            </div>
+
+            <!-- The Sharp 4-Column Architectural Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-l border-black/10">
+                
+                <!-- Promise 1: Personalized Curations -->
+                <div class="group relative p-8 lg:p-10 border-b border-r border-black/10 hover:bg-brand-black/5 transition-colors duration-300">
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">01</span>
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-route text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl lg:text-2xl font-bold text-brand-black mb-2">Personalized Curations</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">We don’t do generic group tours. Every itinerary is tailored to your speed—whether you want to explore 5 temples in a day or spend a week floating on a houseboat.</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Promise 2: Deep Local Network -->
+                <div class="group relative p-8 lg:p-10 border-b border-r border-black/10 hover:bg-brand-black/5 transition-colors duration-300">
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">02</span>
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-handshake text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl lg:text-2xl font-bold text-brand-black mb-2">Deep Local Network</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">We have established relationships with the best luxury resorts, local spice plantation owners, and government-approved boat operators across the state.</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Promise 3: Premium Fleet for Kerala -->
+                <div class="group relative p-8 lg:p-10 border-b border-r border-black/10 hover:bg-brand-black/5 transition-colors duration-300">
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">03</span>
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-car text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl lg:text-2xl font-bold text-brand-black mb-2">Premium Fleet for Kerala</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">From luxury sedans for hill station drives to spacious vans for large family pilgrimages, our vehicles are maintained to handle diverse terrains.</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Promise 4: 24/7 On-Ground Support -->
+                <div class="group relative p-8 lg:p-10 border-b border-r border-black/10 hover:bg-brand-black/5 transition-colors duration-300 md:border-r-0">
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">04</span>
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-headset text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl lg:text-2xl font-bold text-brand-black mb-2">24/7 On-Ground Support</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">A dedicated local concierge ensures your hotel check-ins, boat departures, and national park safari bookings happen absolutely seamlessly.</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 3: KERALA TOUR PACKAGES (THE OFFERINGS) -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <!-- Editorial Header -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-12">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">Curated Itineraries</p>
+                    </div>
+                    <h2 class="font-serif text-5xl lg:text-6xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                        Choose Your <span class="italic font-normal text-brand-red">Journey.</span>
+                    </h2>
+                </div>
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md font-light lg:text-right">
+                    From quick weekend escapes to month-long leisurely retreats, every package is designed around your pace and passion.
+                </p>
+            </div>
+
+            <!-- PART 1: THE DURATION INDEX (The "Days" Menu) -->
+            <div class="mb-16 border-y border-black/10">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 divide-x divide-y lg:divide-y-0 divide-black/10">
+                    
+                    <!-- Duration 1 -->
+                    <div class="group p-6 lg:p-8 hover:bg-brand-black/5 transition-colors duration-300 text-center">
+                        <p class="font-serif text-5xl font-bold text-brand-black group-hover:text-brand-red transition-colors duration-300">3</p>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-black/40 mt-1">Days Tour</p>
+                        <div class="w-6 h-[2px] bg-brand-red mx-auto mt-3 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
+                    </div>
+
+                    <!-- Duration 2 -->
+                    <div class="group p-6 lg:p-8 hover:bg-brand-black/5 transition-colors duration-300 text-center">
+                        <p class="font-serif text-5xl font-bold text-brand-black group-hover:text-brand-red transition-colors duration-300">4</p>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-black/40 mt-1">Days Tour</p>
+                        <div class="w-6 h-[2px] bg-brand-red mx-auto mt-3 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
+                    </div>
+
+                    <!-- Duration 3 -->
+                    <div class="group p-6 lg:p-8 hover:bg-brand-black/5 transition-colors duration-300 text-center">
+                        <p class="font-serif text-5xl font-bold text-brand-black group-hover:text-brand-red transition-colors duration-300">5</p>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-black/40 mt-1">Days Tour</p>
+                        <div class="w-6 h-[2px] bg-brand-red mx-auto mt-3 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
+                    </div>
+
+                    <!-- Duration 4 -->
+                    <div class="group p-6 lg:p-8 hover:bg-brand-black/5 transition-colors duration-300 text-center">
+                        <p class="font-serif text-5xl font-bold text-brand-black group-hover:text-brand-red transition-colors duration-300">6</p>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-black/40 mt-1">Days Tour</p>
+                        <div class="w-6 h-[2px] bg-brand-red mx-auto mt-3 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
+                    </div>
+
+                    <!-- Duration 5 -->
+                    <div class="group p-6 lg:p-8 hover:bg-brand-black/5 transition-colors duration-300 text-center">
+                        <p class="font-serif text-5xl font-bold text-brand-black group-hover:text-brand-red transition-colors duration-300">7</p>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-black/40 mt-1">Days Tour</p>
+                        <div class="w-6 h-[2px] bg-brand-red mx-auto mt-3 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
+                    </div>
+
+                    <!-- Duration 6 -->
+                    <div class="group p-6 lg:p-8 hover:bg-brand-black/5 transition-colors duration-300 text-center">
+                        <p class="font-serif text-5xl font-bold text-brand-red transition-colors duration-300">10</p>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-black/40 mt-1">Days Tour</p>
+                        <div class="w-6 h-[2px] bg-brand-red mx-auto mt-3 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- PART 2: THE THEME BENTO GRID -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <!-- Family Tour (Large - Spans 2) -->
+                <div class="group relative lg:col-span-2 h-[300px] lg:h-[400px] overflow-hidden bg-brand-black rounded-none">
+                    <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Family Tour">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
+                    <span class="absolute top-6 right-6 font-serif text-6xl font-bold text-white/10">01</span>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <div class="w-10 h-1 bg-brand-red mb-4 group-hover:w-16 transition-all duration-500"></div>
+                        <h3 class="font-serif text-3xl font-bold text-white tracking-tight">Family Tour</h3>
+                        <p class="text-gray-300 text-sm mt-2 font-light max-w-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">Perfectly paced trips for all ages, ensuring comfort and joy for the entire family.</p>
+                    </div>
+                </div>
+
+                <!-- Honeymoon Tour (Large - Spans 2) -->
+                <div class="group relative lg:col-span-2 h-[300px] lg:h-[400px] overflow-hidden bg-brand-black rounded-none">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Honeymoon Tour">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
+                    <span class="absolute top-6 right-6 font-serif text-6xl font-bold text-white/10">02</span>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <div class="w-10 h-1 bg-brand-red mb-4 group-hover:w-16 transition-all duration-500"></div>
+                        <h3 class="font-serif text-3xl font-bold text-white tracking-tight">Honeymoon Tour</h3>
+                        <p class="text-gray-300 text-sm mt-2 font-light max-w-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">Romantic houseboats, private candlelit dinners, and the most beautiful sunsets in India.</p>
+                    </div>
+                </div>
+
+                <!-- Group Tour -->
+                <div class="group relative h-[300px] overflow-hidden bg-brand-black rounded-none">
+                    <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Group Tour">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
+                    <span class="absolute top-4 right-4 font-serif text-5xl font-bold text-white/10">03</span>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="font-serif text-2xl font-bold text-white tracking-tight">Group Tour</h3>
+                    </div>
+                </div>
+
+                <!-- Temple Tour -->
+                <div class="group relative h-[300px] overflow-hidden bg-brand-black rounded-none">
+                    <img src="https://images.unsplash.com/photo-1627895420903-1b7c91f8c8c0?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Temple Tour">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
+                    <span class="absolute top-4 right-4 font-serif text-5xl font-bold text-white/10">04</span>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="font-serif text-2xl font-bold text-white tracking-tight">Temple Tour</h3>
+                    </div>
+                </div>
+
+                <!-- Pilgrimage Tour -->
+                <div class="group relative h-[300px] overflow-hidden bg-brand-black rounded-none">
+                    <img src="https://images.unsplash.com/photo-1629815418147-b277d748cb2d?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Pilgrimage Tour">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
+                    <span class="absolute top-4 right-4 font-serif text-5xl font-bold text-white/10">05</span>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="font-serif text-2xl font-bold text-white tracking-tight">Pilgrimage Tour</h3>
+                    </div>
+                </div>
+
+                <!-- Backwater Tour -->
+                <div class="group relative h-[300px] overflow-hidden bg-brand-black rounded-none">
+                    <img src="https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Backwater Tour">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
+                    <span class="absolute top-4 right-4 font-serif text-5xl font-bold text-white/10">06</span>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="font-serif text-2xl font-bold text-white tracking-tight">Backwater Tour</h3>
+                    </div>
+                </div>
+
+                <!-- Hill Station Tour -->
+                <div class="group relative h-[300px] overflow-hidden bg-brand-black rounded-none">
+                    <img src="https://images.unsplash.com/photo-1582117405790-8d2f8d0a4b2e?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Hill Station Tour">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
+                    <span class="absolute top-4 right-4 font-serif text-5xl font-bold text-white/10">07</span>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="font-serif text-2xl font-bold text-white tracking-tight">Hill Station Tour</h3>
+                    </div>
+                </div>
+
+                <!-- Wildlife Tour -->
+                <div class="group relative h-[300px] overflow-hidden bg-brand-black rounded-none">
+                    <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Wildlife Tour">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
+                    <span class="absolute top-4 right-4 font-serif text-5xl font-bold text-white/10">08</span>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="font-serif text-2xl font-bold text-white tracking-tight">Wildlife Tour</h3>
+                    </div>
+                </div>
+
+                <!-- Beach Tour -->
+                <div class="group relative h-[300px] overflow-hidden bg-brand-black rounded-none">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Beach Tour">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
+                    <span class="absolute top-4 right-4 font-serif text-5xl font-bold text-white/10">09</span>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="font-serif text-2xl font-bold text-white tracking-tight">Beach Tour</h3>
+                    </div>
+                </div>
+
+                <!-- Ayurveda Tour -->
+                <div class="group relative h-[300px] overflow-hidden bg-brand-black rounded-none">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Ayurveda Tour">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
+                    <span class="absolute top-4 right-4 font-serif text-5xl font-bold text-white/10">10</span>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="font-serif text-2xl font-bold text-white tracking-tight">Ayurveda Tour</h3>
+                    </div>
+                </div>
+
+                <!-- Corporate Tour (FULL WIDTH FEATURE) -->
+                <div class="group relative lg:col-span-4 h-[300px] lg:h-[350px] overflow-hidden bg-brand-black rounded-none">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Corporate Tour">
+                    <div class="absolute inset-0 bg-gradient-to-r from-brand-black/90 via-brand-black/40 to-transparent"></div>
+                    <span class="absolute top-6 right-6 font-serif text-6xl font-bold text-white/10">11</span>
+                    <div class="absolute bottom-0 left-0 p-8 lg:p-12 max-w-2xl">
+                        <div class="w-10 h-1 bg-brand-red mb-4 group-hover:w-20 transition-all duration-500"></div>
+                        <h3 class="font-serif text-3xl lg:text-4xl font-bold text-white tracking-tight">Corporate Tour & Retreats</h3>
+                        <p class="text-gray-300 text-sm lg:text-base mt-2 font-light max-w-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">Team building, executive off-sites, and luxury group retreats combining business with the serene backdrop of Kerala.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 4: OUR CURATED ROUTES (ITINERARIES) -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <!-- Editorial Header -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-16">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">The Itineraries</p>
+                    </div>
+                    <h2 class="font-serif text-5xl lg:text-6xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                        Curated <span class="italic font-normal text-brand-red">Routes.</span>
+                    </h2>
+                </div>
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md font-light lg:text-right">
+                    Every route is hand-crafted to give you the perfect balance of nature, culture, and luxury.
+                </p>
+            </div>
+
+            <!-- The Route Timeline Grid -->
+            <div class="border-t border-black/10 divide-y divide-black/10">
+                
+                <!-- ROUTE 1: The Classic -->
+                <div class="group relative py-10 lg:py-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <!-- Red Thread Top Line -->
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+
+                    <!-- Left: Number & Name -->
+                    <div class="lg:col-span-3 flex flex-col space-y-2">
+                        <span class="font-serif text-6xl font-bold text-brand-black/10 group-hover:text-brand-red/20 transition-colors duration-300">01</span>
+                        <h3 class="font-serif text-2xl font-bold text-brand-black tracking-tight">The Classic</h3>
+                        <p class="text-[0.6rem] uppercase tracking-widest text-brand-black/40 font-bold">Most Popular</p>
+                    </div>
+
+                    <!-- Middle: The Connected SVG Flowchart -->
+                    <div class="lg:col-span-7 relative flex items-center justify-between gap-4 overflow-x-auto pb-2 lg:pb-0 scrollbar-hide">
+                        <!-- Underlying Dashed Line -->
+                        <div class="absolute top-1/2 left-10 right-10 -translate-y-1/2 border-t-2 border-dashed border-brand-red/20"></div>
+                        
+                        <!-- Stop 1: Kochi -->
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]">
+                            <div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red bg-brand-white group-hover:bg-brand-red group-hover:text-white transition-colors duration-300 rounded-none">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 16V14l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+                            </div>
+                            <p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Kochi</p>
+                        </div>
+                        <!-- Stop 2: Munnar -->
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]">
+                            <div class="w-12 h-12 border border-black/10 flex items-center justify-center text-brand-black bg-brand-white group-hover:border-brand-red group-hover:text-brand-red transition-colors duration-300 rounded-none">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 20l6-10 4 6 3-4 5 8H3z"/></svg>
+                            </div>
+                            <p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Munnar</p>
+                        </div>
+                        <!-- Stop 3: Thekkady -->
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]">
+                            <div class="w-12 h-12 border border-black/10 flex items-center justify-center text-brand-black bg-brand-white group-hover:border-brand-red group-hover:text-brand-red transition-colors duration-300 rounded-none">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 21V10l4 4 2-2 2 2 2-2 2 2 4-4v11H4zm1-15h14M7 4h4v2H7V4z"/></svg>
+                            </div>
+                            <p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Thekkady</p>
+                        </div>
+                        <!-- Stop 4: Alleppey -->
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]">
+                            <div class="w-12 h-12 border border-black/10 flex items-center justify-center text-brand-black bg-brand-white group-hover:border-brand-red group-hover:text-brand-red transition-colors duration-300 rounded-none">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16M4 12l8-8 8 8M4 20h16"/></svg>
+                            </div>
+                            <p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Alleppey</p>
+                        </div>
+                        <!-- Stop 5: Kochi -->
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]">
+                            <div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red bg-brand-white group-hover:bg-brand-red group-hover:text-white transition-colors duration-300 rounded-none">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 16V14l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+                            </div>
+                            <p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Kochi</p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Action -->
+                    <div class="lg:col-span-2 text-left lg:text-right">
+                        <a href="#" class="inline-flex items-center gap-2 font-sans text-[0.65rem] uppercase tracking-widest font-bold text-brand-black group-hover:text-brand-red transition-colors duration-300">
+                            View Itinerary <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ROUTE 2: The Backwater Luxury -->
+                <div class="group relative py-10 lg:py-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    <div class="lg:col-span-3 flex flex-col space-y-2">
+                        <span class="font-serif text-6xl font-bold text-brand-black/10 group-hover:text-brand-red/20 transition-colors duration-300">02</span>
+                        <h3 class="font-serif text-2xl font-bold text-brand-black tracking-tight">The Backwater Luxury</h3>
+                    </div>
+                    <div class="lg:col-span-7 relative flex items-center justify-between gap-4 overflow-x-auto pb-2 lg:pb-0 scrollbar-hide">
+                        <div class="absolute top-1/2 left-10 right-10 -translate-y-1/2 border-t-2 border-dashed border-brand-red/20"></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]"><div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red bg-brand-white group-hover:bg-brand-red group-hover:text-white transition-colors duration-300 rounded-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 16V14l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg></div><p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Kochi</p></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]"><div class="w-12 h-12 border border-black/10 flex items-center justify-center text-brand-black bg-brand-white group-hover:border-brand-red group-hover:text-brand-red transition-colors duration-300 rounded-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 20l6-10 4 6 3-4 5 8H3z"/></svg></div><p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Munnar</p></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]"><div class="w-12 h-12 border border-black/10 flex items-center justify-center text-brand-black bg-brand-white group-hover:border-brand-red group-hover:text-brand-red transition-colors duration-300 rounded-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 21V10l4 4 2-2 2 2 2-2 2 2 4-4v11H4zm1-15h14M7 4h4v2H7V4z"/></svg></div><p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Thekkady</p></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]"><div class="w-12 h-12 border border-black/10 flex items-center justify-center text-brand-black bg-brand-white group-hover:border-brand-red group-hover:text-brand-red transition-colors duration-300 rounded-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2 12h20M2 18h20M4 6h16M8 12v6M16 12v6M12 6v6"/></svg></div><p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Kumarakom</p></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]"><div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red bg-brand-white group-hover:bg-brand-red group-hover:text-white transition-colors duration-300 rounded-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 16V14l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg></div><p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Kochi</p></div>
+                    </div>
+                    <div class="lg:col-span-2 text-left lg:text-right"><a href="#" class="inline-flex items-center gap-2 font-sans text-[0.65rem] uppercase tracking-widest font-bold text-brand-black group-hover:text-brand-red transition-colors duration-300">View Itinerary <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i></a></div>
+                </div>
+
+                <!-- ROUTE 3: The Coastal Retreat -->
+                <div class="group relative py-10 lg:py-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    <div class="lg:col-span-3 flex flex-col space-y-2">
+                        <span class="font-serif text-6xl font-bold text-brand-black/10 group-hover:text-brand-red/20 transition-colors duration-300">03</span>
+                        <h3 class="font-serif text-2xl font-bold text-brand-black tracking-tight">The Coastal Retreat</h3>
+                    </div>
+                    <div class="lg:col-span-7 relative flex items-center justify-between gap-4 overflow-x-auto pb-2 lg:pb-0 scrollbar-hide">
+                        <div class="absolute top-1/2 left-10 right-10 -translate-y-1/2 border-t-2 border-dashed border-brand-red/20"></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]"><div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red bg-brand-white group-hover:bg-brand-red group-hover:text-white transition-colors duration-300 rounded-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 16V14l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg></div><p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Kochi</p></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]"><div class="w-12 h-12 border border-black/10 flex items-center justify-center text-brand-black bg-brand-white group-hover:border-brand-red group-hover:text-brand-red transition-colors duration-300 rounded-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 20l6-10 4 6 3-4 5 8H3z"/></svg></div><p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Munnar</p></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]"><div class="w-12 h-12 border border-black/10 flex items-center justify-center text-brand-black bg-brand-white group-hover:border-brand-red group-hover:text-brand-red transition-colors duration-300 rounded-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16M4 12l8-8 8 8M4 20h16"/></svg></div><p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Alleppey</p></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]"><div class="w-12 h-12 border border-black/10 flex items-center justify-center text-brand-black bg-brand-white group-hover:border-brand-red group-hover:text-brand-red transition-colors duration-300 rounded-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2 17h20M4 13l4-4 4 4 4-4 4 4M2 21h20M8 9V5M16 9V3"/></svg></div><p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Kovalam</p></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]"><div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red bg-brand-white group-hover:bg-brand-red group-hover:text-white transition-colors duration-300 rounded-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 16V14l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg></div><p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Trivandrum</p></div>
+                    </div>
+                    <div class="lg:col-span-2 text-left lg:text-right"><a href="#" class="inline-flex items-center gap-2 font-sans text-[0.65rem] uppercase tracking-widest font-bold text-brand-black group-hover:text-brand-red transition-colors duration-300">View Itinerary <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i></a></div>
+                </div>
+
+                <!-- ROUTE 4: The Northern Trail -->
+                <div class="group relative py-10 lg:py-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    <div class="lg:col-span-3 flex flex-col space-y-2">
+                        <span class="font-serif text-6xl font-bold text-brand-black/10 group-hover:text-brand-red/20 transition-colors duration-300">04</span>
+                        <h3 class="font-serif text-2xl font-bold text-brand-black tracking-tight">The Northern Trail</h3>
+                    </div>
+                    <div class="lg:col-span-7 relative flex items-center justify-between gap-4 overflow-x-auto pb-2 lg:pb-0 scrollbar-hide">
+                        <div class="absolute top-1/2 left-10 right-10 -translate-y-1/2 border-t-2 border-dashed border-brand-red/20"></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]"><div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red bg-brand-white group-hover:bg-brand-red group-hover:text-white transition-colors duration-300 rounded-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 16V14l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg></div><p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Kochi</p></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]"><div class="w-12 h-12 border border-black/10 flex items-center justify-center text-brand-black bg-brand-white group-hover:border-brand-red group-hover:text-brand-red transition-colors duration-300 rounded-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 20l6-10 4 6 3-4 5 8H3z"/></svg></div><p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Wayanad</p></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]"><div class="w-12 h-12 border border-black/10 flex items-center justify-center text-brand-black bg-brand-white group-hover:border-brand-red group-hover:text-brand-red transition-colors duration-300 rounded-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-4h6v4M10 10h4"/></svg></div><p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Kozhikode</p></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]"><div class="w-12 h-12 border border-black/10 flex items-center justify-center text-brand-black bg-brand-white group-hover:border-brand-red group-hover:text-brand-red transition-colors duration-300 rounded-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2 17h20M4 13l4-4 4 4 4-4 4 4M2 21h20M8 9V5M16 9V3"/></svg></div><p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Kannur</p></div>
+                    </div>
+                    <div class="lg:col-span-2 text-left lg:text-right"><a href="#" class="inline-flex items-center gap-2 font-sans text-[0.65rem] uppercase tracking-widest font-bold text-brand-black group-hover:text-brand-red transition-colors duration-300">View Itinerary <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i></a></div>
+                </div>
+
+                <!-- ROUTE 5: The Temple Pilgrimage -->
+                <div class="group relative py-10 lg:py-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    <div class="lg:col-span-3 flex flex-col space-y-2">
+                        <span class="font-serif text-6xl font-bold text-brand-black/10 group-hover:text-brand-red/20 transition-colors duration-300">05</span>
+                        <h3 class="font-serif text-2xl font-bold text-brand-black tracking-tight">The Temple Pilgrimage</h3>
+                    </div>
+                    <div class="lg:col-span-7 relative flex items-center justify-between gap-4 overflow-x-auto pb-2 lg:pb-0 scrollbar-hide">
+                        <div class="absolute top-1/2 left-10 right-10 -translate-y-1/2 border-t-2 border-dashed border-brand-red/20"></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]"><div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red bg-brand-white group-hover:bg-brand-red group-hover:text-white transition-colors duration-300 rounded-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 16V14l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg></div><p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Kochi</p></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]"><div class="w-12 h-12 border border-black/10 flex items-center justify-center text-brand-black bg-brand-white group-hover:border-brand-red group-hover:text-brand-red transition-colors duration-300 rounded-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2v20M4 22h16M4 8h16M6 8l2-4h8l2 4M10 8v14M14 8v14"/></svg></div><p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Guruvayur</p></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]"><div class="w-12 h-12 border border-black/10 flex items-center justify-center text-brand-black bg-brand-white group-hover:border-brand-red group-hover:text-brand-red transition-colors duration-300 rounded-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12h18M6 12V7l6-4 6 4v5M10 12v6h4v-6"/></svg></div><p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Athirappilly</p></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]"><div class="w-12 h-12 border border-black/10 flex items-center justify-center text-brand-black bg-brand-white group-hover:border-brand-red group-hover:text-brand-red transition-colors duration-300 rounded-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 20l6-10 4 6 3-4 5 8H3z"/></svg></div><p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Munnar</p></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2 min-w-[80px]"><div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red bg-brand-white group-hover:bg-brand-red group-hover:text-white transition-colors duration-300 rounded-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16M4 12l8-8 8 8M4 20h16"/></svg></div><p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Alleppey</p></div>
+                    </div>
+                    <div class="lg:col-span-2 text-left lg:text-right"><a href="#" class="inline-flex items-center gap-2 font-sans text-[0.65rem] uppercase tracking-widest font-bold text-brand-black group-hover:text-brand-red transition-colors duration-300">View Itinerary <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i></a></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 5: EXPLORE TOP PICKS (MASONRY GRID) -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <!-- Editorial Header -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-12">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">Featured Destinations</p>
+                    </div>
+                    <h2 class="font-serif text-5xl lg:text-6xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                        Explore Our <span class="italic font-normal text-brand-red">Top Picks.</span>
+                    </h2>
+                </div>
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md font-light lg:text-right">
+                    Where misty mountains meet serene backwaters. Discover the essence of God's Own Country.
+                </p>
+            </div>
+
+            <!-- The Bento Masonry Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <!-- 1. KOCHI (The Gateway) - Massive 2x2 -->
+                <div class="group relative lg:col-span-2 lg:row-span-2 h-[400px] lg:h-[600px] overflow-hidden bg-brand-black">
+                    <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Kochi">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-white/10">01</span>
+                    
+                    <div class="absolute bottom-0 left-0 p-8 lg:p-10 max-w-lg">
+                        <div class="w-12 h-1 bg-brand-red mb-4 group-hover:w-24 transition-all duration-500"></div>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-brand-red">The Gateway</p>
+                        <h3 class="font-serif text-3xl lg:text-4xl font-bold text-white tracking-tight mt-1">Kochi</h3>
+                        <p class="text-gray-300 text-sm mt-2 font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500">Explore Fort Kochi's colonial charm, Chinese Fishing Nets, and the historic Jew Town.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-white text-[0.65rem] uppercase tracking-widest font-bold mt-4 group-hover:text-brand-red transition-colors">Explore <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i></a>
+                    </div>
+                </div>
+
+                <!-- 2. MUNNAR (The Hill Retreat) - Wide 2x1 -->
+                <div class="group relative lg:col-span-2 h-[200px] lg:h-[292px] overflow-hidden bg-brand-black">
+                    <img src="https://images.unsplash.com/photo-1582117405790-8d2f8d0a4b2e?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Munnar">
+                    <div class="absolute inset-0 bg-gradient-to-r from-brand-black/90 via-brand-black/30 to-transparent"></div>
+                    <span class="absolute top-6 right-6 font-serif text-6xl font-bold text-white/10">02</span>
+                    
+                    <div class="absolute bottom-0 left-0 p-8 max-w-lg">
+                        <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-brand-red">The Hill Retreat</p>
+                        <h3 class="font-serif text-2xl lg:text-3xl font-bold text-white tracking-tight mt-1">Munnar</h3>
+                        <p class="text-gray-300 text-sm mt-1 font-light max-w-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">Walk through endless tea plantations, spot rare Nilgiri Tahr at Eravikulam, and gaze at the mystical Top Station.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-white text-[0.65rem] uppercase tracking-widest font-bold mt-3 group-hover:text-brand-red transition-colors">Explore <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i></a>
+                    </div>
+                </div>
+
+                <!-- 3. ALLEPPEY (Venice of East) - 1x1 -->
+                <div class="group relative h-[200px] lg:h-[292px] overflow-hidden bg-brand-black">
+                    <img src="https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Alleppey">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
+                    <span class="absolute top-4 right-4 font-serif text-5xl font-bold text-white/10">03</span>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-red">The Venice of the East</p>
+                        <h3 class="font-serif text-xl font-bold text-white tracking-tight mt-1">Alleppey</h3>
+                        <p class="text-gray-300 text-xs mt-1 font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500">Drift along tranquil backwaters in a luxury houseboat.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-white text-[0.6rem] uppercase tracking-widest font-bold mt-2 group-hover:text-brand-red transition-colors">Explore <i class="fa-solid fa-arrow-right text-[9px] group-hover:translate-x-1 transition-transform"></i></a>
+                    </div>
+                </div>
+
+                <!-- 4. THEKKADY (Wildlife Corridor) - 1x1 -->
+                <div class="group relative h-[200px] lg:h-[292px] overflow-hidden bg-brand-black">
+                    <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Thekkady">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
+                    <span class="absolute top-4 right-4 font-serif text-5xl font-bold text-white/10">04</span>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-red">The Wildlife Corridor</p>
+                        <h3 class="font-serif text-xl font-bold text-white tracking-tight mt-1">Thekkady</h3>
+                        <p class="text-gray-300 text-xs mt-1 font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500">Spot elephants at Periyar Wildlife Sanctuary.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-white text-[0.6rem] uppercase tracking-widest font-bold mt-2 group-hover:text-brand-red transition-colors">Explore <i class="fa-solid fa-arrow-right text-[9px] group-hover:translate-x-1 transition-transform"></i></a>
+                    </div>
+                </div>
+
+                <!-- 5. WAYANAD (Wild North) - Wide 2x1 -->
+                <div class="group relative lg:col-span-2 h-[200px] lg:h-[292px] overflow-hidden bg-brand-black">
+                    <img src="https://images.unsplash.com/photo-1627895420903-1b7c91f8c8c0?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Wayanad">
+                    <div class="absolute inset-0 bg-gradient-to-r from-brand-black/90 via-brand-black/30 to-transparent"></div>
+                    <span class="absolute top-6 right-6 font-serif text-6xl font-bold text-white/10">05</span>
+                    <div class="absolute bottom-0 left-0 p-8 max-w-lg">
+                        <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-brand-red">The Wild North</p>
+                        <h3 class="font-serif text-2xl lg:text-3xl font-bold text-white tracking-tight mt-1">Wayanad</h3>
+                        <p class="text-gray-300 text-sm mt-1 font-light max-w-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">Discover ancient Edakkal Caves and serene Soochipara Falls.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-white text-[0.65rem] uppercase tracking-widest font-bold mt-3 group-hover:text-brand-red transition-colors">Explore <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i></a>
+                    </div>
+                </div>
+
+                <!-- 6. VARKALA (Cliffside Haven) - 1x1 -->
+                <div class="group relative h-[200px] lg:h-[292px] overflow-hidden bg-brand-black">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Varkala">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
+                    <span class="absolute top-4 right-4 font-serif text-5xl font-bold text-white/10">06</span>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-red">The Cliffside Haven</p>
+                        <h3 class="font-serif text-xl font-bold text-white tracking-tight mt-1">Varkala</h3>
+                        <p class="text-gray-300 text-xs mt-1 font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500">Witness breathtaking sunsets from the red cliffs.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-white text-[0.6rem] uppercase tracking-widest font-bold mt-2 group-hover:text-brand-red transition-colors">Explore <i class="fa-solid fa-arrow-right text-[9px] group-hover:translate-x-1 transition-transform"></i></a>
+                    </div>
+                </div>
+
+                <!-- 7. KOVALAM (Coastal Jewel) - 1x1 -->
+                <div class="group relative h-[200px] lg:h-[292px] overflow-hidden bg-brand-black">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Kovalam">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
+                    <span class="absolute top-4 right-4 font-serif text-5xl font-bold text-white/10">07</span>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <p class="font-sans text-[0.55rem] uppercase tracking-widest font-bold text-brand-red">The Coastal Jewel</p>
+                        <h3 class="font-serif text-xl font-bold text-white tracking-tight mt-1">Kovalam</h3>
+                        <p class="text-gray-300 text-xs mt-1 font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500">Bask in the sun at the iconic Lighthouse Beach.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-white text-[0.6rem] uppercase tracking-widest font-bold mt-2 group-hover:text-brand-red transition-colors">Explore <i class="fa-solid fa-arrow-right text-[9px] group-hover:translate-x-1 transition-transform"></i></a>
+                    </div>
+                </div>
+
+                <!-- 8. KUMARAKOM (Lake Paradise) - Full Width Bottom -->
+                <div class="group relative lg:col-span-4 h-[300px] lg:h-[350px] overflow-hidden bg-brand-black">
+                    <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Kumarakom">
+                    <div class="absolute inset-0 bg-gradient-to-r from-brand-black/90 via-brand-black/40 to-transparent"></div>
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-white/10">08</span>
+                    <div class="absolute bottom-0 left-0 p-8 lg:p-12 max-w-2xl">
+                        <div class="w-12 h-1 bg-brand-red mb-4 group-hover:w-24 transition-all duration-500"></div>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-brand-red">The Lake Paradise</p>
+                        <h3 class="font-serif text-3xl lg:text-4xl font-bold text-white tracking-tight mt-1">Kumarakom</h3>
+                        <p class="text-gray-300 text-sm mt-2 font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500">Birdwatch at the Kumarakom Bird Sanctuary, nestled perfectly on the shores of Vembanad Lake.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-white text-[0.65rem] uppercase tracking-widest font-bold mt-4 group-hover:text-brand-red transition-colors">Explore <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ========================================== -->
+            <!-- SECONDARY DESTINATIONS INDEX (The Full List) -->
+            <!-- ========================================== -->
+            <div class="mt-16 border-t border-black/10 pt-8">
+                <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40 mb-6">More Destinations To Explore</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-8">
+                    
+                    <!-- Dest 1 -->
+                    <a href="#" class="group flex items-center gap-3 py-2 border-b border-black/5 hover:border-brand-red transition-colors duration-300">
+                        <i class="fa-solid fa-location-dot text-brand-red text-[10px]"></i>
+                        <span class="text-brand-black/70 text-sm font-light group-hover:text-brand-black transition-colors">Thrissur</span>
+                        <span class="ml-auto text-black/30 text-xs group-hover:text-brand-red transition-colors">→</span>
+                    </a>
+
+                    <!-- Dest 2 -->
+                    <a href="#" class="group flex items-center gap-3 py-2 border-b border-black/5 hover:border-brand-red transition-colors duration-300">
+                        <i class="fa-solid fa-location-dot text-brand-red text-[10px]"></i>
+                        <span class="text-brand-black/70 text-sm font-light group-hover:text-brand-black transition-colors">Kozhikode</span>
+                        <span class="ml-auto text-black/30 text-xs group-hover:text-brand-red transition-colors">→</span>
+                    </a>
+
+                    <!-- Dest 3 -->
+                    <a href="#" class="group flex items-center gap-3 py-2 border-b border-black/5 hover:border-brand-red transition-colors duration-300">
+                        <i class="fa-solid fa-location-dot text-brand-red text-[10px]"></i>
+                        <span class="text-brand-black/70 text-sm font-light group-hover:text-brand-black transition-colors">Bekal</span>
+                        <span class="ml-auto text-black/30 text-xs group-hover:text-brand-red transition-colors">→</span>
+                    </a>
+
+                    <!-- Dest 4 -->
+                    <a href="#" class="group flex items-center gap-3 py-2 border-b border-black/5 hover:border-brand-red transition-colors duration-300">
+                        <i class="fa-solid fa-location-dot text-brand-red text-[10px]"></i>
+                        <span class="text-brand-black/70 text-sm font-light group-hover:text-brand-black transition-colors">Kollam</span>
+                        <span class="ml-auto text-black/30 text-xs group-hover:text-brand-red transition-colors">→</span>
+                    </a>
+
+                    <!-- Dest 5 -->
+                    <a href="#" class="group flex items-center gap-3 py-2 border-b border-black/5 hover:border-brand-red transition-colors duration-300">
+                        <i class="fa-solid fa-location-dot text-brand-red text-[10px]"></i>
+                        <span class="text-brand-black/70 text-sm font-light group-hover:text-brand-black transition-colors">Palakkad</span>
+                        <span class="ml-auto text-black/30 text-xs group-hover:text-brand-red transition-colors">→</span>
+                    </a>
+
+                    <!-- Dest 6 -->
+                    <a href="#" class="group flex items-center gap-3 py-2 border-b border-black/5 hover:border-brand-red transition-colors duration-300">
+                        <i class="fa-solid fa-location-dot text-brand-red text-[10px]"></i>
+                        <span class="text-brand-black/70 text-sm font-light group-hover:text-brand-black transition-colors">Kottayam</span>
+                        <span class="ml-auto text-black/30 text-xs group-hover:text-brand-red transition-colors">→</span>
+                    </a>
+
+                    <!-- Dest 7 -->
+                    <a href="#" class="group flex items-center gap-3 py-2 border-b border-black/5 hover:border-brand-red transition-colors duration-300">
+                        <i class="fa-solid fa-location-dot text-brand-red text-[10px]"></i>
+                        <span class="text-brand-black/70 text-sm font-light group-hover:text-brand-black transition-colors">Pathanamthitta</span>
+                        <span class="ml-auto text-black/30 text-xs group-hover:text-brand-red transition-colors">→</span>
+                    </a>
+
+                    <!-- Dest 8 -->
+                    <a href="#" class="group flex items-center gap-3 py-2 border-b border-black/5 hover:border-brand-red transition-colors duration-300">
+                        <i class="fa-solid fa-location-dot text-brand-red text-[10px]"></i>
+                        <span class="text-brand-black/70 text-sm font-light group-hover:text-brand-black transition-colors">Kannur</span>
+                        <span class="ml-auto text-black/30 text-xs group-hover:text-brand-red transition-colors">→</span>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 6: TEMPLE & PILGRIMAGE (SANCTUARY)  -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+                
+                <!-- LEFT COLUMN: The Narrative & Services -->
+                <div class="lg:col-span-7 relative z-10">
+                    
+                    <div class="flex items-center gap-4 mb-8">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">Spiritual Journeys</p>
+                    </div>
+
+                    <h2 class="font-serif text-6xl lg:text-8xl font-bold text-brand-black leading-[0.9] tracking-tight">
+                        A Journey<br>
+                        <span class="italic font-normal text-brand-red">of the Soul.</span>
+                    </h2>
+
+                    <p class="text-brand-black/60 text-base lg:text-lg leading-relaxed max-w-lg mt-8 font-light">
+                        Limore facilitates deep spiritual journeys. We arrange multi-temple tours with dedicated transportation and accommodation. Whether it's the holy Sabarimala pilgrimage or a visit to the architectural marvel of the Sree Padmanabhaswamy Temple, we handle the logistics so you can focus on devotion.
+                    </p>
+
+                    <!-- Our Services for Pilgrims (Clean 2x2 Grid with Diamond Markers) -->
+                    <div class="mt-10 pt-8 border-t border-black/10">
+                        <p class="text-[0.6rem] uppercase tracking-[0.2em] font-bold text-brand-black/40 mb-5">Our Services for Pilgrims</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
+                            <div class="flex items-center gap-3">
+                                <span class="w-2 h-2 bg-brand-red rotate-45"></span>
+                                <span class="text-sm text-brand-black/70 font-light">Dedicated Temple Transportation</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-2 h-2 bg-brand-red rotate-45"></span>
+                                <span class="text-sm text-brand-black/70 font-light">Airport & Hotel Pickup</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-2 h-2 bg-brand-red rotate-45"></span>
+                                <span class="text-sm text-brand-black/70 font-light">Multi-Temple Sightseeing</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-2 h-2 bg-brand-red rotate-45"></span>
+                                <span class="text-sm text-brand-black/70 font-light">Family Pilgrimage Tours</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-2 h-2 bg-brand-red rotate-45"></span>
+                                <span class="text-sm text-brand-black/70 font-light">Group Pilgrimage Vans & Buses</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: The Dissolving Elephant Image -->
+                <div class="lg:col-span-5 h-[400px] lg:h-[600px] relative w-full">
+                    <img src="https://images.unsplash.com/photo-1561365452-4d1c5d02c1c4?q=80&w=2070&auto=format&fit=crop" 
+                         alt="Temple Elephant" 
+                         class="absolute inset-0 w-full h-full object-cover mix-blend-multiply">
+                    
+                    <!-- The Pure White Dissolve Gradient (Melts the image into the white background) -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/40 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-white via-transparent to-transparent"></div>
+                    
+                    <!-- Subtle Red Overlay to keep the brand identity -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-red/10 via-transparent to-transparent mix-blend-multiply"></div>
+                </div>
+
+            </div>
+
+            <!-- ========================================== -->
+            <!-- THE SHARP SPIRITUAL INDEX (Pure Typography)-->
+            <!-- ========================================== -->
+            <div class="mt-20 pt-12 border-t border-black/10">
+                
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="w-10 h-px bg-brand-red"></span>
+                    <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">Key Temples Served</p>
+                </div>
+
+                <!-- The 2-Column Editorial Index (No boxes, just razor-thin lines & massive numbers) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-black/10">
+                    
+                    <!-- Left Column (First 5 Temples) -->
+                    <div class="divide-y divide-black/10 md:pr-8">
+                        <a href="#" class="group flex items-baseline gap-6 py-4 hover:bg-black/[0.02] transition-colors">
+                            <span class="font-serif text-4xl font-bold text-black/10 group-hover:text-brand-red transition-colors">01</span>
+                            <span class="font-serif text-2xl font-semibold text-brand-black group-hover:text-brand-red transition-colors">Guruvayur Sri Krishna</span>
+                        </a>
+                        <a href="#" class="group flex items-baseline gap-6 py-4 hover:bg-black/[0.02] transition-colors">
+                            <span class="font-serif text-4xl font-bold text-black/10 group-hover:text-brand-red transition-colors">02</span>
+                            <span class="font-serif text-2xl font-semibold text-brand-black group-hover:text-brand-red transition-colors">Sree Padmanabhaswamy</span>
+                        </a>
+                        <a href="#" class="group flex items-baseline gap-6 py-4 hover:bg-black/[0.02] transition-colors">
+                            <span class="font-serif text-4xl font-bold text-black/10 group-hover:text-brand-red transition-colors">03</span>
+                            <span class="font-serif text-2xl font-semibold text-brand-black group-hover:text-brand-red transition-colors">Sabarimala Ayyappa</span>
+                        </a>
+                        <a href="#" class="group flex items-baseline gap-6 py-4 hover:bg-black/[0.02] transition-colors">
+                            <span class="font-serif text-4xl font-bold text-black/10 group-hover:text-brand-red transition-colors">04</span>
+                            <span class="font-serif text-2xl font-semibold text-brand-black group-hover:text-brand-red transition-colors">Chottanikkara</span>
+                        </a>
+                        <a href="#" class="group flex items-baseline gap-6 py-4 hover:bg-black/[0.02] transition-colors">
+                            <span class="font-serif text-4xl font-bold text-black/10 group-hover:text-brand-red transition-colors">05</span>
+                            <span class="font-serif text-2xl font-semibold text-brand-black group-hover:text-brand-red transition-colors">Vadakkunnathan</span>
+                        </a>
+                    </div>
+
+                    <!-- Right Column (Last 5 Temples) -->
+                    <div class="divide-y divide-black/10 md:pl-8">
+                        <a href="#" class="group flex items-baseline gap-6 py-4 hover:bg-black/[0.02] transition-colors">
+                            <span class="font-serif text-4xl font-bold text-black/10 group-hover:text-brand-red transition-colors">06</span>
+                            <span class="font-serif text-2xl font-semibold text-brand-black group-hover:text-brand-red transition-colors">Vaikom Mahadeva</span>
+                        </a>
+                        <a href="#" class="group flex items-baseline gap-6 py-4 hover:bg-black/[0.02] transition-colors">
+                            <span class="font-serif text-4xl font-bold text-black/10 group-hover:text-brand-red transition-colors">07</span>
+                            <span class="font-serif text-2xl font-semibold text-brand-black group-hover:text-brand-red transition-colors">Ambalappuzha</span>
+                        </a>
+                        <a href="#" class="group flex items-baseline gap-6 py-4 hover:bg-black/[0.02] transition-colors">
+                            <span class="font-serif text-4xl font-bold text-black/10 group-hover:text-brand-red transition-colors">08</span>
+                            <span class="font-serif text-2xl font-semibold text-brand-black group-hover:text-brand-red transition-colors">Mannarasala Nagaraja</span>
+                        </a>
+                        <a href="#" class="group flex items-baseline gap-6 py-4 hover:bg-black/[0.02] transition-colors">
+                            <span class="font-serif text-4xl font-bold text-black/10 group-hover:text-brand-red transition-colors">09</span>
+                            <span class="font-serif text-2xl font-semibold text-brand-black group-hover:text-brand-red transition-colors">Ananthapura Lake</span>
+                        </a>
+                        <a href="#" class="group flex items-baseline gap-6 py-4 hover:bg-black/[0.02] transition-colors">
+                            <span class="font-serif text-4xl font-bold text-black/10 group-hover:text-brand-red transition-colors">10</span>
+                            <span class="font-serif text-2xl font-semibold text-brand-black group-hover:text-brand-red transition-colors">Rajarajeswara</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 7: THE TESTIMONIAL (TRUST)          -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12 relative z-10">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+                
+                <!-- LEFT: The Cinematic Dissolve Image (Misty Munnar) -->
+                <div class="lg:col-span-7 relative h-[350px] lg:h-[500px] w-full overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1582117405790-8d2f8d0a4b2e?q=80&w=2070&auto=format&fit=crop" 
+                         alt="Misty Morning in Munnar" 
+                         class="absolute inset-0 w-full h-full object-cover mix-blend-multiply">
+                    
+                    <!-- The Pure White Dissolve Gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/30 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-white via-transparent to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-red/10 via-transparent to-transparent mix-blend-multiply"></div>
+                </div>
+
+                <!-- RIGHT: The Editorial Quote Block -->
+                <div class="lg:col-span-5 relative flex flex-col justify-center">
+                    
+                    <!-- Massive Watermark Quote Mark -->
+                    <span class="absolute -top-16 -left-4 font-serif text-[15rem] leading-none text-brand-red/5 select-none pointer-events-none">"</span>
+                    
+                    <div class="relative z-10 space-y-8">
+                        <div class="w-12 h-1 bg-brand-red"></div>
+                        
+                        <blockquote class="font-serif text-2xl lg:text-3xl font-medium text-brand-black leading-[1.4] italic max-w-md">
+                            "We booked the 7-day Kerala Honeymoon tour through Limore. They handled everything—from the luxury houseboat in Alleppey to the jeep safari in Thekkady. The level of care was incredible, and we never had to worry about a single connection."
+                        </blockquote>
+                        
+                        <!-- Author Line -->
+                        <div class="pt-6 border-t border-black/10 flex items-center gap-4">
+                            <div class="w-2 h-2 bg-brand-red rotate-45"></div>
+                            <div>
+                                <p class="font-sans text-[0.65rem] uppercase tracking-[0.15em] font-bold text-brand-black">Meera & Rahul</p>
+                                <p class="font-sans text-[0.6rem] uppercase tracking-widest text-black/40 font-light mt-1">Newlyweds, Delhi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 8: THE FINAL CTA (CURATE YOUR TRIP) -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-black relative overflow-hidden border-b border-white/5">
+        
+        <!-- Background Engineering Grid & Red Glow -->
+        <div class="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-red/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <!-- Top and Bottom Architectural Red Threads -->
+        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-brand-red/50 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-brand-red/50 to-transparent"></div>
+
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12 relative z-10 text-center">
+            
+            <!-- Editorial Eyebrow -->
+            <div class="flex items-center justify-center gap-4 mb-6">
+                <span class="w-10 h-px bg-brand-red"></span>
+                <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-white/40">Your Journey</p>
+                <span class="w-10 h-px bg-brand-red"></span>
+            </div>
+
+            <!-- Massive Headline -->
+            <h2 class="font-serif text-5xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight">
+                Kerala is <span class="italic font-normal text-brand-red">Calling.</span>
+            </h2>
+
+            <!-- Subtext -->
+            <p class="text-gray-400 text-sm lg:text-base leading-relaxed max-w-xl mx-auto mt-6 font-light">
+                Don't just read about it. Experience it. Whether it's a 3-day getaway or a 10-day grand tour, let Limore craft your perfect Kerala itinerary.
+            </p>
+
+            <!-- The Massive Sharp CTA Button -->
+            <div class="mt-12 flex justify-center">
+                <a href="#" class="inline-flex items-center gap-3 bg-brand-red text-white px-12 py-5 text-[0.7rem] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-black transition-colors duration-300 group rounded-none shadow-lg shadow-brand-red/20">
+                    Start Curating Your Trip
+                    <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>
