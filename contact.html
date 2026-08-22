@@ -66,89 +66,175 @@
 <body class="bg-brand-white text-brand-black antialiased overflow-x-hidden">
 
     <!-- (Your Navbar goes here) -->
+    <nav class="fixed w-full top-0 z-50 bg-brand-white/95 backdrop-blur-md border-b border-black/10 h-20">
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12 h-full flex items-center justify-between">
 
+            <!-- Logo (Scaled properly) -->
+            <a href="./index.html" class="flex-shrink-0 flex items-center">
+                <img src="./assets/images/logo.png" class="h-6 w-auto" alt="Limore">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center gap-8 h-full">
+                <a href="./index.html"
+                    class="nav-link text-brand-black/80 hover:text-brand-red transition-colors">Home</a>
+                <a href="./about.html"
+                    class="nav-link text-brand-black/80 hover:text-brand-red transition-colors">About</a>
+
+                <!-- Services Dropdown -->
+                <div class="nav-dropdown h-full flex items-center cursor-pointer">
+                    <span class="nav-link text-brand-black/80 hover:text-brand-red transition-colors">Services</span>
+                    <i
+                        class="fa-solid fa-chevron-down text-[8px] ml-1.5 text-black/30 group-hover:text-brand-red transition-colors"></i>
+
+                    <div class="nav-dropdown-content">
+                        <a href="./services/private-aviation.html"
+                            class="nav-link px-5 py-3 hover:bg-brand-black hover:text-white transition-colors block">Private
+                            Aviation</a>
+                        <a href="./services/airport-transfer.html"
+                            class="nav-link px-5 py-3 hover:bg-brand-black hover:text-white transition-colors block">Airport
+                            Transfers</a>
+                        <a href="./services/cars-and-chauffeur.html"
+                            class="nav-link px-5 py-3 hover:bg-brand-black hover:text-white transition-colors block">Car
+                            & Chauffeur</a>
+                        <a href="./services/events-and-wedding.html"
+                            class="nav-link px-5 py-3 hover:bg-brand-black hover:text-white transition-colors block">Events
+                            & Weddings</a>
+                    </div>
+                </div>
+
+                <a href="./kerala.html"
+                    class="nav-link text-brand-black/80 hover:text-brand-red transition-colors">Kerala</a>
+                <a href="./dubai.html"
+                    class="nav-link text-brand-black/80 hover:text-brand-red transition-colors">Dubai</a>
+            </div>
+
+            <!-- Desktop CTA -->
+            <div class="hidden lg:flex items-center gap-6">
+                <a href="./contact.html"
+                    class="text-xs font-medium hover:text-brand-red block uppercase transition-colors">Contact</a>
+                <a href="./contact.html#consultation"
+                    class="bg-brand-red text-white px-6 py-2.5 text-[0.7rem] tracking-widest font-semibold uppercase hover:bg-brand-black transition-all duration-300 rounded-none">
+                    Get a Quote
+                </a>
+            </div>
+
+            <!-- Mobile Burger -->
+            <button id="menu-toggle"
+                class="lg:hidden flex flex-col items-end gap-1.5 focus:outline-none space-y-1.5 z-50">
+                <span class="block w-6 h-[2px] bg-black transition-all duration-300"></span>
+                <span class="block w-4 h-[2px] bg-black transition-all duration-300"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu - Full Height, Clean Spacing, Bottom Sticky CTAs -->
+        <div id="mobile-menu"
+            class="lg:hidden fixed top-20 left-0 w-full bg-brand-white border-t border-black/5 px-6 py-8 z-40 flex flex-col">
+
+            <!-- Main Links (Clean Spacing with Sharp Dividers) -->
+            <div class="flex flex-col">
+                <a href="./index.html"
+                    class="font-serif text-2xl font-bold text-brand-black hover:text-brand-red transition-colors py-4 border-b border-black/5">Home</a>
+
+                <!-- Services Section (Clean Sub-Menu) -->
+                <div class="py-4 border-b border-black/5">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="w-2 h-2 bg-brand-red rotate-45"></span>
+                        <span
+                            class="font-sans text-[0.6rem] uppercase tracking-[0.2em] font-bold text-black/40">Services</span>
+                    </div>
+                    <div class="flex flex-col gap-3 pl-2">
+                        <a href="./services/private-aviation.html"
+                            class="text-sm font-medium text-brand-black/80 hover:text-brand-red uppercase tracking-widest transition-colors">Private
+                            Aviation</a>
+                        <a href="./services/airport-transfer.html"
+                            class="text-sm font-medium text-brand-black/80 hover:text-brand-red uppercase tracking-widest transition-colors">Airport
+                            Transfers</a>
+                        <a href="./services/cars-and-chauffeur.html"
+                            class="text-sm font-medium text-brand-black/80 hover:text-brand-red uppercase tracking-widest transition-colors">Car
+                            & Chauffeur</a>
+                        <a href="./services/events-and-wedding.html"
+                            class="text-sm font-medium text-brand-black/80 hover:text-brand-red uppercase tracking-widest transition-colors">Events
+                            & Weddings</a>
+                    </div>
+                </div>
+
+                <a href="./kerala.html"
+                    class="font-serif text-2xl font-bold text-brand-black hover:text-brand-red transition-colors py-4 border-b border-black/5">Kerala</a>
+                <a href="./dubai.html"
+                    class="font-serif text-2xl font-bold text-brand-black hover:text-brand-red transition-colors py-4 border-b border-black/5">Dubai</a>
+                <a href="./about.html"
+                    class="font-serif text-2xl font-bold text-brand-black hover:text-brand-red transition-colors py-4 border-b border-black/5">About</a>
+            </div>
+
+            <!-- Bottom CTAs (Stuck to bottom with mt-auto for easy thumb access) -->
+            <div class="mt-auto pt-8 border-t border-black/10 flex flex-col gap-3">
+                <a href="./contact.html"
+                    class="block text-center font-sans text-sm tracking-widest uppercase font-bold border border-brand-red text-brand-black px-6 py-4 hover:bg-brand-red hover:text-white transition-colors">Contact
+                    Us</a>
+                <a href="./contact.html#consultation"
+                    class="block text-center font-sans text-sm tracking-widest uppercase font-bold bg-brand-red text-white px-6 py-4 hover:bg-brand-black transition-colors">Get
+                    a Quote</a>
+            </div>
+        </div>
+    </nav>
     <!-- ========================================== -->
     <!-- CONTACT HERO: THE EXECUTIVE CONCIERGE       -->
     <!-- ========================================== -->
-    <section class="pt-20 min-h-screen lg:h-screen flex items-center bg-brand-white relative overflow-hidden">
+    <section class="pt-20 min-h-screen lg:h-screen relative bg-brand-white overflow-hidden flex items-center">
     
-        <!-- Massive Editorial Watermark (The "L") -->
-        <div class="absolute -bottom-10 -right-10 font-serif text-[25rem] lg:text-[35rem] font-bold text-brand-red/5 leading-none pointer-events-none select-none">L</div>
-    
-        <div class="max-w-[100rem] mx-auto px-6 lg:px-12 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 h-full items-stretch">
+        <!-- The Full-Bleed Dissolving Image (Right Side) -->
+        <div class="absolute inset-y-0 right-0 w-full lg:w-[65%] h-full overflow-hidden">
+            <!-- High-res luxury car/concierge image -->
+            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop" 
+                 alt="Limore Executive Concierge" 
+                 class="w-full h-full object-cover saturate-[0.95] contrast-110 transition-transform duration-[8s] hover:scale-105">
             
-            <!-- LEFT COLUMN: The Typography & Direct Contact (No Boxes, Pure Type) -->
-            <div class="lg:col-span-6 flex flex-col justify-center py-12 lg:py-0 lg:pr-16 relative">
+            <!-- The "Dissolve" Gradient (Melts the image into pure white on the left for clean text readability) -->
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/70 to-transparent lg:via-brand-white/30"></div>
+            
+            <!-- Cinematic Red Light Leak -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-brand-red/10 via-transparent to-transparent mix-blend-multiply"></div>
+        </div>
+    
+        <!-- The Text & CTA Column (Pure Typography) -->
+        <div class="relative z-10 max-w-[90rem] mx-auto px-6 lg:px-12 w-full">
+            <div class="lg:w-[65%] flex flex-col justify-center py-12 lg:py-0">
                 
-                <!-- The "Letterhead" Eyebrow -->
-                <div class="flex items-center gap-4 mb-8">
-                    <div class="w-12 h-px bg-brand-red"></div>
+                <!-- Editorial Eyebrow + Red Spine -->
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-1 h-10 bg-brand-red"></div>
                     <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">The Executive Desk</p>
                 </div>
     
-                <!-- Massive Typography -->
-                <h1 class="font-display text-5xl lg:text-7xl font-bold text-brand-black leading-[0.95] tracking-tighter">
+                <!-- Massive Serif Headline -->
+                <h1 class="font-serif text-6xl lg:text-8xl xl:text-9xl font-bold text-brand-black leading-[0.85] tracking-tight">
                     Connect with<br>
-                    <span class="font-serif italic font-normal text-brand-red">the Concierge.</span>
+                    <span class="text-brand-red italic">the Concierge.</span>
                 </h1>
     
-                <!-- Editorial Subtext -->
-                <p class="text-black/60 text-sm lg:text-base leading-relaxed max-w-md mt-6 font-light">
+                <!-- The Subtext (Clean, no box) -->
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md mt-8 font-light">
                     We are ready to curate your next journey. Reach out to our team for tailored corporate travel, private aviation, event logistics, or luxury Kerala holidays.
                 </p>
     
-                <!-- The Massive "Command Line" CTA (No Button, Just a Giant Red Link) -->
-                <div class="mt-10 group">
-                    <a href="tel:+919292470174" class="block w-fit border-b-2 border-brand-red pb-4 transition-all duration-300 group-hover:border-brand-black">
-                        <p class="text-[0.6rem] uppercase tracking-widest font-bold text-black/40 mb-2">Direct Line</p>
-                        <span class="font-display text-2xl lg:text-4xl font-bold text-brand-red tracking-tight group-hover:text-brand-black transition-colors duration-300">+91 929 247 0174</span>
+                <!-- The Sharp, Flat, Solid Red CTA -->
+                <div class="mt-10">
+                    <a href="tel:+919292470174" class="inline-flex items-center gap-3 bg-brand-red text-white px-10 py-4 text-[0.7rem] font-bold uppercase tracking-widest transition-all duration-300 hover:bg-brand-black group rounded-none">
+                        Call Now: +91 929 247 0174
+                        <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
                     </a>
-                    <div class="mt-2 flex items-center gap-2 text-[0.55rem] uppercase tracking-widest text-black/40 font-mono">
+                </div>
+    
+                <!-- The "Footline" (Replaces the giant text link and floating box) -->
+                <div class="mt-10 flex flex-col gap-4 border-t border-black/10 pt-6">
+                    <div class="flex items-center gap-3 border-l-2 border-brand-red pl-3 py-1">
                         <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-                        24/7 Executive Support
+                        <span class="font-sans text-[0.6rem] uppercase tracking-[0.2em] font-bold text-brand-black/50">24/7 Executive Support</span>
                     </div>
-                </div>
-    
-                <!-- Architectural Divider Line -->
-                <div class="w-full h-px bg-black/5 mt-12"></div>
-                
-                <!-- The Signature Line (Bottom of the Letterhead) -->
-                <div class="pt-6 flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                        <div class="w-2 h-2 bg-brand-red rotate-45"></div>
-                        <span class="text-[0.55rem] uppercase tracking-[0.2em] font-bold text-black/30">Dubai · Mumbai · Kochi · Delhi</span>
-                    </div>
-                    <span class="text-[0.55rem] uppercase tracking-[0.2em] font-bold text-black/30 font-serif italic">Est. 2014</span>
-                </div>
-    
-            </div>
-    
-            <!-- RIGHT COLUMN: The Sharp Architectural Image Cut -->
-            <div class="lg:col-span-6 h-[400px] lg:h-auto relative">
-                
-                <!-- The Sharp Diagonal Mask (No rounded corners, no shadows, pure architectural cut) -->
-                <div class="absolute inset-0 w-full h-full lg:clip-path-[polygon(12%_0,100%_0,100%_100%,0%_100%)] overflow-hidden">
-                    
-                    <!-- The Image -->
-                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop" 
-                         alt="Limore Executive Concierge" 
-                         class="w-full h-full object-cover saturate-[0.9] contrast-110 transition-transform duration-[8s] hover:scale-105">
-                    
-                    <!-- The Corporate Red Light Leak -->
-                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-red/10 via-transparent to-transparent mix-blend-multiply"></div>
-                    
-                    <!-- The Dark Bottom Gradient (So white text below pops) -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/30 via-transparent to-transparent lg:from-brand-black/10"></div>
-                </div>
-    
-                <!-- Integrated Text Overlay (Sitting on the dark bottom of the image) -->
-                <div class="absolute bottom-0 right-0 z-20 p-8 lg:p-12 text-right max-w-md flex flex-col items-end">
-                    <p class="text-white text-xs lg:text-sm font-light tracking-wide leading-relaxed mb-4">
-                        "From the bustling corridors of the Dubai Mall to the high-stakes conference halls of the World Trade Centre."
-                    </p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-8 h-px bg-brand-red"></div>
-                        <span class="text-[0.55rem] uppercase tracking-widest font-bold text-white">Limore Global</span>
+                    <div class="flex items-center gap-3 border-l-2 border-brand-red pl-3 py-1">
+                        <span class="w-1.5 h-1.5 bg-brand-red rotate-45"></span>
+                        <span class="font-sans text-[0.6rem] uppercase tracking-[0.2em] font-bold text-brand-black/50">Dubai · Mumbai · Kochi · Delhi</span>
                     </div>
                 </div>
     
