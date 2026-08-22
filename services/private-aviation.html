@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Aviation | Limored</title>
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Syne', 'sans-serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#0A0A0A',
+                            white: '#FCFCFC',
+                            red: '#D9181E',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-white text-brand-black antialiased overflow-x-hidden">
+
+    <!-- (Your Navbar goes here) -->
+
+    <!-- ========================================== -->
+    <!-- PRIVATE AVIATION HERO: THE SKY IS YOURS     -->
+    <!-- ========================================== -->
+    <section class="pt-20 min-h-screen lg:h-screen relative bg-brand-white overflow-hidden flex items-center">
+        
+        <!-- Full-Bleed Cinematic Image (Private Jet in Golden/Red Sunset) -->
+        <div class="absolute inset-y-0 right-0 w-full lg:w-[65%] h-full overflow-hidden">
+            <!-- High-res private jet image -->
+            <img src="https://images.unsplash.com/photo-1570701569070-95a3c8d37c8f?q=80&w=2070&auto=format&fit=crop" 
+                 alt="Limore Private Jet" 
+                 class="w-full h-full object-cover saturate-[0.95] contrast-110 transition-transform duration-[8s] hover:scale-105">
+            
+            <!-- The "Dissolve" Gradient (Melts the image into pure white on the left for text) -->
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/70 to-transparent lg:via-brand-white/30"></div>
+            
+            <!-- The Subtle Dark Gradient on the image itself (to make the Jet pop) -->
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black/40 via-brand-black/10 to-transparent"></div>
+            
+            <!-- Cinematic Red Light Leak -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-brand-red/10 via-transparent to-transparent mix-blend-multiply"></div>
+        </div>
+
+        <!-- The Text & CTA Column (Pure Typography) -->
+        <div class="relative z-10 max-w-[90rem] mx-auto px-6 lg:px-12 w-full">
+            <div class="lg:w-[65%] flex flex-col justify-center py-12 lg:py-0">
+                
+                <!-- Editorial Eyebrow + Red Spine -->
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-1 h-10 bg-brand-red"></div>
+                    <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">Private Aviation</p>
+                </div>
+
+                <!-- Massive Serif Headline -->
+                <h1 class="font-serif text-6xl lg:text-8xl xl:text-9xl font-bold text-brand-black leading-[0.85] tracking-tight">
+                    Access the Skies.<br>
+                    <span class="text-brand-red italic">Elevate Your Freedom.</span>
+                </h1>
+
+                <!-- The Subtext -->
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md mt-8 font-light">
+                    Skip the crowds, the security lines, and the rigid schedules. Limore Private Aviation offers bespoke charter services on a fleet of meticulously maintained aircraft. Your journey, entirely on your terms.
+                </p>
+
+                <!-- The Sharp, Flat, Solid Red CTA -->
+                <div class="mt-10">
+                    <a href="#" class="inline-flex items-center gap-3 bg-brand-red text-white px-10 py-4 text-[0.7rem] font-bold uppercase tracking-widest transition-all duration-300 hover:bg-brand-black group rounded-none">
+                        Request A Charter
+                        <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Sharp "Available Now" Floating Badge -->
+        <!-- Sharp edges, red left spine, dark glass background, live pulsing dot -->
+        <div class="absolute bottom-8 right-8 lg:bottom-12 lg:right-12 z-20 bg-brand-black/70 backdrop-blur-md border-l-4 border-brand-red px-6 py-4 shadow-2xl rounded-none">
+            <div class="flex items-center gap-4">
+                <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <div class="flex flex-col">
+                    <span class="text-[0.55rem] uppercase tracking-widest text-gray-300 font-mono">Live Status</span>
+                    <span class="text-lg font-serif font-bold text-white">Available Now</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 2: THE FLEET (AIRCRAFT SHOWCASE)    -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <!-- Editorial Header -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-12">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">The Hangar</p>
+                    </div>
+                    <h2 class="font-serif text-5xl lg:text-6xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                        The <span class="italic font-normal text-brand-red">Fleet.</span>
+                    </h2>
+                </div>
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md font-light lg:text-right">
+                    Meticulously maintained, immaculately detailed, and backed by our 24/7 operational team.
+                </p>
+            </div>
+
+            <!-- The Sharp 3-Column Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 border-t border-l border-black/10">
+                
+                <!-- Jet 1: Gulfstream G650 -->
+                <div class="group relative flex flex-col border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <div class="relative h-56 lg:h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1569629743817-70d8db6c323b?q=80&w=2070&auto=format&fit=crop" 
+                             class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Gulfstream G650">
+                        
+                        <!-- Massive Watermark Number -->
+                        <span class="absolute top-4 right-4 font-serif text-6xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">01</span>
+                        
+                        <!-- Sharp Square Icon Box -->
+                        <div class="absolute bottom-4 left-4 w-12 h-12 border border-brand-red/30 bg-brand-black/60 backdrop-blur-sm flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-plane-up text-lg"></i>
+                        </div>
+                    </div>
+
+                    <!-- The Spec Sheet Text -->
+                    <div class="p-6 lg:p-8 flex flex-col flex-1">
+                        <h3 class="font-serif text-xl font-bold text-brand-black mb-1">Gulfstream G650</h3>
+                        <p class="text-brand-black/40 text-xs uppercase tracking-widest font-bold mb-4">Ultra-Long Range Jet</p>
+                        
+                        <!-- Minimalist Feature List -->
+                        <div class="space-y-2.5 border-t border-black/10 pt-4">
+                            <div class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 bg-brand-red rotate-45 flex-shrink-0"></span>
+                                <span class="text-sm text-brand-black/60 font-light">Range: <span class="font-semibold text-brand-black">7,000 NM</span></span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 bg-brand-red rotate-45 flex-shrink-0"></span>
+                                <span class="text-sm text-brand-black/60 font-light">Passengers: <span class="font-semibold text-brand-black">16</span></span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 bg-brand-red rotate-45 flex-shrink-0"></span>
+                                <span class="text-sm text-brand-black/60 font-light">Cabin: <span class="font-semibold text-brand-black">Ultra-Long Range, Full Bed</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- The Precision Red Thread Top Line -->
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Jet 2: Cessna Citation CJ3+ -->
+                <div class="group relative flex flex-col border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <div class="relative h-56 lg:h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?q=80&w=2070&auto=format&fit=crop" 
+                             class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Cessna Citation CJ3+">
+                        
+                        <span class="absolute top-4 right-4 font-serif text-6xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">02</span>
+                        
+                        <div class="absolute bottom-4 left-4 w-12 h-12 border border-brand-red/30 bg-brand-black/60 backdrop-blur-sm flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-plane text-lg"></i>
+                        </div>
+                    </div>
+
+                    <div class="p-6 lg:p-8 flex flex-col flex-1">
+                        <h3 class="font-serif text-xl font-bold text-brand-black mb-1">Cessna Citation CJ3+</h3>
+                        <p class="text-brand-black/40 text-xs uppercase tracking-widest font-bold mb-4">Light Jet</p>
+                        
+                        <div class="space-y-2.5 border-t border-black/10 pt-4">
+                            <div class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 bg-brand-red rotate-45 flex-shrink-0"></span>
+                                <span class="text-sm text-brand-black/60 font-light">Range: <span class="font-semibold text-brand-black">2,000 NM</span></span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 bg-brand-red rotate-45 flex-shrink-0"></span>
+                                <span class="text-sm text-brand-black/60 font-light">Passengers: <span class="font-semibold text-brand-black">8</span></span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 bg-brand-red rotate-45 flex-shrink-0"></span>
+                                <span class="text-sm text-brand-black/60 font-light">Cabin: <span class="font-semibold text-brand-black">Perfect for regional India-UAE hops</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Helicopter 1: Airbus H130 -->
+                <div class="group relative flex flex-col border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <div class="relative h-56 lg:h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1534073828943-f801091bb18c?q=80&w=2070&auto=format&fit=crop" 
+                             class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Airbus H130">
+                        
+                        <span class="absolute top-4 right-4 font-serif text-6xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">03</span>
+                        
+                        <div class="absolute bottom-4 left-4 w-12 h-12 border border-brand-red/30 bg-brand-black/60 backdrop-blur-sm flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-helicopter text-lg"></i>
+                        </div>
+                    </div>
+
+                    <div class="p-6 lg:p-8 flex flex-col flex-1">
+                        <h3 class="font-serif text-xl font-bold text-brand-black mb-1">Airbus H130</h3>
+                        <p class="text-brand-black/40 text-xs uppercase tracking-widest font-bold mb-4">Luxury Rotary</p>
+                        
+                        <div class="space-y-2.5 border-t border-black/10 pt-4">
+                            <div class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 bg-brand-red rotate-45 flex-shrink-0"></span>
+                                <span class="text-sm text-brand-black/60 font-light">Range: <span class="font-semibold text-brand-black">300 NM</span></span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 bg-brand-red rotate-45 flex-shrink-0"></span>
+                                <span class="text-sm text-brand-black/60 font-light">Passengers: <span class="font-semibold text-brand-black">7</span></span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 bg-brand-red rotate-45 flex-shrink-0"></span>
+                                <span class="text-sm text-brand-black/60 font-light">Cabin: <span class="font-semibold text-brand-black">Perfect for city transfers & site inspections</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 3: THE ROUTE MAP (GLOBAL NETWORK)   -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+                
+                <!-- LEFT COLUMN: The Editorial Statement & Route Ledger -->
+                <div class="lg:col-span-5 flex flex-col space-y-8">
+                    
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">Where We Fly</p>
+                    </div>
+
+                    <h2 class="font-serif text-5xl lg:text-6xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                        A Global Network,<br>
+                        <span class="italic font-normal text-brand-red">Anchored in Dubai & India.</span>
+                    </h2>
+
+                    <p class="text-brand-black/60 text-base lg:text-lg leading-relaxed max-w-md font-light">
+                        From corporate shuttle flights between DXB and BOM to long-haul transatlantic business trips, our global operational permits grant us the freedom to fly you anywhere.
+                    </p>
+
+                    <!-- The Sharp Route Ledger -->
+                    <div class="mt-6 pt-8 border-t border-black/10">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
+                            <!-- Dubai ↔ Mumbai (Flagship) -->
+                            <div class="flex items-center gap-3 border-b border-black/5 pb-2">
+                                <span class="w-2 h-2 bg-brand-red rotate-45 flex-shrink-0"></span>
+                                <span class="text-sm font-semibold text-brand-black">Dubai ↔ Mumbai</span>
+                                <span class="text-[0.55rem] uppercase tracking-widest font-bold text-brand-red ml-auto">Flagship</span>
+                            </div>
+                            <!-- Dubai ↔ Delhi -->
+                            <div class="flex items-center gap-3 border-b border-black/5 pb-2">
+                                <span class="w-2 h-2 bg-brand-red rotate-45 flex-shrink-0"></span>
+                                <span class="text-sm font-semibold text-brand-black">Dubai ↔ Delhi</span>
+                            </div>
+                            <!-- Dubai ↔ Kochi -->
+                            <div class="flex items-center gap-3 border-b border-black/5 pb-2">
+                                <span class="w-2 h-2 bg-brand-red rotate-45 flex-shrink-0"></span>
+                                <span class="text-sm font-semibold text-brand-black">Dubai ↔ Kochi</span>
+                            </div>
+                            <!-- Dubai ↔ London -->
+                            <div class="flex items-center gap-3 border-b border-black/5 pb-2">
+                                <span class="w-2 h-2 bg-brand-red rotate-45 flex-shrink-0"></span>
+                                <span class="text-sm font-semibold text-brand-black">Dubai ↔ London</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: The Dark Minimalist Map Panel -->
+                <div class="lg:col-span-7 relative h-[400px] lg:h-[550px] bg-brand-black overflow-hidden border border-black/5 rounded-none">
+                    
+                    <!-- Subtle Dot Matrix Grid -->
+                    <div class="absolute inset-0 bg-[radial-gradient(#ffffff03_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none"></div>
+                    
+                    <!-- The Red Architectural Spine (Left edge) -->
+                    <div class="absolute top-0 left-0 w-1 h-full bg-brand-red/30"></div>
+
+                    <!-- The Stylized SVG Map -->
+                    <svg viewBox="0 0 600 550" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 w-full h-full">
+                        
+                        <!-- Dashed Route Lines (Connecting nodes) -->
+                        <path d="M 120 200 L 250 100 L 400 150 L 500 250" stroke="#D9181E" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.4" />
+                        <path d="M 250 100 L 300 400 L 450 450" stroke="#D9181E" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.2" />
+
+                        <!-- SVG Glowing Filters for Nodes & The Arc -->
+                        <defs>
+                            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+
+                        <!-- The Flagship Glowing Red Arc (Dubai to Mumbai) -->
+                        <path d="M 250 100 Q 350 150 300 400" stroke="#D9181E" stroke-width="2" filter="url(#glow)" />
+                        <path d="M 250 100 Q 350 150 300 400" stroke="#D9181E" stroke-width="8" opacity="0.2" filter="blur(4px)" />
+
+                        <!-- Node: Dubai (DXB - Global Hub) -->
+                        <circle cx="250" cy="100" r="8" fill="#D9181E" filter="url(#glow)" class="animate-pulse" />
+                        <text x="270" y="95" fill="#ffffff" font-family="Inter, sans-serif" font-weight="700" font-size="20">DXB</text>
+                        <text x="270" y="115" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="9" letter-spacing="1" uppercase>Dubai (Global Hub)</text>
+
+                        <!-- Node: London (LHR) -->
+                        <circle cx="120" cy="200" r="6" fill="#D9181E" filter="url(#glow)" class="animate-pulse" />
+                        <text x="80" y="190" fill="#ffffff" font-family="Inter, sans-serif" font-weight="700" font-size="18">LHR</text>
+                        <text x="80" y="210" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="9" letter-spacing="1" uppercase>London</text>
+
+                        <!-- Node: Delhi (DEL) -->
+                        <circle cx="400" cy="150" r="6" fill="#D9181E" filter="url(#glow)" class="animate-pulse" />
+                        <text x="420" y="145" fill="#ffffff" font-family="Inter, sans-serif" font-weight="700" font-size="18">DEL</text>
+                        <text x="420" y="160" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="9" letter-spacing="1" uppercase>Delhi</text>
+
+                        <!-- Node: Mumbai (BOM) -->
+                        <circle cx="300" cy="400" r="8" fill="#D9181E" filter="url(#glow)" class="animate-pulse" />
+                        <text x="320" y="395" fill="#ffffff" font-family="Inter, sans-serif" font-weight="700" font-size="20">BOM</text>
+                        <text x="320" y="415" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="9" letter-spacing="1" uppercase>Mumbai</text>
+
+                        <!-- Node: Kochi (COK) -->
+                        <circle cx="450" cy="450" r="6" fill="#D9181E" filter="url(#glow)" class="animate-pulse" />
+                        <text x="470" y="445" fill="#ffffff" font-family="Inter, sans-serif" font-weight="700" font-size="18">COK</text>
+                        <text x="470" y="460" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="9" letter-spacing="1" uppercase>Kochi</text>
+
+                        <!-- Bottom Label -->
+                        <div class="absolute bottom-6 left-6 border-l-2 border-brand-red pl-4">
+                            <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-white/50">Global Access,</p>
+                            <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-white/50">Anchored Locally.</p>
+                        </div>
+                    </svg>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 4: THE LIMORE PRIVATE EXPERIENCE    -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <!-- Editorial Header -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-12">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">The Lifestyle</p>
+                    </div>
+                    <h2 class="font-serif text-5xl lg:text-6xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                        The Limore <span class="italic font-normal text-brand-red">Private Experience.</span>
+                    </h2>
+                </div>
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md font-light lg:text-right">
+                    This isn't just a flight. It's an entirely bespoke ecosystem of luxury, privacy, and absolute control over your schedule.
+                </p>
+            </div>
+
+            <!-- The Sharp 2x2 Architectural Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 border-t border-l border-black/10">
+                
+                <!-- Experience 1: FBO & Tarmac Access -->
+                <div class="group relative p-8 lg:p-12 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">01</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-key text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">FBO & Tarmac Access</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">No main terminal crowds. You drive directly to the Private Jet terminal (FBO), where we handle your bags, passports, and security in minutes.</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Experience 2: Bespoke In-Flight Catering -->
+                <div class="group relative p-8 lg:p-12 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">02</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-champagne-glasses text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Bespoke In-Flight Catering</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">Tell us what you want. Michelin-starred meals, vintage champagne, or a simple gourmet sandwich. Our partners curate it freshly for your flight.</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Experience 3: Dedicated Flight Concierge -->
+                <div class="group relative p-8 lg:p-12 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">03</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-user-tie text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Dedicated Flight Concierge</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">A 24/7 charter manager is assigned to your trip, handling everything from fuel stops to ground transportation at your destination.</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Experience 4: Pets & Extra Baggage -->
+                <div class="group relative p-8 lg:p-12 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">04</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-paw text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Pets & Extra Baggage</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">Travel with your family, pets, or oversized luggage with absolutely zero hidden fees or weight restrictions.</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 5: WHEN TO CHARTER? (USE CASES)     -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <!-- Editorial Header -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-12">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">Use Cases</p>
+                    </div>
+                    <h2 class="font-serif text-5xl lg:text-6xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                        When to <span class="italic font-normal text-brand-red">Charter?</span>
+                    </h2>
+                </div>
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md font-light lg:text-right">
+                    Eliminate the friction of commercial travel. Whether it's time-critical business or pure leisure, here is when a private jet becomes your most valuable asset.
+                </p>
+            </div>
+
+            <!-- The Sharp 2x2 Architectural Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 border-t border-l border-black/10">
+                
+                <!-- Use Case 1: Corporate Board Meetings -->
+                <div class="group relative flex flex-col border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <!-- Lifestyle Image -->
+                    <div class="relative h-56 lg:h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070&auto=format&fit=crop" 
+                             class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Corporate Boardroom">
+                        
+                        <!-- Massive Watermark Number -->
+                        <span class="absolute top-4 right-4 font-serif text-7xl font-bold text-black/20 group-hover:text-brand-red/40 transition-colors duration-300">01</span>
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="p-8 lg:p-10 flex flex-col flex-1 relative">
+                        <div class="w-12 h-12 border border-brand-red/30 bg-brand-white flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none absolute -top-6 left-8 shadow-lg">
+                            <i class="fa-solid fa-briefcase text-lg"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-brand-black mt-4 mb-2">Corporate Board Meetings</h3>
+                        <p class="text-brand-black/60 text-sm leading-relaxed font-light">Get your entire executive team across the subcontinent in a single day, avoiding hotel stays and jet lag.</p>
+                    </div>
+                    
+                    <!-- The Precision Red Thread Top Line -->
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Use Case 2: Global Events & Airshows -->
+                <div class="group relative flex flex-col border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <div class="relative h-56 lg:h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?q=80&w=2070&auto=format&fit=crop" 
+                             class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Airshow">
+                        <span class="absolute top-4 right-4 font-serif text-7xl font-bold text-black/20 group-hover:text-brand-red/40 transition-colors duration-300">02</span>
+                    </div>
+                    <div class="p-8 lg:p-10 flex flex-col flex-1 relative">
+                        <div class="w-12 h-12 border border-brand-red/30 bg-brand-white flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none absolute -top-6 left-8 shadow-lg">
+                            <i class="fa-solid fa-plane-up text-lg"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-brand-black mt-4 mb-2">Global Events & Airshows</h3>
+                        <p class="text-brand-black/60 text-sm leading-relaxed font-light">Arrive at Aero India or the Farnborough Airshow via private jet, flying directly into the event airfield.</p>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Use Case 3: Luxury Vacations -->
+                <div class="group relative flex flex-col border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <div class="relative h-56 lg:h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2070&auto=format&fit=crop" 
+                             class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Luxury Beach Vacation">
+                        <span class="absolute top-4 right-4 font-serif text-7xl font-bold text-black/20 group-hover:text-brand-red/40 transition-colors duration-300">03</span>
+                    </div>
+                    <div class="p-8 lg:p-10 flex flex-col flex-1 relative">
+                        <div class="w-12 h-12 border border-brand-red/30 bg-brand-white flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none absolute -top-6 left-8 shadow-lg">
+                            <i class="fa-solid fa-umbrella-beach text-lg"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-brand-black mt-4 mb-2">Luxury Vacations</h3>
+                        <p class="text-brand-black/60 text-sm leading-relaxed font-light">Skip the airport chaos entirely. Fly directly to the Maldives, Seychelles, or Goa with your family.</p>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Use Case 4: Emergency Medical & VIP Transport -->
+                <div class="group relative flex flex-col border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <div class="relative h-56 lg:h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=2070&auto=format&fit=crop" 
+                             class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Emergency Medical VIP">
+                        <span class="absolute top-4 right-4 font-serif text-7xl font-bold text-black/20 group-hover:text-brand-red/40 transition-colors duration-300">04</span>
+                    </div>
+                    <div class="p-8 lg:p-10 flex flex-col flex-1 relative">
+                        <div class="w-12 h-12 border border-brand-red/30 bg-brand-white flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none absolute -top-6 left-8 shadow-lg">
+                            <i class="fa-solid fa-heart-pulse text-lg"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-brand-black mt-4 mb-2">Emergency & VIP Transport</h3>
+                        <p class="text-brand-black/60 text-sm leading-relaxed font-light">Guaranteed availability for urgent corporate repatriation or critical VIP travel needs.</p>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 6: HOW IT WORKS (4-STEP SIMPLICITY) -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <!-- Editorial Header -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-12">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">The Process</p>
+                    </div>
+                    <h2 class="font-serif text-5xl lg:text-6xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                        How It <span class="italic font-normal text-brand-red">Works.</span>
+                    </h2>
+                </div>
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md font-light lg:text-right">
+                    No apps to download, no complicated menus. Just a seamless, highly efficient journey from inquiry to takeoff.
+                </p>
+            </div>
+
+            <!-- The Grid with Center Connecting Line -->
+            <div class="relative">
+                
+                <!-- The Center Connecting Line (Desktop Only) -->
+               
+
+                <div class="relative z-10 grid grid-cols-1 md:grid-cols-4 border-t border-l border-black/10">
+                    
+                    <!-- Step 1: Submit an Inquiry -->
+                    <div class="group relative p-8 lg:p-10 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                        <span class="absolute top-6 right-6 font-serif text-6xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">01</span>
+                        
+                        <div class="flex flex-col items-start space-y-6">
+                            <div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                                <i class="fa-solid fa-file-pen text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-brand-black mb-2">Submit an Inquiry</h3>
+                                <p class="text-brand-black/60 text-sm leading-relaxed font-light">Tell us your origin, destination, preferred dates, and number of passengers.</p>
+                            </div>
+                        </div>
+                        <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    </div>
+
+                    <!-- Step 2: Receive a tailored quote within 2 hours -->
+                    <div class="group relative p-8 lg:p-10 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                        <span class="absolute top-6 right-6 font-serif text-6xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">02</span>
+                        
+                        <div class="flex flex-col items-start space-y-6">
+                            <div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                                <i class="fa-solid fa-file-invoice-dollar text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-brand-black mb-2">Receive a Tailored Quote</h3>
+                                <p class="text-brand-black/60 text-sm leading-relaxed font-light">We custom-price based on your needs within 2 hours, not standard package rates.</p>
+                            </div>
+                        </div>
+                        <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    </div>
+
+                    <!-- Step 3: Confirm & prepare -->
+                    <div class="group relative p-8 lg:p-10 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                        <span class="absolute top-6 right-6 font-serif text-6xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">03</span>
+                        
+                        <div class="flex flex-col items-start space-y-6">
+                            <div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                                <i class="fa-solid fa-calendar-check text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-brand-black mb-2">Confirm & Prepare</h3>
+                                <p class="text-brand-black/60 text-sm leading-relaxed font-light">Your assigned Concierge handles flight plans, crew scheduling, and catering.</p>
+                            </div>
+                        </div>
+                        <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    </div>
+
+                    <!-- Step 4: Departure -->
+                    <div class="group relative p-8 lg:p-10 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                        <span class="absolute top-6 right-6 font-serif text-6xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">04</span>
+                        
+                        <div class="flex flex-col items-start space-y-6">
+                            <div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                                <i class="fa-solid fa-plane-departure text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-brand-black mb-2">Departure</h3>
+                                <p class="text-brand-black/60 text-sm leading-relaxed font-light">You arrive 20 minutes before takeoff, walk straight onto the tarmac, and depart immediately.</p>
+                            </div>
+                        </div>
+                        <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ========================================== -->
+    <!-- SECTION 8: THE FINAL CTA (READY FOR TAKEOFF)-->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-black relative overflow-hidden border-b border-white/5">
+        
+        <!-- Background Tactical Grid & Red Glow -->
+        <div class="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-red/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <!-- Top and Bottom Architectural Red Threads -->
+        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-brand-red/50 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-brand-red/50 to-transparent"></div>
+
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12 relative z-10 text-center">
+            
+            <!-- Editorial Eyebrow -->
+            <div class="flex items-center justify-center gap-4 mb-6">
+                <span class="w-10 h-px bg-brand-red"></span>
+                <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-white/40">Your Flight</p>
+                <span class="w-10 h-px bg-brand-red"></span>
+            </div>
+
+            <!-- Massive Headline -->
+            <h2 class="font-serif text-5xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight">
+                Your Private Flight <span class="italic font-normal text-brand-red">Awaits.</span>
+            </h2>
+
+            <!-- Subtext -->
+            <p class="text-gray-400 text-sm lg:text-base leading-relaxed max-w-xl mx-auto mt-6 font-light">
+                Stop waiting in line. Start arriving. Speak to our aviation specialists today for a confidential, no-obligation consultation.
+            </p>
+
+            <!-- The Massive Sharp CTA Button (Solid Red, Flips to White Text on Hover) -->
+            <div class="mt-12 flex justify-center">
+                <a href="#" class="inline-flex items-center gap-3 bg-brand-red text-white px-12 py-5 text-[0.7rem] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-black transition-colors duration-300 group rounded-none shadow-lg shadow-brand-red/20">
+                    Get Your Free Charter Quote
+                    <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

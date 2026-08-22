@@ -12,7 +12,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    
+      <!-- YOUR EXTERNAL STYLESHEET -->
+      <link rel="stylesheet" href="style.css">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -64,6 +66,119 @@
 <body class="bg-brand-white text-brand-black antialiased overflow-x-hidden">
 
     <!-- (Your Navbar goes here) -->
+
+    <nav class="fixed w-full top-0 z-50 bg-brand-white/95 backdrop-blur-md border-b border-black/10 h-20">
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12 h-full flex items-center justify-between">
+
+            <!-- Logo (Scaled properly) -->
+            <a href="./index.html" class="flex-shrink-0 flex items-center">
+                <img src="./assets/images/logo.png" class="h-6 w-auto" alt="Limore">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center gap-8 h-full">
+                <a href="./index.html"
+                    class="nav-link text-brand-black/80 hover:text-brand-red transition-colors">Home</a>
+                <a href="./about.html"
+                    class="nav-link text-brand-black/80 hover:text-brand-red transition-colors">About</a>
+
+                <!-- Services Dropdown -->
+                <div class="nav-dropdown h-full flex items-center cursor-pointer">
+                    <span class="nav-link text-brand-black/80 hover:text-brand-red transition-colors">Services</span>
+                    <i
+                        class="fa-solid fa-chevron-down text-[8px] ml-1.5 text-black/30 group-hover:text-brand-red transition-colors"></i>
+
+                    <div class="nav-dropdown-content">
+                        <a href="./services/private-aviation.html"
+                            class="nav-link px-5 py-3 hover:bg-brand-black hover:text-white transition-colors block">Private
+                            Aviation</a>
+                        <a href="./services/airport-transfer.html"
+                            class="nav-link px-5 py-3 hover:bg-brand-black hover:text-white transition-colors block">Airport
+                            Transfers</a>
+                        <a href="./services/cars-and-chauffeur.html"
+                            class="nav-link px-5 py-3 hover:bg-brand-black hover:text-white transition-colors block">Car
+                            & Chauffeur</a>
+                        <a href="./services/events-and-wedding.html"
+                            class="nav-link px-5 py-3 hover:bg-brand-black hover:text-white transition-colors block">Events
+                            & Weddings</a>
+                    </div>
+                </div>
+
+                <a href="./kerala.html"
+                    class="nav-link text-brand-black/80 hover:text-brand-red transition-colors">Kerala</a>
+                <a href="./dubai.html"
+                    class="nav-link text-brand-black/80 hover:text-brand-red transition-colors">Dubai</a>
+            </div>
+
+            <!-- Desktop CTA -->
+            <div class="hidden lg:flex items-center gap-6">
+                <a href="./contact.html"
+                    class="text-xs font-medium hover:text-brand-red block uppercase transition-colors">Contact</a>
+                <a href="./contact.html#consultation"
+                    class="bg-brand-red text-white px-6 py-2.5 text-[0.7rem] tracking-widest font-semibold uppercase hover:bg-brand-black transition-all duration-300 rounded-none">
+                    Get a Quote
+                </a>
+            </div>
+
+            <!-- Mobile Burger -->
+            <button id="menu-toggle"
+                class="lg:hidden flex flex-col items-end gap-1.5 focus:outline-none space-y-1.5 z-50">
+                <span class="block w-6 h-[2px] bg-black transition-all duration-300"></span>
+                <span class="block w-4 h-[2px] bg-black transition-all duration-300"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu - Full Height, Clean Spacing, Bottom Sticky CTAs -->
+        <div id="mobile-menu"
+            class="lg:hidden fixed top-20 left-0 w-full bg-brand-white border-t border-black/5 px-6 py-8 z-40 flex flex-col">
+
+            <!-- Main Links (Clean Spacing with Sharp Dividers) -->
+            <div class="flex flex-col">
+                <a href="./index.html"
+                    class="font-serif text-2xl font-bold text-brand-black hover:text-brand-red transition-colors py-4 border-b border-black/5">Home</a>
+
+                <!-- Services Section (Clean Sub-Menu) -->
+                <div class="py-4 border-b border-black/5">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="w-2 h-2 bg-brand-red rotate-45"></span>
+                        <span
+                            class="font-sans text-[0.6rem] uppercase tracking-[0.2em] font-bold text-black/40">Services</span>
+                    </div>
+                    <div class="flex flex-col gap-3 pl-2">
+                        <a href="./services/private-aviation.html"
+                            class="text-sm font-medium text-brand-black/80 hover:text-brand-red uppercase tracking-widest transition-colors">Private
+                            Aviation</a>
+                        <a href="./services/airport-transfer.html"
+                            class="text-sm font-medium text-brand-black/80 hover:text-brand-red uppercase tracking-widest transition-colors">Airport
+                            Transfers</a>
+                        <a href="./services/cars-and-chauffeur.html"
+                            class="text-sm font-medium text-brand-black/80 hover:text-brand-red uppercase tracking-widest transition-colors">Car
+                            & Chauffeur</a>
+                        <a href="./services/events-and-wedding.html"
+                            class="text-sm font-medium text-brand-black/80 hover:text-brand-red uppercase tracking-widest transition-colors">Events
+                            & Weddings</a>
+                    </div>
+                </div>
+
+                <a href="./kerala.html"
+                    class="font-serif text-2xl font-bold text-brand-black hover:text-brand-red transition-colors py-4 border-b border-black/5">Kerala</a>
+                <a href="./dubai.html"
+                    class="font-serif text-2xl font-bold text-brand-black hover:text-brand-red transition-colors py-4 border-b border-black/5">Dubai</a>
+                <a href="./about.html"
+                    class="font-serif text-2xl font-bold text-brand-black hover:text-brand-red transition-colors py-4 border-b border-black/5">About</a>
+            </div>
+
+            <!-- Bottom CTAs (Stuck to bottom with mt-auto for easy thumb access) -->
+            <div class="mt-auto pt-8 border-t border-black/10 flex flex-col gap-3">
+                <a href="./contact.html"
+                    class="block text-center font-sans text-sm tracking-widest uppercase font-bold border border-brand-red text-brand-black px-6 py-4 hover:bg-brand-red hover:text-white transition-colors">Contact
+                    Us</a>
+                <a href="./contact.html#consultation"
+                    class="block text-center font-sans text-sm tracking-widest uppercase font-bold bg-brand-red text-white px-6 py-4 hover:bg-brand-black transition-colors">Get
+                    a Quote</a>
+            </div>
+        </div>
+    </nav>
 
     <!-- ========================================== -->
     <!-- HOME HERO: INSPIRED RED CIRCLE COMPOSITION  -->
@@ -582,5 +697,7 @@
         </div>
     </section>
 
+
+    <script src="/js/index.js" defer></script>
 </body>
 </html>

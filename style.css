@@ -8,42 +8,44 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Custom Dropdown Styling */
 .nav-dropdown {
     position: relative;
 }
-
 .nav-dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #ffffff;
-    min-width: 160px;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
-    border-radius: 8px;
-    padding: 12px 0;
-    border: 1px solid rgba(0, 0, 0, 0.03);
-    margin-top: 8px;
+    min-width: 220px;
+    background-color: #FCFCFC;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-top: 2px solid #D9181E; /* Red Spine */
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+    padding: 8px 0;
     z-index: 50;
 }
-
 .nav-dropdown:hover .nav-dropdown-content {
     display: block;
 }
 
-.nav-dropdown-content a {
-    display: block;
-    padding: 8px 20px;
-    font-size: 0.875rem;
-    color: #000000;
-    transition: all 0.2s ease;
+/* Mobile Menu Slide-down Animation */
+#mobile-menu {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+}
+#mobile-menu.open {
+    max-height: calc(100vh - 5rem);
+    opacity: 1;
 }
 
-.nav-dropdown-content a:hover {
-    background-color: #F3F4F6;
-    color: #D9181E;
-    /* Red hover */
+/* Nav Link styling for premium look */
+.nav-link {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 /* Map Interaction - subtle pulse effect for the hero route */
@@ -74,7 +76,7 @@ html {
 }
 
 #mobile-menu.open {
-    max-height: 500px;
+    max-height: 100vh;
     opacity: 1;
 }
 
