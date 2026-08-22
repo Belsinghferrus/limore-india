@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car & Chauffeur | Limore</title>
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Syne', 'sans-serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#0A0A0A',
+                            white: '#FCFCFC',
+                            red: '#D9181E',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-white text-brand-black antialiased overflow-x-hidden">
+
+    <!-- (Your Navbar goes here) -->
+
+    <!-- ========================================== -->
+    <!-- CHAUFFEUR HERO: THE EXECUTIVE ARRIVAL       -->
+    <!-- ========================================== -->
+    <section class="pt-20 min-h-screen lg:h-screen relative bg-brand-white overflow-hidden flex items-center">
+        
+        <!-- Full-Bleed Cinematic Image (Mercedes S-Class + Chauffeur) -->
+        <div class="absolute inset-y-0 right-0 w-full lg:w-[65%] h-full overflow-hidden">
+            <!-- High-quality luxury car/driver image -->
+            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=2070&auto=format&fit=crop" 
+                 alt="Limore Executive Chauffeur" 
+                 class="w-full h-full object-cover saturate-[0.95] contrast-110 transition-transform duration-[8s] hover:scale-105">
+            
+            <!-- The "Dissolve" Gradient (Melts the image into pure white on the left for text) -->
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/70 to-transparent lg:via-brand-white/30"></div>
+            
+            <!-- The "Very Subtle Dark Gradient" on the image itself (Perfect for highlighting the badge and car) -->
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black/40 via-brand-black/10 to-transparent"></div>
+            
+            <!-- Cinematic Red Light Leak -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-brand-red/10 via-transparent to-transparent mix-blend-multiply"></div>
+        </div>
+
+        <!-- The Text & CTA Column (Pure Typography) -->
+        <div class="relative z-10 max-w-[90rem] mx-auto px-6 lg:px-12 w-full">
+            <div class="lg:w-[65%] flex flex-col justify-center py-12 lg:py-0">
+                
+                <!-- Editorial Eyebrow -->
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="w-10 h-px bg-brand-red"></span>
+                    <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">Executive Mobility</p>
+                </div>
+
+                <!-- Massive Serif Headline -->
+                <h1 class="font-serif text-6xl lg:text-8xl xl:text-9xl font-bold text-brand-black leading-[0.85] tracking-tight">
+                    Command the Road.<br>
+                    <span class="text-brand-red italic">Arrive with Presence.</span>
+                </h1>
+
+                <!-- The Subtext -->
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md mt-8 font-light">
+                    Your schedule is tight. Your standards are high. We provide the most immaculate chauffeur service in the UAE and India-so you can focus entirely on what matters while you are in transit.
+                </p>
+
+                <!-- The Sharp, Flat, Solid Red CTA -->
+                <div class="mt-10">
+                    <a href="#" class="inline-flex items-center gap-3 bg-brand-red text-white px-10 py-4 text-[0.7rem] font-bold uppercase tracking-widest transition-all duration-300 hover:bg-brand-black group rounded-none">
+                        Book Your Chauffeur
+                        <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Sharp "Verified Driver" Floating Badge (Bottom Right) -->
+        <div class="absolute bottom-8 right-8 lg:bottom-12 lg:right-12 z-20 bg-brand-black/70 backdrop-blur-md border-l-4 border-brand-red px-6 py-4 shadow-2xl rounded-none">
+            <div class="flex items-center gap-3">
+                <!-- Shield + Green Tick Icon -->
+                <div class="relative w-10 h-10 flex items-center justify-center">
+                    <i class="fa-solid fa-shield-halved text-brand-red text-3xl"></i>
+                    <i class="fa-solid fa-circle-check text-green-500 text-sm absolute -bottom-1 -right-1 bg-brand-black rounded-full"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-lg font-serif font-bold text-white">Verified Driver</span>
+                    <span class="text-[0.5rem] uppercase tracking-widest text-gray-300 font-mono">Background Checked & Trained</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 2: THE EXECUTIVE FLEET (SPEC SHEET) -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <!-- Editorial Header -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-12">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">The Fleet</p>
+                    </div>
+                    <h2 class="font-serif text-5xl lg:text-6xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                        The Executive <span class="italic font-normal text-brand-red">Fleet.</span>
+                    </h2>
+                </div>
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md font-light lg:text-right">
+                    Immaculately maintained vehicles, customized to meet the exacting standards of modern executives and their families.
+                </p>
+            </div>
+
+            <!-- The Sharp 3-Column Architectural Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 border-y border-black/10 divide-y md:divide-y-0 md:divide-x divide-black/10">
+                
+                <!-- Vehicle 1: The Corporate Sedan -->
+                <div class="group relative flex flex-col hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <div class="relative h-56 lg:h-72 overflow-hidden">
+                        <!-- Isolated luxury car image -->
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=2070&auto=format&fit=crop" 
+                             class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Mercedes S-Class">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/20 to-transparent pointer-events-none"></div>
+                        <span class="absolute top-4 right-4 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">01</span>
+                        <div class="absolute bottom-4 left-4 w-12 h-12 border border-brand-red/30 bg-brand-black/60 backdrop-blur-sm flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-car-side text-lg"></i>
+                        </div>
+                    </div>
+
+                    <div class="p-8 lg:p-10 flex flex-col flex-1">
+                        <h3 class="font-serif text-2xl font-bold text-brand-black mb-4">The Corporate Sedan</h3>
+                        <p class="text-brand-black/40 text-xs uppercase tracking-widest font-bold mb-2">Mercedes S-Class / E-Class</p>
+                        
+                        <!-- Minimalist Feature List (Luxury Dealer Spec Sheet style) -->
+                        <div class="space-y-3 border-t border-black/5 pt-4">
+                            <div class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 bg-brand-red rotate-45 flex-shrink-0"></span>
+                                <span class="text-sm text-brand-black/60 font-light">Passengers: <span class="font-semibold text-brand-black">3</span></span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 bg-brand-red rotate-45 flex-shrink-0"></span>
+                                <span class="text-sm text-brand-black/60 font-light">Luggage: <span class="font-semibold text-brand-black">2 Large Suitcases</span></span>
+                            </div>
+                            <div class="flex items-start gap-3 pt-2">
+                                <span class="w-1.5 h-1.5 bg-brand-red rotate-45 flex-shrink-0 mt-1.5"></span>
+                                <span class="text-sm text-brand-black/60 font-light">Best For: <span class="font-semibold text-brand-black">CEO airport runs, high-stakes boardroom meetings.</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Vehicle 2: The Executive SUV -->
+                <div class="group relative flex flex-col hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <div class="relative h-56 lg:h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519245659620-e859806a8d3b?q=80&w=2070&auto=format&fit=crop" 
+                             class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Mercedes GLS">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/20 to-transparent pointer-events-none"></div>
+                        <span class="absolute top-4 right-4 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">02</span>
+                        <div class="absolute bottom-4 left-4 w-12 h-12 border border-brand-red/30 bg-brand-black/60 backdrop-blur-sm flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-truck-monster text-lg"></i>
+                        </div>
+                    </div>
+                    <div class="p-8 lg:p-10 flex flex-col flex-1">
+                        <h3 class="font-serif text-2xl font-bold text-brand-black mb-4">The Executive SUV</h3>
+                        <p class="text-brand-black/40 text-xs uppercase tracking-widest font-bold mb-2">Mercedes GLS / Range Rover</p>
+                        <div class="space-y-3 border-t border-black/5 pt-4">
+                            <div class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 bg-brand-red rotate-45 flex-shrink-0"></span>
+                                <span class="text-sm text-brand-black/60 font-light">Passengers: <span class="font-semibold text-brand-black">6</span></span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 bg-brand-red rotate-45 flex-shrink-0"></span>
+                                <span class="text-sm text-brand-black/60 font-light">Luggage: <span class="font-semibold text-brand-black">4 Large Suitcases</span></span>
+                            </div>
+                            <div class="flex items-start gap-3 pt-2">
+                                <span class="w-1.5 h-1.5 bg-brand-red rotate-45 flex-shrink-0 mt-1.5"></span>
+                                <span class="text-sm text-brand-black/60 font-light">Best For: <span class="font-semibold text-brand-black">Group executive travel, luxury family outings.</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Vehicle 3: The VIP Van -->
+                <div class="group relative flex flex-col hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <div class="relative h-56 lg:h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2070&auto=format&fit=crop" 
+                             class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" alt="Mercedes V-Class">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/20 to-transparent pointer-events-none"></div>
+                        <span class="absolute top-4 right-4 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">03</span>
+                        <div class="absolute bottom-4 left-4 w-12 h-12 border border-brand-red/30 bg-brand-black/60 backdrop-blur-sm flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-van-shuttle text-lg"></i>
+                        </div>
+                    </div>
+                    <div class="p-8 lg:p-10 flex flex-col flex-1">
+                        <h3 class="font-serif text-2xl font-bold text-brand-black mb-4">The VIP Van</h3>
+                        <p class="text-brand-black/40 text-xs uppercase tracking-widest font-bold mb-2">Mercedes V-Class / Sprinter</p>
+                        <div class="space-y-3 border-t border-black/5 pt-4">
+                            <div class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 bg-brand-red rotate-45 flex-shrink-0"></span>
+                                <span class="text-sm text-brand-black/60 font-light">Passengers: <span class="font-semibold text-brand-black">8</span></span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 bg-brand-red rotate-45 flex-shrink-0"></span>
+                                <span class="text-sm text-brand-black/60 font-light">Luggage: <span class="font-semibold text-brand-black">6 Large Suitcases</span></span>
+                            </div>
+                            <div class="flex items-start gap-3 pt-2">
+                                <span class="w-1.5 h-1.5 bg-brand-red rotate-45 flex-shrink-0 mt-1.5"></span>
+                                <span class="text-sm text-brand-black/60 font-light">Best For: <span class="font-semibold text-brand-black">Corporate team off-sites, event attendees, large families.</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+        <!-- ========================================== -->
+    <!-- SECTION 3: THE CHAUFFEUR STANDARD (2x2)     -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <!-- Editorial Header -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-12">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">The Human Element</p>
+                    </div>
+                    <h2 class="font-serif text-5xl lg:text-6xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                        The Chauffeur <span class="italic font-normal text-brand-red">Standard.</span>
+                    </h2>
+                </div>
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md font-light lg:text-right">
+                    This is what separates Limore from a standard ride-hailing service. Every professional behind the wheel is held to an unprecedented global standard of luxury service.
+                </p>
+            </div>
+
+            <!-- The Sharp 2x2 Architectural Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 border-t border-l border-black/10">
+                
+                <!-- Standard 1: Professionally Attired -->
+                <div class="group relative p-8 lg:p-12 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <!-- Watermark Number -->
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">01</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-user-tie text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Professionally Attired</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">Uniformed in tailored suits, polished shoes, and pristine white gloves. First impressions matter from the moment you see them.</p>
+                        </div>
+                    </div>
+                    <!-- Precision Top Red Line -->
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Standard 2: Verified Background -->
+                <div class="group relative p-8 lg:p-12 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">02</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-shield-halved text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Verified Background</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">Every chauffeur undergoes rigorous background checks, drug testing, and corporate confidentiality agreements.</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Standard 3: Hospitality Trained -->
+                <div class="group relative p-8 lg:p-12 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">03</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-bell-concierge text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Hospitality Trained</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">Not just drivers-but service professionals. Trained in the art of luxury corporate hospitality, door-to-door service, and luggage handling.</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Standard 4: Route-Masters -->
+                <div class="group relative p-8 lg:p-12 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">04</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-14 h-14 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-route text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-black mb-2">Route-Masters</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">Expertly trained to navigate the heavy traffic of Mumbai, Delhi, and Dubai. They know the fastest routes, the VIP entrances, and the secure parking.</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+        <!-- ========================================== -->
+    <!-- SECTION 4: TAILORED HIRE OPTIONS (MATRIX)   -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <!-- Editorial Header -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-12">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-px bg-brand-red"></span>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">Booking Flexibility</p>
+                    </div>
+                    <h2 class="font-serif text-5xl lg:text-6xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                        Tailored <span class="italic font-normal text-brand-red">Hire Options.</span>
+                    </h2>
+                </div>
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md font-light lg:text-right">
+                    Whether it's a quick 2-hour city sprint or a permanent executive retainer, our fleet is structured entirely around your schedule.
+                </p>
+            </div>
+
+            <!-- The Sharp 4-Column Hire Matrix -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-l border-black/10">
+                
+                <!-- Option 1: Point-to-Point / Hourly -->
+                <div class="group relative p-8 lg:p-10 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <span class="absolute top-6 right-6 font-serif text-6xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">01</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-location-dot text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-brand-black mb-2">Point-to-Point / Hourly</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">Perfect for single meetings, restaurant reservations, or an afternoon of shopping in Dubai Mall.</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Option 2: Full-Day Hire -->
+                <div class="group relative p-8 lg:p-10 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <span class="absolute top-6 right-6 font-serif text-6xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">02</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-clock text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-brand-black mb-2">Full-Day Hire (8 Hours)</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">A completely private mobile office for the day. Unlimited stops, meetings, and city navigating.</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Option 3: Inter-City Travel -->
+                <div class="group relative p-8 lg:p-10 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <span class="absolute top-6 right-6 font-serif text-6xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">03</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-road text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-brand-black mb-2">Inter-City Travel</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">Luxury extended travel (e.g., Dubai to Abu Dhabi, or Delhi to Agra). Enjoy the scenic journey in perfect comfort.</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+                <!-- Option 4: Monthly Corporate Retainer -->
+                <div class="group relative p-8 lg:p-10 border-b border-r border-black/10 hover:bg-brand-black/[0.02] transition-colors duration-300">
+                    <span class="absolute top-6 right-6 font-serif text-6xl font-bold text-black/5 group-hover:text-brand-red/20 transition-colors duration-300">04</span>
+                    
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-12 h-12 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 rounded-none">
+                            <i class="fa-solid fa-file-contract text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-brand-black mb-2">Monthly Corporate Retainer</h3>
+                            <p class="text-brand-black/60 text-sm leading-relaxed font-light">For VIP executives requiring a dedicated, permanently assigned vehicle and driver on a long-term contract.</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+      <!-- ========================================== -->
+    <!-- SECTION 7: SOCIAL PROOF (THE CEO EXPERIENCE)-->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
+        
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            
+            <div class="max-w-4xl mx-auto border-y border-black/10 py-16 lg:py-20 relative text-center">
+                
+                <!-- The Massive Red Quote Mark (Watermark) -->
+                <span class="absolute -top-20 left-1/2 -translate-x-1/2 font-serif text-[20rem] leading-none text-brand-red/5 select-none pointer-events-none">"</span>
+
+                <div class="relative z-10 space-y-8">
+                    <!-- Red Diamond Marker -->
+                    <div class="flex justify-center">
+                        <span class="w-2 h-2 bg-brand-red rotate-45"></span>
+                    </div>
+
+                    <blockquote class="font-serif text-2xl lg:text-4xl font-medium text-brand-black leading-[1.4] italic max-w-3xl mx-auto">
+                        "When I'm traveling between my office and the airport, my time is crucial. Limore's chauffeurs are always punctual, perfectly presented, and they make sure my trip is entirely frictionless. I don't trust anyone else with my schedule."
+                    </blockquote>
+                    
+                    <div class="pt-6 border-t border-black/10 flex flex-col items-center gap-2">
+                        <p class="font-sans text-[0.7rem] uppercase tracking-[0.15em] font-bold text-brand-black">Vikram Rathore</p>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-widest text-black/40 font-light">Managing Partner, Global Capital</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 8: FINAL CTA (READY TO RIDE)        -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-b border-black/5">
+        
+        <!-- Top and Bottom Architectural Red Threads (Sharp, fading lines) -->
+        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-brand-red/50 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-brand-red/50 to-transparent"></div>
+
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12 text-center">
+            
+            <!-- Editorial Eyebrow -->
+            <div class="flex items-center justify-center gap-4 mb-6">
+                <span class="w-10 h-px bg-brand-red"></span>
+                <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">On Demand</p>
+                <span class="w-10 h-px bg-brand-red"></span>
+            </div>
+
+            <!-- Massive Serif Headline -->
+            <h2 class="font-serif text-5xl lg:text-7xl font-bold text-brand-black leading-[1.05] tracking-tight">
+                Your Ride. <span class="italic font-normal text-brand-red">Your Schedule.</span>
+            </h2>
+
+            <!-- Subtext -->
+            <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-xl mx-auto mt-6 font-light">
+                Book your executive sedan or SUV today. Experience the pinnacle of corporate luxury travel.
+            </p>
+
+            <!-- The Massive Sharp CTA Button (Solid Red, White text -> Black text on hover) -->
+            <div class="mt-12 flex justify-center">
+                <a href="#" class="inline-flex items-center gap-3 bg-brand-red text-white px-12 py-5 text-[0.7rem] font-bold uppercase tracking-widest hover:bg-brand-white hover:text-brand-black transition-all duration-300 group rounded-none border border-brand-red shadow-lg shadow-brand-red/20">
+                    Request Your Chauffeur
+                    <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

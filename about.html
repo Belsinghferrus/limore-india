@@ -68,84 +68,63 @@
     <!-- ========================================== -->
     <!-- HOME HERO: INSPIRED RED CIRCLE COMPOSITION  -->
     <!-- ========================================== -->
-    <main class="pt-20 relative bg-brand-white overflow-hidden min-h-screen flex flex-col justify-center">
-        
-        <!-- Background Element: The Giant Red Circle (Inspired by Reference) -->
-        <div class="absolute top-0 right-0 w-[70%] lg:w-[50%] aspect-square bg-brand-red/10 rounded-full blur-[60px] lg:blur-[100px] -z-10 translate-x-[10%] -translate-y-[20%] pointer-events-none"></div>
-        <!-- Secondary subtle shape -->
-        <div class="absolute bottom-0 left-0 w-[40%] h-[40%] bg-brand-red/5 rounded-full blur-[80px] -z-10 pointer-events-none"></div>
-
-        <div class="max-w-[90rem] mx-auto px-6 lg:px-12 w-full py-8 lg:py-12 relative z-10">
+    <main class="pt-20 min-h-screen lg:h-screen relative bg-brand-white overflow-hidden flex items-center">
+    
+        <!-- The Dissolving Background Image (Right Side) -->
+        <div class="absolute inset-y-0 right-0 w-full lg:w-[65%] h-full overflow-hidden">
+            <!-- Use your premium executive image here -->
+            <img src="./assets/images/about/about-hero.png" 
+                 alt="Limore Executive" 
+                 class="w-full h-full object-cover saturate-[0.95] contrast-110 transition-transform duration-[8s] hover:scale-105">
             
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <!-- The "Dissolve" Gradient (Melts the image into pure white on the left) -->
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/70 to-transparent lg:via-brand-white/30"></div>
+            
+            <!-- Cinematic Red Light Leak (Subtle, ties into brand) -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-brand-red/10 via-transparent to-transparent mix-blend-multiply"></div>
+        </div>
+    
+        <!-- The Massive Background "L" Watermark -->
+        <div class="absolute -bottom-10 -left-10 font-serif text-[25rem] lg:text-[35rem] font-bold text-brand-red/5 leading-none pointer-events-none select-none z-0">L</div>
+    
+        <!-- The Text & CTA Column (Pure Typography) -->
+        <div class="relative z-10 max-w-[90rem] mx-auto px-6 lg:px-12 w-full">
+            <div class="lg:w-[65%] flex flex-col justify-center py-12 lg:py-0 relative">
                 
-                <!-- LEFT COLUMN: The Editorial Content -->
-                <div class="flex flex-col space-y-6 lg:space-y-8">
-                    
-                    <div class="flex items-center gap-3">
-                        <div class="w-6 h-px bg-brand-red"></div>
-                        <p class="font-sans text-[0.65rem] uppercase tracking-[0.2em] font-bold text-brand-red">Premier Corporate Travel</p>
-                    </div>
-
-                    <!-- Headline -->
-                    <h1 class="ont-serif text-5xl lg:text-[5.5rem] font-bold text-brand-black leading-[0.95] tracking-tight">
-                        Redefining<br>
-                        <span class="text-brand-red font-serif italic font-normal">Journeys.</span><br>
-                        Delivering <span class="text-brand-black">Excellence.</span>
-                    </h1>
-
-                    <!-- Subtext -->
-                    <p class="text-black/60 text-sm lg:text-base leading-relaxed max-w-md font-light">
-                        Limored is a premium corporate travel management company serving executives and individual travelers across Kerala, India, Dubai, and the global stage.
-                    </p>
-
-                    <!-- 3 Icon Strip (Matches the reference's 3 horizontal items) -->
-                    <div class="grid grid-cols-3 gap-4 pt-2 border-t border-black/5 max-w-md">
-                        <div class="flex flex-col items-start text-center">
-                            <div class="w-8 h-8 rounded-full border border-brand-red/30 flex items-center justify-center text-brand-red mb-1.5">
-                                <i class="fa-solid fa-globe text-xs"></i>
-                            </div>
-                            <h4 class="text-[0.55rem] font-bold uppercase tracking-wider text-brand-black">Global Standards</h4>
-                            <p class="text-[0.45rem] text-black/50 leading-tight">Premium expertise</p>
-                        </div>
-                        <div class="flex flex-col items-start text-center">
-                            <div class="w-8 h-8 rounded-full border border-brand-red/30 flex items-center justify-center text-brand-red mb-1.5">
-                                <i class="fa-solid fa-circle-check text-xs"></i>
-                            </div>
-                            <h4 class="text-[0.55rem] font-bold uppercase tracking-wider text-brand-black">Trusted by Many</h4>
-                            <p class="text-[0.45rem] text-black/50 leading-tight">500+ Corporate clients</p>
-                        </div>
-                        <div class="flex flex-col items-start text-center">
-                            <div class="w-8 h-8 rounded-full border border-brand-red/30 flex items-center justify-center text-brand-red mb-1.5">
-                                <i class="fa-solid fa-route text-xs"></i>
-                            </div>
-                            <h4 class="text-[0.55rem] font-bold uppercase tracking-wider text-brand-black">Seamless Travel</h4>
-                            <p class="text-[0.45rem] text-black/50 leading-tight">End-to-end solutions</p>
-                        </div>
+                <!-- Editorial Eyebrow + Red Spine -->
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-1 h-12 bg-brand-red"></div>
+                    <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">Since 2014</p>
+                </div>
+    
+                <!-- Massive Serif Headline -->
+                <h1 class="font-serif text-6xl lg:text-8xl xl:text-9xl font-bold text-brand-black leading-[0.85] tracking-tight">
+                    Architects of<br>
+                    <span class="text-brand-red italic">Global Transit.</span>
+                </h1>
+    
+                <!-- The Subtext (Clean, no box) -->
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md mt-8 font-light">
+                    Founded in 2014, Limore was built on a singular principle: the modern corporation doesn't just need transport-it needs an invisible, precision-engineered logistical spine.
+                </p>
+    
+                <!-- The Sharp CTA & Footline -->
+                <div class="mt-10 flex flex-col items-start gap-4">
+                    <a href="#team" class="inline-flex items-center gap-3 bg-brand-black text-white px-10 py-4 text-[0.7rem] font-bold uppercase tracking-widest transition-all duration-300 hover:bg-brand-red group rounded-none">
+                        Meet Our Team
+                        <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+    
+                    <!-- The "Locations" Footline (Editorial Style) -->
+                    <div class="flex items-center gap-3 border-l-2 border-brand-red pl-3 py-1">
+                        <span class="w-1.5 h-1.5 bg-brand-red rotate-45"></span>
+                        <span class="font-sans text-[0.6rem] uppercase tracking-[0.2em] font-bold text-brand-black/50">Dubai · Mumbai · Kochi · Delhi</span>
                     </div>
                 </div>
-
-                <!-- RIGHT COLUMN: The Visual Composition (Jet + Car Collage) -->
-                <div class="relative w-full h-[350px] lg:h-[550px] mt-4 lg:mt-0 flex items-center justify-center">
-                    
-                    <!-- Plane (Background Layer) -->
-                    <img src="./assets/images/about/jet.jpg" 
-                         alt="Limored Private Jet" 
-                         class="absolute top-0 right-0 w-[80%] lg:w-[85%] h-auto object-contain z-0 drop-shadow-2xl opacity-90 mix-blend-multiply">
-                    
-                    <!-- Sedan Car (Foreground Layer) -->
-                    <img src="./assets/images/about/about-hero.png" 
-                         alt="Limored Executive Sedan" 
-                         class="absolute bottom-0 left-0 w-[70%] lg:w-[75%] h-auto object-contain z-10 drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]">
-                    
-                    <!-- Red Glow Filter (To blend the jet/car into the background) -->
-                  
-                </div>
-
+    
             </div>
         </div>
     </main>
-
     
 
 
@@ -183,7 +162,7 @@
                     
                     <div class="space-y-4 text-brand-black/70 text-sm lg:text-base leading-[1.8] font-serif max-w-md">
                         <p>
-                            Limored was born out of a glaring gap in the market—a lack of truly bespoke, premium corporate travel solutions connecting the UAE and India. Our founder recognized that traveling executives didn't just need a car; they needed an ecosystem.
+                            Limore was born out of a glaring gap in the market-a lack of truly bespoke, premium corporate travel solutions connecting the UAE and India. Our founder recognized that traveling executives didn't just need a car; they needed an ecosystem.
                         </p>
                         <p>
                             Today, we are the silent engine behind some of the most successful boardroom meetings, global delegations, and luxury events across the subcontinent.
@@ -201,7 +180,7 @@
                     <!-- Top Large Image -->
                     <div class="col-span-2 relative rounded-xl overflow-hidden border border-black/5 group">
                         <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop" 
-                             alt="Limored Executive Car" 
+                             alt="Limore Executive Car" 
                              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none"></div>
                     </div>
@@ -546,7 +525,7 @@
                         </h2>
 
                         <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed font-light max-w-sm">
-                            Experience the Limored standard for yourself. Schedule a consultation with our executive team today.
+                            Experience the Limore standard for yourself. Schedule a consultation with our executive team today.
                         </p>
 
                         <!-- The CTA Button -->
@@ -575,7 +554,7 @@
                     
                     <!-- The Image (Luxury car / travel aesthetic) -->
                     <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop" 
-                         alt="Limored Executive Luxury" 
+                         alt="Limore Executive Luxury" 
                          class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                     
                     <!-- The Red Glow Overlay (Matches the rest of the page) -->

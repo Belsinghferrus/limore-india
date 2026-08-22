@@ -155,90 +155,93 @@
     <!-- ========================================== -->
     <!-- HERO SECTION (Corporate Layout Style)       -->
     <!-- ========================================== -->
-    <main class="pt-20">
-        <div class="max-w-[100rem] mx-auto px-6 lg:px-6 py-12 lg:py-20">
+    <main class="pt-20 min-h-screen lg:h-screen relative bg-brand-white overflow-visible flex items-center">
 
-            <!-- Top Badge -->
-            <div class="flex items-center gap-2 mb-6">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse"></span>
-                <p class="font-sans text-[0.7rem] uppercase tracking-[0.15em] font-bold text-black/50">Beyond Journeys,
-                    We Manage Experiences</p>
+        <!-- The Dissolving Background Image (Right Side) -->
+        <!-- Replace with your exact image: ./assets/images/home/limore-hero.png -->
+        <div class="absolute inset-y-0 right-0 w-full lg:w-[60%] h-full overflow-hidden">
+            <img src="./assets/images/home/limore-hero1.png" alt="Limore Luxury Travel"
+                class="w-full h-full object-cover saturate-[0.95] contrast-110 transition-transform duration-[8s] hover:scale-105">
+
+            <!-- The "Dissolve" Gradient (Melts the image into pure white on the left for text) -->
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/70 to-transparent lg:via-brand-white/30">
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Cinematic Red Light Leak -->
+            <div
+                class="absolute inset-0 bg-gradient-to-tr from-brand-red/10 via-transparent to-transparent mix-blend-multiply">
+            </div>
+        </div>
 
-                <!-- Left Column: Typography -->
-                <div class="lg:col-span-6 space-y-8">
-                    <h1
-                        class="font-display font-bold text-[3.5rem] lg:text-[5.5rem] xl:text-[7rem] leading-[0.9] tracking-tight text-brand-black">
-                        Dubai<br>
-                        <span class="italic font-normal text-[#D9181E]">to</span><br>
-                        India
-                    </h1>
+        <!-- The Text & CTA Column (Pure Typography) -->
+        <div class="relative z-10 max-w-[90rem] mx-auto px-6 lg:px-12 w-full">
+            <div class="lg:w-[60%] flex flex-col justify-center py-12 lg:py-0">
 
-                    <p class="text-black/60 text-lg leading-relaxed max-w-lg font-light">
-                        From corporate travel and airport transfers to Kerala holidays, Dubai tours, and chauffeur
-                        services. Limore coordinates global travel for businesses and individuals.
-                    </p>
+                <!-- Editorial Eyebrow + Red Spine (No pill badge, just a sharp line) -->
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-1 h-10 bg-brand-red"></div>
+                    <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">Beyond
+                        Journeys, We Manage Experiences</p>
+                </div>
 
-                    <!-- Hero Features (Like the reference image) -->
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-black/5 pt-6">
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-circle-check text-brand-red text-sm"></i>
-                            <span class="text-[0.65rem] uppercase tracking-widest font-medium text-black/70">Trusted by
-                                Business</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-globe text-brand-red text-sm"></i>
-                            <span class="text-[0.65rem] uppercase tracking-widest font-medium text-black/70">Pan India &
-                                UAE</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-headset text-brand-red text-sm"></i>
-                            <span class="text-[0.65rem] uppercase tracking-widest font-medium text-black/70">24/7 Travel
-                                Assistance</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-gem text-brand-red text-sm"></i>
-                            <span class="text-[0.65rem] uppercase tracking-widest font-medium text-black/70">Premium
-                                Fleet</span>
-                        </div>
+                <!-- Massive Serif Headline -->
+                <h1
+                    class="font-serif text-6xl lg:text-8xl xl:text-9xl font-bold text-brand-black leading-[0.85] tracking-tight">
+                    Dubai<br>
+                    <span class="text-brand-red italic">to</span><br>
+                    India
+                </h1>
+
+                <!-- The Subtext (Clean, no box) -->
+                <p class="text-brand-black/60 text-sm lg:text-base leading-relaxed max-w-md mt-8 font-light">
+                    From corporate travel and airport transfers to Kerala holidays, Dubai tours, and chauffeur services.
+                    Limore coordinates global travel for businesses and individuals.
+                </p>
+
+                <!-- The Features (Replaced basic icons with sharp rotated red diamonds) -->
+                <div
+                    class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-4 pt-8 border-t border-black/10 mt-8 max-w-lg">
+                    <div class="flex flex-col items-start">
+                        <span class="w-2 h-2 bg-brand-red rotate-45 mb-2"></span>
+                        <span class="text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Trusted by
+                            Business</span>
                     </div>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-wrap gap-4 pt-2">
-                        <a href="#"
-                            class="bg-brand-red text-white px-8 py-3.5 text-[0.7rem] tracking-widest font-semibold uppercase hover:bg-brand-black transition-colors duration-300 flex items-center gap-2 shadow-md shadow-brand-red/20">
-                            Plan Your Journey <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                        </a>
-                        <a href="#"
-                            class="border border-black/10 bg-white px-8 py-3.5 text-[0.7rem] tracking-widest font-semibold uppercase text-brand-black/70 hover:border-brand-red hover:text-brand-red transition-all duration-300 flex items-center gap-2">
-                            Get a Quote <i class="fa-solid fa-file-lines"></i>
-                        </a>
+                    <div class="flex flex-col items-start">
+                        <span class="w-2 h-2 bg-brand-red rotate-45 mb-2"></span>
+                        <span class="text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Pan India &
+                            UAE</span>
+                    </div>
+                    <div class="flex flex-col items-start">
+                        <span class="w-2 h-2 bg-brand-red rotate-45 mb-2"></span>
+                        <span class="text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">24/7 Travel
+                            Assistance</span>
+                    </div>
+                    <div class="flex flex-col items-start">
+                        <span class="w-2 h-2 bg-brand-red rotate-45 mb-2"></span>
+                        <span class="text-[0.55rem] uppercase tracking-widest font-bold text-brand-black">Premium
+                            Fleet</span>
                     </div>
                 </div>
 
-                <!-- Right Column: Hero Image (Inspired by Reference) -->
-                <div class="lg:col-span-6 relative h-[600px] overflow-visible lg:h-[600px] ">
-                    <img src="./assets/images/home/limore-hero.png" alt="Limore Luxury Travel"
-                        class="w-full h-full object-cover ">
+                <!-- The Sharp CTA Buttons -->
+                <div class="mt-10 flex flex-wrap gap-4">
+                    <a href="#"
+                        class="inline-flex items-center gap-3 bg-brand-red text-white px-10 py-4 text-[0.7rem] font-bold uppercase tracking-widest transition-all duration-300 hover:bg-brand-black group rounded-none">
+                        Plan Your Journey <i
+                            class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#"
+                        class="inline-flex items-center gap-3 border border-brand-black text-brand-black px-10 py-4 text-[0.7rem] font-bold uppercase tracking-widest transition-all duration-300 hover:bg-brand-black hover:text-white group rounded-none">
+                        Get a Quote <i class="fa-solid fa-file-lines text-[10px]"></i>
+                    </a>
+                </div>
 
-                    <!-- Red Abstract Shape (Decorative like the reference) -->
-                    <div
-                        class="absolute top-0 right-0 w-48 h-48 lg:w-96 lg:h-96 bg-brand-red rounded-full blur-[80px] opacity-30 pointer-events-none translate-x-1/7 -translate-y-1/8">
-                    </div>
-
-                    <!-- Floating Overlay -->
-                    <div
-                        class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md px-5 py-4 border border-black/5 shadow-xl">
-                        <p class="text-[0.65rem] uppercase tracking-[0.15em] font-bold text-brand-black">Dubai - India
-                            Corridor</p>
-                        <div class="flex items-center gap-2 text-black/60 text-xs mt-1">
-                            <span class="w-2 h-2 bg-brand-red rounded-full animate-pulse"></span>
-                            <span class="font-bold text-brand-red">DXB</span> <span class="text-[8px]">—</span> <span
-                                class="font-bold text-brand-red">COK</span>
-                        </div>
-                    </div>
+                <!-- The "Footline" (Replaces the floating white box) -->
+                <div class="mt-8 flex items-center gap-3 border-l-2 border-brand-red pl-3 py-1">
+                    <span class="w-1.5 h-1.5 bg-brand-red rotate-45"></span>
+                    <span class="font-sans text-[0.6rem] uppercase tracking-[0.2em] font-bold text-brand-black/50">DXB -
+                        COK · Live Corridor</span>
                 </div>
 
             </div>
@@ -464,8 +467,8 @@
                 <div class="lg:col-span-4 space-y-4">
                     <!-- Top Large Image -->
                     <div class=" h-284 lg:h-284  overflow-hidden ">
-                        <img src="./assets/images/home/about.png"
-                            class="w-full h-full object-cover" alt="Limore Luxury Chauffeur">
+                        <img src="./assets/images/home/limore2.jpg" class="w-full h-full object-cover"
+                            alt="Limore Luxury Chauffeur">
                     </div>
 
                     <!-- Bottom 2 Smaller Images -->
@@ -838,7 +841,7 @@
                         <p>
                             Whether it's a seamless airport transfer to your hotel in Dubai,
                             a luxury private jet charter for your family holiday, or a chauffeured
-                            drive through the backwaters of Kerala—we curate every mile so you can
+                            drive through the backwaters of Kerala-we curate every mile so you can
                             focus entirely on the destination.
                         </p>
                     </div>
@@ -1091,48 +1094,58 @@
     <!-- ========================================== -->
     <!-- SECTION 7: THE TRUST DASHBOARD (100vh)      -->
     <!-- ========================================== -->
-    <section class="min-h-screen lg:h-screen flex flex-col justify-center bg-brand-white relative overflow-hidden border-y border-black/5">
-        
-        <div class="max-w-[90rem] mx-auto w-full px-6 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-0 py-12 lg:py-0">
-            
+    <section
+        class="min-h-screen lg:h-screen flex flex-col justify-center bg-brand-white relative overflow-hidden border-y border-black/5">
+
+        <div
+            class="max-w-[90rem] mx-auto w-full px-6 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-0 py-12 lg:py-0">
+
             <!-- ====================================== -->
             <!-- LEFT COLUMN: THE HUMAN TESTIMONIAL     -->
             <!-- ====================================== -->
             <div class="lg:col-span-5 flex flex-col justify-center pr-0 lg:pr-12 space-y-8">
-                
+
                 <!-- Huge Editorial Quote -->
                 <div class="relative space-y-6">
                     <div class="flex items-center gap-2 mb-2">
                         <span class="w-4 h-px bg-brand-red"></span>
-                        <p class="font-sans text-[0.55rem] uppercase tracking-[0.2em] font-bold text-brand-red">Real Experiences</p>
+                        <p class="font-sans text-[0.55rem] uppercase tracking-[0.2em] font-bold text-brand-red">Real
+                            Experiences</p>
                     </div>
-                    
-                    <h2 class="font-serif text-3xl lg:text-[2.8rem] font-semibold text-brand-black leading-[1.15] tracking-tight">
+
+                    <h2
+                        class="font-serif text-3xl lg:text-[2.8rem] font-semibold text-brand-black leading-[1.15] tracking-tight">
                         Trusted by travelers<br>
                         <span class="italic font-normal text-brand-red">across borders.</span>
                     </h2>
-                    
+
                     <blockquote class="relative">
                         <p class="text-brand-black/70 text-sm lg:text-base leading-relaxed font-light italic max-w-sm">
-                            "From our corporate charter to the smooth family trip to Kerala, Limore handled everything flawlessly. The service in Dubai and India was world-class."
+                            "From our corporate charter to the smooth family trip to Kerala, Limore handled everything
+                            flawlessly. The service in Dubai and India was world-class."
                         </p>
                         <footer class="mt-6 pt-6 border-t border-black/5 flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-brand-red/10 flex items-center justify-center text-brand-red font-bold text-sm border border-brand-red/20">
+                            <div
+                                class="w-12 h-12 rounded-full bg-brand-red/10 flex items-center justify-center text-brand-red font-bold text-sm border border-brand-red/20">
                                 AM
                             </div>
                             <div>
-                                <p class="text-[0.65rem] font-bold uppercase tracking-wider text-brand-black">Arjun Mehta</p>
-                                <p class="text-[0.55rem] uppercase tracking-widest text-black/40">Frequent Flyer, Mumbai – Dubai</p>
+                                <p class="text-[0.65rem] font-bold uppercase tracking-wider text-brand-black">Arjun
+                                    Mehta</p>
+                                <p class="text-[0.55rem] uppercase tracking-widest text-black/40">Frequent Flyer, Mumbai
+                                    – Dubai</p>
                             </div>
                         </footer>
                     </blockquote>
                 </div>
 
                 <!-- The Universal Trust Text -->
-                <div class="bg-brand-black/5 rounded-xl px-6 py-4 border border-black/5 flex flex-wrap items-center justify-between gap-4">
+                <div
+                    class="bg-brand-black/5 rounded-xl px-6 py-4 border border-black/5 flex flex-wrap items-center justify-between gap-4">
                     <div class="flex items-center gap-2">
                         <span class="w-2 h-2 bg-brand-red rounded-full animate-pulse"></span>
-                        <span class="text-[0.55rem] font-bold uppercase tracking-widest text-brand-black/70">24/7 Support Active</span>
+                        <span class="text-[0.55rem] font-bold uppercase tracking-widest text-brand-black/70">24/7
+                            Support Active</span>
                     </div>
                     <div class="flex items-center gap-2 text-[0.5rem] font-mono text-brand-black/40">
                         <i class="fa-solid fa-route text-brand-red"></i> DXB ↔ BOM
@@ -1143,47 +1156,65 @@
             <!-- ====================================== -->
             <!-- RIGHT COLUMN: THE DATA DASHBOARD       -->
             <!-- ====================================== -->
-            <div class="lg:col-span-7 bg-[#0A0A0A] rounded-3xl p-6 lg:p-10 shadow-2xl shadow-black/20 border border-white/10 relative flex flex-col justify-center">
-                
+            <div
+                class="lg:col-span-7 bg-[#0A0A0A] rounded-3xl p-6 lg:p-10 shadow-2xl shadow-black/20 border border-white/10 relative flex flex-col justify-center">
+
                 <!-- Background Tech Grid -->
-                <div class="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none rounded-3xl"></div>
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-brand-red/5 rounded-full blur-[80px] pointer-events-none"></div>
+                <div
+                    class="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none rounded-3xl">
+                </div>
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-brand-red/5 rounded-full blur-[80px] pointer-events-none">
+                </div>
 
                 <div class="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-6 h-full">
-                    
+
                     <!-- 1. Satisfaction Rings (SVG) -->
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col items-center justify-center hover:border-brand-red/50 transition-colors duration-300">
+                    <div
+                        class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col items-center justify-center hover:border-brand-red/50 transition-colors duration-300">
                         <div class="flex gap-6 lg:gap-8 w-full justify-center">
                             <!-- Ring 1 -->
                             <div class="flex flex-col items-center">
                                 <div class="relative w-20 h-20 lg:w-24 lg:h-24 flex items-center justify-center">
                                     <svg class="w-full h-full progress-ring__circle" viewBox="0 0 36 36">
-                                        <path class="text-white/10" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3" />
-                                        <path class="text-brand-red" stroke-dasharray="100, 100" stroke-dashoffset="2" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                                        <path class="text-white/10"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none" stroke="currentColor" stroke-width="3" />
+                                        <path class="text-brand-red" stroke-dasharray="100, 100" stroke-dashoffset="2"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
                                     </svg>
                                     <span class="absolute text-white font-display text-lg font-bold">98%</span>
                                 </div>
-                                <p class="text-[0.5rem] uppercase tracking-widest text-gray-400 mt-3 text-center">Client Satisfaction</p>
+                                <p class="text-[0.5rem] uppercase tracking-widest text-gray-400 mt-3 text-center">Client
+                                    Satisfaction</p>
                             </div>
                             <!-- Ring 2 -->
                             <div class="flex flex-col items-center">
                                 <div class="relative w-20 h-20 lg:w-24 lg:h-24 flex items-center justify-center">
                                     <svg class="w-full h-full progress-ring__circle" viewBox="0 0 36 36">
-                                        <path class="text-white/10" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3" />
-                                        <path class="text-brand-red" stroke-dasharray="100, 100" stroke-dashoffset="0.2" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                                        <path class="text-white/10"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none" stroke="currentColor" stroke-width="3" />
+                                        <path class="text-brand-red" stroke-dasharray="100, 100" stroke-dashoffset="0.2"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
                                     </svg>
                                     <span class="absolute text-white font-display text-lg font-bold">99.8%</span>
                                 </div>
-                                <p class="text-[0.5rem] uppercase tracking-widest text-gray-400 mt-3 text-center">On-Time Arrival</p>
+                                <p class="text-[0.5rem] uppercase tracking-widest text-gray-400 mt-3 text-center">
+                                    On-Time Arrival</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- 2. Bar Graph (Route Volume) -->
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col justify-between hover:border-brand-red/50 transition-colors duration-300">
-                        <p class="text-[0.55rem] uppercase tracking-widest text-brand-red font-bold">Active Route Volume</p>
+                    <div
+                        class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col justify-between hover:border-brand-red/50 transition-colors duration-300">
+                        <p class="text-[0.55rem] uppercase tracking-widest text-brand-red font-bold">Active Route Volume
+                        </p>
                         <div class="flex justify-between items-end h-24 gap-2 pt-4">
-                            
+
                             <!-- CHANGED: added justify-end -->
                             <div class="flex flex-col justify-end items-center gap-2 w-full h-full">
                                 <div class="w-full bg-white/10 rounded-t-sm bar-animate bar-1 relative overflow-hidden">
@@ -1191,68 +1222,83 @@
                                 </div>
                                 <span class="text-[0.45rem] font-mono text-gray-400">DXB</span>
                             </div>
-                    
+
                             <!-- CHANGED: added justify-end -->
                             <div class="flex flex-col justify-end items-center gap-2 w-full h-full">
-                                <div class="w-full bg-white/10 rounded-t-sm bar-animate bar-2 relative overflow-hidden" style="animation-delay: 0.2s;">
+                                <div class="w-full bg-white/10 rounded-t-sm bar-animate bar-2 relative overflow-hidden"
+                                    style="animation-delay: 0.2s;">
                                     <div class="absolute inset-0 bg-brand-red/60"></div>
                                 </div>
                                 <span class="text-[0.45rem] font-mono text-gray-400">TRV</span>
                             </div>
-                    
+
                             <!-- CHANGED: added justify-end -->
                             <div class="flex flex-col justify-end items-center gap-2 w-full h-full">
-                                <div class="w-full bg-white/10 rounded-t-sm bar-animate bar-3 relative overflow-hidden" style="animation-delay: 0.4s;">
+                                <div class="w-full bg-white/10 rounded-t-sm bar-animate bar-3 relative overflow-hidden"
+                                    style="animation-delay: 0.4s;">
                                     <div class="absolute inset-0 bg-brand-red/40"></div>
                                 </div>
                                 <span class="text-[0.45rem] font-mono text-gray-400">COK</span>
                             </div>
-                    
+
                             <!-- CHANGED: added justify-end -->
                             <div class="flex flex-col justify-end items-center gap-2 w-full h-full">
-                                <div class="w-full bg-white/10 rounded-t-sm bar-animate bar-4 relative overflow-hidden" style="animation-delay: 0.6s;">
+                                <div class="w-full bg-white/10 rounded-t-sm bar-animate bar-4 relative overflow-hidden"
+                                    style="animation-delay: 0.6s;">
                                     <div class="absolute inset-0 bg-brand-red/60"></div>
                                 </div>
                                 <span class="text-[0.45rem] font-mono text-gray-400">DEL</span>
                             </div>
-                    
+
                         </div>
                     </div>
 
                     <!-- 3. Client Count Status -->
-                    <div class="col-span-1 sm:col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 hover:border-brand-red/50 transition-colors duration-300 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-red/10 rounded-full blur-[40px] pointer-events-none"></div>
+                    <div
+                        class="col-span-1 sm:col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 hover:border-brand-red/50 transition-colors duration-300 relative overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-brand-red/10 rounded-full blur-[40px] pointer-events-none">
+                        </div>
                         <div class="flex items-center gap-6 z-10">
                             <div class="text-center">
-                                <p class="font-display text-2xl lg:text-3xl font-bold text-white tracking-tight">500+</p>
+                                <p class="font-display text-2xl lg:text-3xl font-bold text-white tracking-tight">500+
+                                </p>
                                 <p class="text-[0.5rem] uppercase tracking-widest text-gray-400">Corporate Clients</p>
                             </div>
                             <div class="w-px h-10 bg-white/10"></div>
                             <div class="text-center">
-                                <p class="font-display text-2xl lg:text-3xl font-bold text-white tracking-tight">15K+</p>
+                                <p class="font-display text-2xl lg:text-3xl font-bold text-white tracking-tight">15K+
+                                </p>
                                 <p class="text-[0.5rem] uppercase tracking-widest text-gray-400">Happy Travelers</p>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-red/20 border border-brand-red/30 z-10">
+                        <div
+                            class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-red/20 border border-brand-red/30 z-10">
                             <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
-                            <span class="text-[0.45rem] uppercase tracking-widest text-brand-red font-bold">Verified Stats</span>
+                            <span class="text-[0.45rem] uppercase tracking-widest text-brand-red font-bold">Verified
+                                Stats</span>
                         </div>
                     </div>
 
                     <!-- 4. The Flying Route (SVG) -->
-                    <div class="col-span-1 sm:col-span-2 bg-transparent relative h-16 lg:h-20 flex items-center justify-center">
+                    <div
+                        class="col-span-1 sm:col-span-2 bg-transparent relative h-16 lg:h-20 flex items-center justify-center">
                         <!-- The path line -->
                         <svg class="absolute w-full h-full" viewBox="0 0 400 40">
-                            <path d="M 20 20 Q 200 0 380 20" stroke="#ffffff20" stroke-width="2" stroke-dasharray="4 4" fill="none" />
-                            <path d="M 20 20 Q 200 0 380 20" stroke="#D9181E" stroke-width="1.5" stroke-dasharray="4 4" fill="none" opacity="0.6" />
-                            
+                            <path d="M 20 20 Q 200 0 380 20" stroke="#ffffff20" stroke-width="2" stroke-dasharray="4 4"
+                                fill="none" />
+                            <path d="M 20 20 Q 200 0 380 20" stroke="#D9181E" stroke-width="1.5" stroke-dasharray="4 4"
+                                fill="none" opacity="0.6" />
+
                             <!-- The Plane on the path -->
                             <g class="animate-fly-plane" style="offset-path: path('M 20 20 Q 200 0 380 20');">
                                 <svg x="-8" y="-8" width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                    <path d="M21 16V14L13 9V3.5C13 2.67 12.33 2 11.5 2C10.67 2 10 2.67 10 3.5V9L2 14V16L10 13.5V19L8 20.5V22L11.5 21L15 22V20.5L13 19V13.5L21 16Z" fill="#D9181E"/>
+                                    <path
+                                        d="M21 16V14L13 9V3.5C13 2.67 12.33 2 11.5 2C10.67 2 10 2.67 10 3.5V9L2 14V16L10 13.5V19L8 20.5V22L11.5 21L15 22V20.5L13 19V13.5L21 16Z"
+                                        fill="#D9181E" />
                                 </svg>
                             </g>
-                            
+
                             <!-- Start Node -->
                             <circle cx="20" cy="20" r="4" fill="#D9181E" class="animate-pulse" />
                             <circle cx="380" cy="20" r="4" fill="#ffffff" />
@@ -1265,197 +1311,236 @@
     </section>
 
 
-
-
-        <!-- ========================================== -->
-    <!-- SECTION 9: THE GLOBAL EVENT CIRCUIT (100vh) -->
     <!-- ========================================== -->
-    <section class=" flex flex-col justify-center bg-brand-white relative overflow-hidden  py-12 lg:py-0">
-        
-        <!-- The "Global Thread" SVG background connector -->
+    <!-- SECTION 9: GLOBAL EVENT CIRCUIT (SYMMETRICAL) -->
+    <!-- ========================================== -->
+    <section class="py-24 lg:py-32 bg-brand-white relative overflow-hidden border-t border-black/5">
 
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12 w-full relative z-10">
 
-        <div class="max-w-[90rem] mx-auto px-6 lg:px-12 w-full relative z-10 flex flex-col gap-10 lg:gap-14 h-full">
-            
-            <!-- ====================================== -->
-            <!-- TOP ROW: THE INTRO BRIEFING (Heading, Para, CTA)-->
-            <!-- ====================================== -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
+            <!-- Top Intro -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center mb-12">
                 <div class="lg:col-span-8 flex flex-col space-y-4">
                     <div class="flex items-center gap-3">
-                        <div class="w-6 h-px bg-brand-red"></div>
-                        <p class="font-sans text-[0.65rem] uppercase tracking-[0.2em] font-bold text-brand-red">Elite Experiences</p>
+                        <div class="w-10 h-px bg-brand-red"></div>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-[0.4em] font-bold text-brand-black/40">
+                            Elite Experiences</p>
                     </div>
-                    
-                    <h2 class="font-display text-3xl lg:text-[3.2rem] font-bold text-brand-black leading-[1.05] tracking-tight">
+                    <h2
+                        class="font-serif text-5xl lg:text-7xl font-bold text-brand-black leading-[1.05] tracking-tight">
                         Your Global Passport to the<br>
-                        <span class="text-brand-red italic font-normal">World's Greatest Events.</span>
+                        <span class="text-brand-red italic">World's Greatest Events.</span>
                     </h2>
                 </div>
-
-                <div class="lg:col-span-4 flex justify-end lg:justify-end">
-                    <a href="events.html" class="inline-flex items-center gap-3 bg-brand-black text-white px-8 py-3.5 text-[0.65rem] font-bold uppercase tracking-widest transition-all duration-300 hover:bg-brand-red hover:shadow-lg hover:shadow-brand-red/20 group">
-                        <span>View Full Event Schedule</span>
-                        <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                <div class="lg:col-span-4 flex justify-end">
+                    <a href="./services/events-and-wedding.html"
+                        class="inline-flex items-center gap-3 bg-brand-red text-white px-10 py-4 text-[0.7rem] font-bold uppercase tracking-widest transition-all duration-300 hover:bg-brand-black group rounded-none">
+                        View Full Event Schedule
+                        <i
+                            class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
                     </a>
                 </div>
             </div>
 
             <!-- The Thoughtful Paragraph -->
-            <div class="max-w-4xl">
+            <div class="max-w-4xl mb-14">
                 <p class="text-black/60 text-sm lg:text-base leading-relaxed">
-                    From the high-octane runways of <strong class="text-brand-black">Aero India</strong> to the prestigious galleries of the <strong class="text-brand-black">India Art Fair</strong>, Limore connects the world's elite to India's most prestigious cultural and corporate spectacles. 
-                    We don't just provide transport—we orchestrate seamless VIP ground handling, private jet charters, and luxury chauffeur networks that ensure global delegates, corporate executives, and celebrities arrive with the precision and prestige their calendars demand.
+                    From the high-octane runways of <strong class="text-brand-black">Aero India</strong> to the
+                    prestigious galleries of the <strong class="text-brand-black">India Art Fair</strong>, Limore
+                    connects the world's elite to India's most prestigious cultural and corporate spectacles. We don't
+                    just provide transport—we orchestrate seamless VIP ground handling, private jet charters, and luxury
+                    chauffeur networks that ensure global delegates, corporate executives, and celebrities arrive with
+                    the precision and prestige their calendars demand.
                 </p>
             </div>
 
-            <!-- ====================================== -->
-            <!-- BOTTOM ROW: 3x2 EVENT GRID             -->
-            <!-- ====================================== -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 h-full flex-1 pt-2">
-                
+            <!-- The Strict 3x2 Architectural Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-black/10">
+
                 <!-- EVENT 1: Aero India -->
-                <div class="group relative bg-white border border-black/5 rounded-xl overflow-hidden transition-all duration-300 hover:border-brand-red/50 hover:shadow-xl flex flex-col h-full">
-                    <div class="aspect-[4/3] w-full overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Aero India">
-                        <div class="absolute top-2 left-2 bg-brand-red/90 text-white text-[0.4rem] font-bold uppercase tracking-widest px-2 py-1 rounded">Featured</div>
+                <div
+                    class="group relative h-[350px] lg:h-[400px] overflow-hidden bg-brand-black border-b border-r border-black/10">
+                    <img src="./assets/images/home/aero-india.jpg"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105"
+                        alt="Aero India">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent">
                     </div>
-                    <div class="p-4 lg:p-5 flex flex-col flex-1 justify-between">
-                        <div>
-                            <h4 class="font-display text-base lg:text-lg font-bold text-brand-black leading-tight">Aero India</h4>
-                            <p class="text-[0.6rem] uppercase tracking-widest text-brand-red font-semibold mb-1">Bengaluru, India</p>
-                            <p class="text-[0.75rem] text-black/60 leading-relaxed line-clamp-2">Defence & Aerospace Expo. Bringing global defense CEOs, fighter jets, and international delegations.</p>
-                        </div>
-                        <div class="mt-3 pt-3 border-t border-black/5 flex justify-between items-center">
-                            <span class="text-[0.5rem] uppercase tracking-widest text-black/40 font-semibold">Private Jet Transfers</span>
-                            <i class="fa-solid fa-arrow-right text-brand-red text-xs opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"></i>
-                        </div>
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-white/10">01</span>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <div class="w-10 h-1 bg-brand-red mb-4 group-hover:w-20 transition-all duration-500"></div>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-brand-red mb-2">
+                            Bengaluru, India</p>
+                        <h3 class="font-serif text-3xl font-bold text-white tracking-tight">Aero India</h3>
+                        <p
+                            class="text-gray-300 text-sm mt-2 font-light max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            Defence & Aerospace Expo. Bringing global defense CEOs and international delegations.</p>
+                    </div>
+                    <div
+                        class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
                     </div>
                 </div>
 
                 <!-- EVENT 2: Indian Grand Prix -->
-                <div class="group relative bg-white border border-black/5 rounded-xl overflow-hidden transition-all duration-300 hover:border-brand-red/50 hover:shadow-xl flex flex-col h-full">
-                    <div class="aspect-[4/3] w-full overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Indian Grand Prix">
+                <div
+                    class="group relative h-[350px] lg:h-[400px] overflow-hidden bg-brand-black border-b border-r border-black/10">
+                    <img src="./assets/images/home/prix.jpg"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105"
+                        alt="Indian Grand Prix">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent">
                     </div>
-                    <div class="p-4 lg:p-5 flex flex-col flex-1 justify-between">
-                        <div>
-                            <h4 class="font-display text-base lg:text-lg font-bold text-brand-black leading-tight">Indian Grand Prix</h4>
-                            <p class="text-[0.6rem] uppercase tracking-widest text-brand-red font-semibold mb-1">Pan-India Circuits</p>
-                            <p class="text-[0.75rem] text-black/60 leading-relaxed line-clamp-2">International F1 & motorsport spectacle. Global racing teams, stars, celebrities, and affluent fans.</p>
-                        </div>
-                        <div class="mt-3 pt-3 border-t border-black/5 flex justify-between items-center">
-                            <span class="text-[0.5rem] uppercase tracking-widest text-black/40 font-semibold">VIP Trackside Chauffeurs</span>
-                            <i class="fa-solid fa-arrow-right text-brand-red text-xs opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"></i>
-                        </div>
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-white/10">02</span>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <div class="w-10 h-1 bg-brand-red mb-4 group-hover:w-20 transition-all duration-500"></div>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-brand-red mb-2">
+                            Pan-India Circuits</p>
+                        <h3 class="font-serif text-3xl font-bold text-white tracking-tight">Indian Grand Prix</h3>
+                        <p
+                            class="text-gray-300 text-sm mt-2 font-light max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            International F1 & motorsport spectacle. Global racing teams and celebrities.</p>
+                    </div>
+                    <div
+                        class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
                     </div>
                 </div>
 
                 <!-- EVENT 3: IPL -->
-                <div class="group relative bg-white border border-black/5 rounded-xl overflow-hidden transition-all duration-300 hover:border-brand-red/50 hover:shadow-xl flex flex-col h-full">
-                    <div class="aspect-[4/3] w-full overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="IPL">
+                <div
+                    class="group relative h-[350px] lg:h-[400px] overflow-hidden bg-brand-black border-b border-r border-black/10">
+                    <img src="./assets/images/home/ipl.jpg"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105"
+                        alt="IPL">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent">
                     </div>
-                    <div class="p-4 lg:p-5 flex flex-col flex-1 justify-between">
-                        <div>
-                            <h4 class="font-display text-base lg:text-lg font-bold text-brand-black leading-tight">IPL</h4>
-                            <p class="text-[0.6rem] uppercase tracking-widest text-brand-red font-semibold mb-1">Mumbai & National Hubs</p>
-                            <p class="text-[0.75rem] text-black/60 leading-relaxed line-clamp-2">World's richest cricket league. Indian and international cricketing legends, sponsors, and billionaires.</p>
-                        </div>
-                        <div class="mt-3 pt-3 border-t border-black/5 flex justify-between items-center">
-                            <span class="text-[0.5rem] uppercase tracking-widest text-black/40 font-semibold">Luxury Corporate Suites</span>
-                            <i class="fa-solid fa-arrow-right text-brand-red text-xs opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"></i>
-                        </div>
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-white/10">03</span>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <div class="w-10 h-1 bg-brand-red mb-4 group-hover:w-20 transition-all duration-500"></div>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-brand-red mb-2">
+                            Mumbai & National Hubs</p>
+                        <h3 class="font-serif text-3xl font-bold text-white tracking-tight">IPL</h3>
+                        <p
+                            class="text-gray-300 text-sm mt-2 font-light max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            World's richest cricket league. Legends, sponsors, and billionaires.</p>
+                    </div>
+                    <div
+                        class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
                     </div>
                 </div>
 
                 <!-- EVENT 4: India Boat Show -->
-                <div class="group relative bg-white border border-black/5 rounded-xl overflow-hidden transition-all duration-300 hover:border-brand-red/50 hover:shadow-xl flex flex-col h-full">
-                    <div class="aspect-[4/3] w-full overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1567892346653-94fea3064746?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="India Boat Show">
+                <div
+                    class="group relative h-[350px] lg:h-[400px] overflow-hidden bg-brand-black border-b border-r border-black/10">
+                    <img src="./assets/images/home/yatch.jpg"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105"
+                        alt="India Boat Show">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent">
                     </div>
-                    <div class="p-4 lg:p-5 flex flex-col flex-1 justify-between">
-                        <div>
-                            <h4 class="font-display text-base lg:text-lg font-bold text-brand-black leading-tight">India Boat & Yacht Show</h4>
-                            <p class="text-[0.6rem] uppercase tracking-widest text-brand-red font-semibold mb-1">Goa</p>
-                            <p class="text-[0.75rem] text-black/60 leading-relaxed line-clamp-2">Superyachts, luxury marine vessels, and international yacht companies docking for India's HNWIs.</p>
-                        </div>
-                        <div class="mt-3 pt-3 border-t border-black/5 flex justify-between items-center">
-                            <span class="text-[0.5rem] uppercase tracking-widest text-black/40 font-semibold">Private Pier Transfers</span>
-                            <i class="fa-solid fa-arrow-right text-brand-red text-xs opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"></i>
-                        </div>
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-white/10">04</span>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <div class="w-10 h-1 bg-brand-red mb-4 group-hover:w-20 transition-all duration-500"></div>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-brand-red mb-2">Goa
+                        </p>
+                        <h3 class="font-serif text-3xl font-bold text-white tracking-tight">India Boat & Yacht Show</h3>
+                        <p
+                            class="text-gray-300 text-sm mt-2 font-light max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            Superyachts and international yacht companies docking for India's HNWIs.</p>
+                    </div>
+                    <div
+                        class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
                     </div>
                 </div>
 
                 <!-- EVENT 5: Jaipur Literature Festival -->
-                <div class="group relative bg-white border border-black/5 rounded-xl overflow-hidden transition-all duration-300 hover:border-brand-red/50 hover:shadow-xl flex flex-col h-full">
-                    <div class="aspect-[4/3] w-full overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1585834175579-5be53d2f6722?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Jaipur Literature Festival">
+                <div
+                    class="group relative h-[350px] lg:h-[400px] overflow-hidden bg-brand-black border-b border-r border-black/10">
+                    <img src="./assets/images/home/jaipur.png"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105"
+                        alt="Jaipur Literature Festival">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent">
                     </div>
-                    <div class="p-4 lg:p-5 flex flex-col flex-1 justify-between">
-                        <div>
-                            <h4 class="font-display text-base lg:text-lg font-bold text-brand-black leading-tight">Jaipur Literature Fest</h4>
-                            <p class="text-[0.6rem] uppercase tracking-widest text-brand-red font-semibold mb-1">Jaipur</p>
-                            <p class="text-[0.75rem] text-black/60 leading-relaxed line-clamp-2">World's largest free literary festival. International authors, intellectuals, and celebrities converge in Jaipur.</p>
-                        </div>
-                        <div class="mt-3 pt-3 border-t border-black/5 flex justify-between items-center">
-                            <span class="text-[0.5rem] uppercase tracking-widest text-black/40 font-semibold">Royal Palace Chauffeurs</span>
-                            <i class="fa-solid fa-arrow-right text-brand-red text-xs opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"></i>
-                        </div>
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-white/10">05</span>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <div class="w-10 h-1 bg-brand-red mb-4 group-hover:w-20 transition-all duration-500"></div>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-brand-red mb-2">
+                            Jaipur</p>
+                        <h3 class="font-serif text-3xl font-bold text-white tracking-tight">Jaipur Literature Fest</h3>
+                        <p
+                            class="text-gray-300 text-sm mt-2 font-light max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            International authors, intellectuals, and celebrities converge in Jaipur.</p>
+                    </div>
+                    <div
+                        class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
                     </div>
                 </div>
 
                 <!-- EVENT 6: India Art Fair -->
-                <div class="group relative bg-white border border-black/5 rounded-xl overflow-hidden transition-all duration-300 hover:border-brand-red/50 hover:shadow-xl flex flex-col h-full">
-                    <div class="aspect-[4/3] w-full overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1577720580479-7d839d829c73?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="India Art Fair">
+                <div
+                    class="group relative h-[350px] lg:h-[400px] overflow-hidden bg-brand-black border-b border-r border-black/10">
+                    <img src="./assets/images/home/artfair.jpg"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105"
+                        alt="India Art Fair">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent">
                     </div>
-                    <div class="p-4 lg:p-5 flex flex-col flex-1 justify-between">
-                        <div>
-                            <h4 class="font-display text-base lg:text-lg font-bold text-brand-black leading-tight">India Art Fair</h4>
-                            <p class="text-[0.6rem] uppercase tracking-widest text-brand-red font-semibold mb-1">New Delhi</p>
-                            <p class="text-[0.75rem] text-black/60 leading-relaxed line-clamp-2">South Asia's leading modern and contemporary art fair. International collectors, galleries, and artists.</p>
-                        </div>
-                        <div class="mt-3 pt-3 border-t border-black/5 flex justify-between items-center">
-                            <span class="text-[0.5rem] uppercase tracking-widest text-black/40 font-semibold">HNWI Curated Services</span>
-                            <i class="fa-solid fa-arrow-right text-brand-red text-xs opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"></i>
-                        </div>
+                    <span class="absolute top-6 right-6 font-serif text-7xl font-bold text-white/10">06</span>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <div class="w-10 h-1 bg-brand-red mb-4 group-hover:w-20 transition-all duration-500"></div>
+                        <p class="font-sans text-[0.6rem] uppercase tracking-widest font-bold text-brand-red mb-2">New
+                            Delhi</p>
+                        <h3 class="font-serif text-3xl font-bold text-white tracking-tight">India Art Fair</h3>
+                        <p
+                            class="text-gray-300 text-sm mt-2 font-light max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            South Asia's leading modern and contemporary art fair. International collectors and
+                            galleries.</p>
+                    </div>
+                    <div
+                        class="absolute top-0 left-0 w-full h-[2px] bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
-
-
-        <!-- ========================================== -->
+    <!-- ========================================== -->
     <!-- SECTION 9: THE CLOSING CTA & FOOTER         -->
     <!-- ========================================== -->
-    
+
     <!-- CTA SECTION -->
     <section class="py-20 mt-10 lg:py-32 bg-brand-black relative overflow-hidden border-b border-white/5">
-        
+
         <!-- Background Ambiance (Glow behind the text) -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-red/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-red/10 rounded-full blur-[120px] pointer-events-none">
+        </div>
         <!-- Minimal grid texture -->
-        <div class="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
+        <div
+            class="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none">
+        </div>
 
         <div class="max-w-[90rem] mx-auto px-6 lg:px-12 relative z-10 text-center">
-            
-            <h2 class="font-display text-4xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1] max-w-3xl mx-auto">
+
+            <h2
+                class="font-display text-4xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1] max-w-3xl mx-auto">
                 Ready to elevate<br class="block lg:hidden">
                 <span class="text-brand-red italic font-normal">your travel?</span>
             </h2>
-            
+
             <p class="text-gray-400 text-sm lg:text-base mt-6 max-w-xl mx-auto font-light">
-                Connect with our executive team today. We are ready to tailor a logistics plan that matches your exact corporate standards.
+                Connect with our executive team today. We are ready to tailor a logistics plan that matches your exact
+                corporate standards.
             </p>
 
             <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="tel:+919292470174" class="bg-brand-red text-white px-10 py-4 text-[0.7rem] font-bold uppercase tracking-widest transition-all duration-300 hover:bg-white hover:text-brand-black hover:shadow-xl hover:shadow-brand-red/20 flex items-center gap-3">
+                <a href="tel:+919292470174"
+                    class="bg-brand-red text-white px-10 py-4 text-[0.7rem] font-bold uppercase tracking-widest transition-all duration-300 hover:bg-white hover:text-brand-black hover:shadow-xl hover:shadow-brand-red/20 flex items-center gap-3">
                     <i class="fa-solid fa-phone"></i> Book Now
                 </a>
-                <a href="mailto:office@limore.in" class="border border-white/20 text-white/70 px-10 py-4 text-[0.7rem] font-bold uppercase tracking-widest transition-all duration-300 hover:border-white hover:text-white">
+                <a href="mailto:office@limore.in"
+                    class="border border-white/20 text-white/70 px-10 py-4 text-[0.7rem] font-bold uppercase tracking-widest transition-all duration-300 hover:border-white hover:text-white">
                     Request a Callback
                 </a>
             </div>
@@ -1476,29 +1561,35 @@
     <!-- FOOTER SECTION -->
     <footer class="bg-brand-black pt-16 pb-8 relative overflow-hidden">
         <!-- Decorative Top Spine -->
-        <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-red/50 to-transparent"></div>
-        
+        <div
+            class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-red/50 to-transparent">
+        </div>
+
         <div class="max-w-[90rem] mx-auto px-6 lg:px-12 relative z-10">
-            
+
             <!-- Main Footer Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 pb-12 border-b border-white/5">
-                
+
                 <!-- Column 1: Brand Identity -->
                 <div class="flex flex-col space-y-4">
                     <a href="#" class="font-display text-2xl font-bold text-white tracking-tight flex items-center">
                         Limor<span class="logo-e border-white"></span>
                     </a>
                     <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
-                        Precision travel and logistics for the corporate elite. Connecting Dubai and India with absolute reliability.
+                        Precision travel and logistics for the corporate elite. Connecting Dubai and India with absolute
+                        reliability.
                     </p>
                     <div class="flex gap-4 mt-2">
-                        <a href="#" class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:bg-brand-red hover:border-brand-red hover:text-white transition-all duration-300">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:bg-brand-red hover:border-brand-red hover:text-white transition-all duration-300">
                             <i class="fa-brands fa-facebook-f text-xs"></i>
                         </a>
-                        <a href="#" class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:bg-brand-red hover:border-brand-red hover:text-white transition-all duration-300">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:bg-brand-red hover:border-brand-red hover:text-white transition-all duration-300">
                             <i class="fa-brands fa-instagram text-xs"></i>
                         </a>
-                        <a href="#" class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:bg-brand-red hover:border-brand-red hover:text-white transition-all duration-300">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:bg-brand-red hover:border-brand-red hover:text-white transition-all duration-300">
                             <i class="fa-brands fa-linkedin-in text-xs"></i>
                         </a>
                     </div>
@@ -1508,10 +1599,15 @@
                 <div class="flex flex-col space-y-4">
                     <h4 class="text-[0.65rem] uppercase tracking-widest font-bold text-brand-red">Quick Links</h4>
                     <ul class="space-y-2.5 text-sm">
-                        <li><a href="#" class="text-gray-400 hover:text-brand-red transition-colors duration-200">Home</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-brand-red transition-colors duration-200">About Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-brand-red transition-colors duration-200">Services</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-brand-red transition-colors duration-200">Fleet & Routes</a></li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-brand-red transition-colors duration-200">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-brand-red transition-colors duration-200">About
+                                Us</a></li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-brand-red transition-colors duration-200">Services</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-brand-red transition-colors duration-200">Fleet
+                                & Routes</a></li>
                     </ul>
                 </div>
 
@@ -1519,10 +1615,17 @@
                 <div class="flex flex-col space-y-4">
                     <h4 class="text-[0.65rem] uppercase tracking-widest font-bold text-brand-red">Our Services</h4>
                     <ul class="space-y-2.5 text-sm">
-                        <li><a href="#" class="text-gray-400 hover:text-brand-red transition-colors duration-200">Private Aviation</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-brand-red transition-colors duration-200">Corporate Travel</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-brand-red transition-colors duration-200">Airport Transfers</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-brand-red transition-colors duration-200">Car & Chauffeur</a></li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-brand-red transition-colors duration-200">Private
+                                Aviation</a></li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-brand-red transition-colors duration-200">Corporate
+                                Travel</a></li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-brand-red transition-colors duration-200">Airport
+                                Transfers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-brand-red transition-colors duration-200">Car &
+                                Chauffeur</a></li>
                     </ul>
                 </div>
 
@@ -1534,14 +1637,17 @@
                             <i class="fa-solid fa-phone text-brand-red mt-1"></i>
                             <div>
                                 <span class="block font-medium text-white/80 text-base">+91 929 247 0174</span>
-                                <span class="text-[0.6rem] uppercase tracking-widest text-gray-500">Mon-Sat, 24/7 Support</span>
+                                <span class="text-[0.6rem] uppercase tracking-widest text-gray-500">Mon-Sat, 24/7
+                                    Support</span>
                             </div>
                         </li>
                         <li class="flex items-start gap-3 text-gray-400">
                             <i class="fa-solid fa-envelope text-brand-red mt-1"></i>
                             <div>
-                                <a href="mailto:office@limore.in" class="block hover:text-brand-red transition-colors duration-200">office@limore.in</a>
-                                <span class="text-[0.6rem] uppercase tracking-widest text-gray-500">Corporate Inquiries</span>
+                                <a href="mailto:office@limore.in"
+                                    class="block hover:text-brand-red transition-colors duration-200">office@limore.in</a>
+                                <span class="text-[0.6rem] uppercase tracking-widest text-gray-500">Corporate
+                                    Inquiries</span>
                             </div>
                         </li>
                         <li class="flex items-start gap-3 text-gray-400">
@@ -1557,7 +1663,8 @@
             </div>
 
             <!-- Bottom Copyright & Legal -->
-            <div class="pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[0.6rem] uppercase tracking-widest text-gray-500">
+            <div
+                class="pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[0.6rem] uppercase tracking-widest text-gray-500">
                 <p>&copy; 2026 Limore. All rights reserved.</p>
                 <div class="flex gap-6">
                     <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a>
