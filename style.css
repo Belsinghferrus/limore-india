@@ -258,3 +258,255 @@ body {
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
 }
+
+
+
+
+/* WHATSAPP */
+
+   /* Popup & Button Base Styles */
+   #wa-chat-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99999;
+    font-family: 'Inter', sans-serif;
+}
+
+/* The Floating Button */
+#wa-btn {
+    width: 60px;
+    height: 60px;
+    background: #25D366; /* WhatsApp Green */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: transform 0.3s;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.5);
+}
+#wa-btn.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+#wa-btn:hover {
+    transform: scale(1.1);
+}
+#wa-btn svg {
+    width: 35px;
+    height: 35px;
+    fill: white;
+}
+
+/* The Chat Popup */
+#wa-popup {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    height: 480px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px) scale(0.9);
+    transform-origin: bottom right;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#wa-popup.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+}
+
+/* Header */
+.wa-header {
+    background: #075E54;
+    color: white;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.wa-avatar {
+    width: 42px;
+    height: 42px;
+    background: #ece5dd;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: #075E54;
+    font-size: 18px;
+}
+.wa-info { flex: 1; }
+.wa-info h4 { margin: 0; font-size: 16px; font-weight: 600; }
+.wa-info p { margin: 0; font-size: 12px; color: #a5d6a7; }
+.wa-close {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.wa-close:hover { opacity: 1; }
+
+/* Chat Body */
+.wa-body {
+    flex: 1;
+    background: #ECE5DD;
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c9b99a' fill-opacity='0.2'%3E%3Cpath d='M0 0h60v60H0z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.wa-msg {
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    position: relative;
+    background: white;
+    color: #333;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+.wa-msg.bot {
+    border-top-left-radius: 2px;
+    align-self: flex-start;
+}
+.wa-time {
+    font-size: 10px;
+    color: #999;
+    float: right;
+    margin-left: 10px;
+    margin-top: 6px;
+}
+
+/* Input Area */
+.wa-input-area {
+    background: #f0f0f0;
+    padding: 12px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+#wa-input {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 10px 16px;
+    font-size: 14px;
+    outline: none;
+    background: white;
+}
+#wa-send {
+    background: #25D366;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s;
+}
+#wa-send:hover { background: #1ebd55; }
+#wa-send svg { width: 22px; height: 22px; fill: white; }
+
+
+
+
+
+/* INTRO */
+
+/* --- PREMIUM PRELOADER --- */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffff; /* Brand Black */
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s;
+}
+
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-logo {
+    opacity: 0;
+    transform: scale(0.95);
+    animation: logoIntro 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+@keyframes logoIntro {
+    to { opacity: 1; transform: scale(1); }
+}
+
+.loader-line {
+    width: 0;
+    height: 2px;
+    background: #D9181E; /* Brand Red */
+    margin-top: 20px;
+    animation: drawLine 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+@keyframes drawLine {
+    to { width: 180px; }
+}
+
+.loader-text {
+    opacity: 0;
+    margin-top: 15px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #D9181E;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 700;
+    animation: fadeUp 0.8s ease 1s forwards;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.loader-counter {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0.8;
+    letter-spacing: 0.1em;
+}
