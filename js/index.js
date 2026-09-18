@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         btn.classList.add("active");
         popup.classList.add("active");
-    }, 5000);
+    }, 10000);
 
     // 2. Close button logic
     closeBtn.addEventListener("click", () => {
