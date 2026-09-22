@@ -100,3 +100,94 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+
+
+
+
+
+
+
+// ============================================
+// CONTACT FORM SUBMISSION HANDLER
+// ============================================
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+  
+    // ⚠️ PASTE YOUR DEPLOYED WEB APP URL HERE
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzhehbBoiaQmfH2ZEHzZ5soZvtpTjBVLaJBHBI28iqNoJYVniz7LWFh5Nk5UM89sRoiBQ/exec';
+  
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+  
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalButtonHTML = submitButton.innerHTML;
+  
+      // Show loading state
+      submitButton.disabled = true;
+      submitButton.innerHTML = `
+        <i class="fa-solid fa-circle-notch fa-spin text-[10px]"></i>
+        Sending...
+      `;
+  
+      // Collect form data
+      const formData = new FormData(form);
+      
+      // Add the source page for tracking
+      formData.append('sourcePage', window.location.pathname);
+  
+      try {
+        const response = await fetch(SCRIPT_URL, {
+          method: 'POST',
+          body: formData,
+          // Do NOT set Content-Type header – let the browser set it automatically
+          // This avoids CORS preflight issues with Apps Script
+        });
+  
+        const result = await response.json();
+  
+        if (result.status === 'success') {
+          // Show success message
+          form.innerHTML = `
+            <div class="text-center py-12">
+              <div class="w-16 h-16 bg-brand-red/10 flex items-center justify-center mx-auto mb-6 rounded-none">
+                <i class="fa-solid fa-check text-brand-red text-2xl"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-brand-black mb-3">
+                Thank You, ${formData.get('fullName')}
+              </h3>
+              <p class="text-black/60 text-sm leading-relaxed max-w-sm mx-auto">
+                Your inquiry has been received. Our executive concierge team will respond within 
+                <strong>2 business hours</strong>.
+              </p>
+              <p class="text-black/40 text-xs mt-6">
+                A confirmation has been sent to <strong>${formData.get('email')}</strong>
+              </p>
+            </div>
+          `;
+        } else {
+          throw new Error(result.message || 'Submission failed.');
+        }
+      } catch (error) {
+        console.error('Form submission error:', error);
+        
+        // Restore button and show error
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonHTML;
+  
+        // Show error message below the button
+        const existingError = form.querySelector('.form-error');
+        if (existingError) existingError.remove();
+  
+        const errorDiv = document.createElement('p');
+        errorDiv.className = 'form-error text-center text-brand-red text-xs mt-4';
+        errorDiv.innerHTML = `
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          Something went wrong. Please try again or contact us directly.
+        `;
+        form.appendChild(errorDiv);
+      }
+    });
+  });
+
